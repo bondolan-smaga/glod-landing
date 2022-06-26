@@ -1,12 +1,11 @@
-// import "antd/dist/antd.css"
-import "./App.css";
-
+// pages
 import Home from "./pages/home";
+import AboutPage from "./pages/about";
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <AboutPage />
     </div>
   );
 }
