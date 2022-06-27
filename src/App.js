@@ -1,10 +1,11 @@
 // pages
-import Home from "./pages/home";
 import AboutPage from "./pages/about";
+// import Home from "./pages/home";
 
 function App() {
   return (
     <div className="App">
+      {/* <Home /> */}
       <AboutPage />
     </div>
   );
