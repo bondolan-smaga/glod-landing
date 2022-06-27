@@ -12,14 +12,3 @@ code {
     monospace;
 }
 
-#topest{
-  width:100%;
-  height:25px;
-  background-color: #d63031;
-}
-
-#navbar{
-  position:-webkit-sticky;
-  position:sticky;
-  background-color: aqua!Important;
-}

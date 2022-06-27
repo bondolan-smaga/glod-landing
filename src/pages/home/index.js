@@ -6,10 +6,9 @@ export default function Home() {
     // <Button type="primary" style={{ marginLeft: 8 }}>
     //   Primary Button
     // </Button>
-    <body>
-    <div id="topest"></div>
-    < Navbar id="navbar"/>
-    </body>
+    <>
+    <Navbar/>
+    </>
   );
 }
 
