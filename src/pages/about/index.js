@@ -60,13 +60,13 @@ export default function AboutPage() {
 
   return (
     <Layout>
-      <Header
+      {/* <Header
         style={{
           backgroundColor: "white",
         }}
       >
         <h2>MAIN NAVBAR</h2>
-      </Header>
+      </Header> */}
       <Header
         style={{
           backgroundColor: "#ebebeb",

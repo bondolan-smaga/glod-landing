@@ -273,13 +273,13 @@ export default function Navbar() {
                     <a href="" style={{ color: 'black' }}> COMPANY KARMA</a>
                 </div>
                 <SearchOutlined style={{fontSize:'32px',transform:'translateX(40px) translateY(15px)', color:'grey'}}/>
-                <input type="search" style={{width:'15%', height:'70px',border:'0.001pt solid grey',textIndent:'20%'}}></input>
-                <div style={{width:'10%', height:'70px',marginTop:'0px',marginLeft:'0px',border:'0.001pt solid grey',textAlign:'center'}}>
+                <input type="search" style={{width:'15%', height:'65px',border:'0.001pt solid grey',textIndent:'20%',borderBottom:'none'}}></input>
+                <div style={{width:'10%', height:'65px',marginTop:'0px',marginLeft:'0px',border:'0.001pt solid grey',textAlign:'center',borderBottom:'none'}}>
                     <a href="">
                         <HeartOutlined style={{fontSize:'36px', marginTop:'15px',color:'grey'}}/> 
                     </a>
                 </div>
-                <div style={{width:'10%', height:'70px',marginTop:'0px',marginLeft:'0px',border:'0.001pt solid grey',textAlign:'center'}}>
+                <div style={{width:'10%', height:'65px',marginTop:'0px',marginLeft:'0px',border:'0.001pt solid grey',textAlign:'center',borderBottom:'none'}}>
                     <a href="">
                     <ShoppingOutlined style={{fontSize:'36px', marginTop:'15px',color:'grey'}}/>
                     </a>
