@@ -1,5 +1,5 @@
 // import { Button } from "antd";
-import Navbar from "../../components/components-navbar";
+import Navbar from "../../components/main-navbar";
 
 export default function Home() {
   return (
