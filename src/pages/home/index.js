@@ -1,9 +1,15 @@
-import { Button } from "antd";
+// import { Button } from "antd";
+import Navbar from "../../components/components-navbar";
 
 export default function Home() {
   return (
-    <Button type="primary">
-      Primary Button
-    </Button>
+    // <Button type="primary" style={{ marginLeft: 8 }}>
+    //   Primary Button
+    // </Button>
+    <>
+    <Navbar/>
+    </>
+
   );
 }
+

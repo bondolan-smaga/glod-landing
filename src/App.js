@@ -1,11 +1,10 @@
 // import "antd/dist/antd.css"
-import "./App.css";
+// pages
+import Home from "./pages/home";
 import Banner from "./components/component-banner";
 import ProductCard from "./components/product-card";
-
-import Home from "./pages/home";
-// pages
 import AboutPage from "./pages/about";
+
 // import Home from "./pages/home";
 
 function App() {
