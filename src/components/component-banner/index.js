@@ -8,6 +8,7 @@ export default function Banner() {
         style={{
           display: "flex",
           justifyContent: "center",
+          marginBottom: "40px"
         }}
       >
         <div
