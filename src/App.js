@@ -5,6 +5,7 @@ import Banner from "./components/home-banner";
 import ProductCard from "./components/product-card";
 import AboutPage from "./pages/about";
 import Newslettersignup from "./components/newsletter-signup";
+import Breadcrumbs from "./components/breadcrumbs";
 
 // import Home from "./pages/home";
 
@@ -12,7 +13,8 @@ function App() {
   return (
     <div className="App">
       {/* <Home /> */}
-      <Newslettersignup />
+      <Breadcrumbs />
+      {/* <Newslettersignup /> */}
       {/* <Banner />
       <ProductCard />
       <AboutPage /> */}
