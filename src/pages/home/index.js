@@ -1,15 +1,16 @@
 // import { Button } from "antd";
 import Navbar from "../../components/main-navbar";
 
-export default function Home() {
-  return (
-    // <Button type="primary" style={{ marginLeft: 8 }}>
-    //   Primary Button
-    // </Button>
-    <>
-    <Navbar/>
-    </>
+export default function HomePage(props) {
+  const { setRenderedPage } = props
 
+  return (
+    <>
+      <Navbar />
+      <h1>home page</h1>
+      <button onClick={() => setRenderedPage('about')}>
+        Go to about page
+      </button>
+    </>
   );
 }
-
