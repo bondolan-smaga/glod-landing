@@ -1,25 +1,16 @@
-// import "antd/dist/antd.css"
+import { useState } from "react"
 // pages
-import Home from "./pages/home";
-import Banner from "./components/home-banner";
-import ProductCard from "./components/product-card";
-import AboutPage from "./pages/about";
-import Newslettersignup from "./components/newsletter-signup";
-import Breadcrumbs from "./components/breadcrumbs";
-import ProductFilter from "./components/product-filter";
-// import Home from "./pages/home";
+import { HomePage, AboutPage } from "./pages"
 
 function App() {
+  const [renderedPage, setRenderedPage] = useState("home")
+
   return (
-    <div className="App">
-      {/* <Home /> */}
-      <Breadcrumbs />
-      <ProductFilter />
-      {/* <Newslettersignup /> */}
-      {/* <Banner />
-      <ProductCard />
-      <AboutPage /> */}
-    </div>
+    <>
+      {
+        renderedPage === "home" ? <HomePage setRenderedPage={setRenderedPage} /> : <AboutPage />
+      }
+    </>
   );
 }
 
