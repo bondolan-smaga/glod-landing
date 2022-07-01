@@ -6,7 +6,7 @@ import ProductCard from "./components/product-card";
 import AboutPage from "./pages/about";
 import Newslettersignup from "./components/newsletter-signup";
 import Breadcrumbs from "./components/breadcrumbs";
-
+import ProductFilter from "./components/product-filter";
 // import Home from "./pages/home";
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
     <div className="App">
       {/* <Home /> */}
       <Breadcrumbs />
+      <ProductFilter />
       {/* <Newslettersignup /> */}
       {/* <Banner />
       <ProductCard />
