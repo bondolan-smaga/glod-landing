@@ -1,13 +1,20 @@
 import "antd/dist/antd.css"
 import "./App.css";
 
-import Home from "./pages/home";
+import HomePage from "./pages/home";
+import { useState } from "react"
+// pages
+import { HomePage, AboutPage } from "./pages"
 
 function App() {
+  const [renderedPage, setRenderedPage] = useState("home")
+
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <>
+      {
+        renderedPage === "home" ? <HomePage setRenderedPage={setRenderedPage} /> : <AboutPage />
+      }
+    </>
   );
 }
 

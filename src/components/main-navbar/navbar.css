@@ -1,0 +1,66 @@
+#topest{
+  width:100%;
+  height:35px;
+  background-color: #d63031;
+}
+
+#nav-mid{
+  text-align:center;
+  color:white;
+  display:flex;
+  width:100%;
+  height:40px;  
+  background-color: #2f3640;
+}
+#nav-mid span{
+  position:absolute;
+  transform: translateX(625px) translateY(10px);
+}
+
+#nav-mid #international{
+  margin-top: 10px;
+  margin-right:auto;
+  color:white;
+  width:150px;
+  height:30px;
+}
+
+#nav-mid #help{
+  margin-top: 10px;
+  color:white;
+  width:50px;
+  height:30px;
+}
+
+#nav-mid #login{
+  margin-top: 10px;
+  margin-right: 20px;
+  color:white;
+  width:50px;
+  height:30px;
+}
+
+#nav-menu{
+  display:flex;
+  position:-webkit-sticky;
+  position:sticky;
+  width:100%;
+  height:65px;
+}
+
+#nav-menu img{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width:10%;
+  height:35px;
+}
+
+#nav-menu div{
+  margin-left:30px;
+  margin-top:20px;
+  font-size:medium;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+
