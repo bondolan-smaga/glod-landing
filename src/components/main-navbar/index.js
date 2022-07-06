@@ -1,11 +1,13 @@
 import {SearchOutlined, HeartOutlined,ShoppingOutlined} from '@ant-design/icons'
 import { Dropdown } from 'antd';
 import "./navbar.css"
+import { useState } from "react"
+import { HomePage, AboutPage } from "../../pages"
 
 const drop = ([
     <div id="drop-men" style={{ width: '1360px', height: '500px', display: 'flex', border: '1pt solid black',backgroundColor:'#f5f6fa' }}>
         <div style={{ width: '20%', height: '100%' }}>
-            <div style={{ display: 'flex', justifyContent: 'center', textAlign: 'left', flexDirection: 'column', width: '100%', height: '50%', marginTop: '10px', marginLeft: '50px', rowGap: '15px', fontSize: 'large', fontWeight: 'bold' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', textAlign: 'left', flexDirection: 'column', width: '100%', height: '50%', marginTop: '10px', marginLeft: '50px', fontSize: 'large', fontWeight: 'bold' }}>
                 <a href="" style={{ color: 'black' }}>SALES</a>
                 <a href="" style={{ color: 'black' }}>NEW IN</a>
                 <a href="" style={{ color: 'black' }}>LIFESTYLE</a>
@@ -234,15 +236,19 @@ const drop = ([
 ]);
 
 export default function Navbar() {
+    const [renderedPage, setRenderedPage] = useState("home")
+    renderedPage === "home" ? <HomePage setRenderedPage={setRenderedPage} /> : <AboutPage />
+    
+
     return (
         <>
-            <div id="topest"></div>
+            {/* <div id="topest"></div>
             <div id="nav-mid">
                 <div id="international">INTERNATIONAL</div>
                 <span>EASY RETURNS</span>
                 <div id="help">HELP</div>
                 <div id="login">LOGIN</div>
-            </div>
+            </div> */}
             <div id="nav-menu">
                 <img src="" alt=""></img>
                 <Dropdown overlay={drop[0]} style={{ marginLeft: '30px' }}>
@@ -270,18 +276,18 @@ export default function Navbar() {
                     </div>
                 </Dropdown>
                 <div style={{marginRight:'auto'}}>
-                    <a href="" style={{ color: 'black' }}> COMPANY KARMA</a>
+                    <a href="" style={{ color: 'black' }} onClick={() => setRenderedPage('about')}> COMPANY KARMA</a>
                 </div>
                 <SearchOutlined style={{fontSize:'32px',transform:'translateX(40px) translateY(15px)', color:'grey'}}/>
-                <input type="search" style={{width:'15%', height:'65px',border:'0.001pt solid grey',textIndent:'20%',borderBottom:'none'}}></input>
-                <div style={{width:'10%', height:'65px',marginTop:'0px',marginLeft:'0px',border:'0.001pt solid grey',textAlign:'center',borderBottom:'none'}}>
+                <input type="search" style={{width:'15%', height:'63px',border:'0.1pt solid grey',textIndent:'20%',borderBottom:'none',borderTop:'none'}}></input>
+                <div style={{width:'10%', height:'65px',marginTop:'0px',marginLeft:'0px',border:'0.001pt solid grey',textAlign:'center',borderBottom:'none',borderTop:'none'}}>
                     <a href="">
-                        <HeartOutlined style={{fontSize:'36px', marginTop:'15px',color:'grey'}}/> 
+                        <HeartOutlined style={{fontSize:'28px',color:'grey'}}/> 
                     </a>
                 </div>
-                <div style={{width:'10%', height:'65px',marginTop:'0px',marginLeft:'0px',border:'0.001pt solid grey',textAlign:'center',borderBottom:'none'}}>
+                <div style={{width:'10%', height:'65px',marginTop:'0px',marginLeft:'0px',border:'0.1pt solid grey',textAlign:'center',borderBottom:'none',borderTop:'none'}}>
                     <a href="">
-                    <ShoppingOutlined style={{fontSize:'36px', marginTop:'15px',color:'grey'}}/>
+                    <ShoppingOutlined style={{fontSize:'28px',color:'grey'}}/>
                     </a>
                 </div>
             </div>

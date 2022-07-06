@@ -1,7 +1,6 @@
 import "antd/dist/antd.css"
-import "./App.css";
 
-import HomePage from "./pages/home";
+// import HomePage from "./pages/home";
 import { useState } from "react"
 // pages
 import { HomePage, AboutPage } from "./pages"
