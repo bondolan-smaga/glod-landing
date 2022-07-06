@@ -57,7 +57,7 @@ export default function MainFooter() {
     return (
         <Row style={{display:'flex',justifyContent:"center",backgroundColor:'#dfe4ea'}}>
             <Col span={6}>
-                <List 
+                <List gutter={[0,8]}
                     header={
                         <img src="https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dwe879875b/footer/logo-small.svg" style={{height:'60px', width:'160px',marginLeft:'45px'}}></img>
                     }
@@ -75,7 +75,7 @@ export default function MainFooter() {
                     }
                     split={false}
                     dataSource={left}
-                    renderItem={(item) => <List.Item>{item}</List.Item>}
+                    renderItem={(item) => <List.Item style={{fontSize:'smaller'}}>{item}</List.Item>}
                 />
             </Col>
             <Col span={4}>
@@ -87,7 +87,7 @@ export default function MainFooter() {
                     }
                     split={false}
                     dataSource={mid}
-                    renderItem={(item) => <List.Item>{item}</List.Item>}
+                    renderItem={(item) => <List.Item style={{fontSize:'smaller'}}>{item}</List.Item>}
                 />
             </Col>
             <Col span={4}>
@@ -99,7 +99,7 @@ export default function MainFooter() {
                     }
                     split={false}
                     dataSource={right}
-                    renderItem={(item) => <List.Item>{item}</List.Item>}
+                    renderItem={(item) => <List.Item style={{fontSize:'smaller'}}>{item}</List.Item>}
                 />
             </Col>
             <Col span={6}>

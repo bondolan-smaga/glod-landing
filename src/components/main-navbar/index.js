@@ -242,13 +242,6 @@ export default function Navbar() {
 
     return (
         <>
-            {/* <div id="topest"></div>
-            <div id="nav-mid">
-                <div id="international">INTERNATIONAL</div>
-                <span>EASY RETURNS</span>
-                <div id="help">HELP</div>
-                <div id="login">LOGIN</div>
-            </div> */}
             <div id="nav-menu">
                 <img src="" alt=""></img>
                 <Dropdown overlay={drop[0]} style={{ marginLeft: '30px' }}>
