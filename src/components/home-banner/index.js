@@ -1,21 +1,20 @@
 import { Button } from "antd";
 
-export default function Banner() {
+export default function Banner(props) {
   return (
-    <>
+    <div {...props}>
       <div
         id="pond"
         style={{
           display: "flex",
-          justifyContent: "center",
-          marginBottom: "40px"
+          justifyContent: "center"
         }}
       >
         <div
           style={{
             backgroundImage:
               "url(https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dw184bfe8a/homepage/UDSALG%20OG%20KAMPAGNER/1480x650_Hero_SALE_SS22_1.jpg)",
-            width: "98%",
+            width: "100%",
             height: "600px",
             backgroundPosition: "center center",
             backgroundSize: "cover",
@@ -106,6 +105,6 @@ export default function Banner() {
           justifyContent: "center",
         }}
       ></div>
-    </>
+    </div>
   );
 }
