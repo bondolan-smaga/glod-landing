@@ -1,12 +1,11 @@
+import { Link } from "react-router-dom";
+import { Dropdown } from "antd";
 import {
   SearchOutlined,
   HeartOutlined,
   ShoppingOutlined,
 } from "@ant-design/icons";
-import { Dropdown } from "antd";
 import "./navbar.css";
-import { useState } from "react";
-import { HomePage, AboutPage } from "../../pages";
 
 const drop = [
   <div
@@ -933,105 +932,91 @@ const drop = [
 ];
 
 export default function Navbar() {
-  const [renderedPage, setRenderedPage] = useState("home");
-  renderedPage === "home" ? (
-    <HomePage setRenderedPage={setRenderedPage} />
-  ) : (
-    <AboutPage />
-  );
-
   return (
-    <>
-      <div id="nav-menu">
-        <img
-          src="https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dwfdab3d01/homepage/logo.svg"
-          alt=""
-        ></img>
-        <Dropdown overlay={drop[0]} style={{ marginLeft: "30px" }}>
-          <div>
-            <a onClick={(e) => e.preventDefault()}></a>
-            MEN
-          </div>
-        </Dropdown>
-        <Dropdown overlay={drop[1]} style={{ marginLeft: "30px" }}>
-          <div>
-            <a onClick={(e) => e.preventDefault()}></a>
-            WOMEN
-          </div>
-        </Dropdown>
-        <Dropdown overlay={drop[2]} style={{ marginLeft: "30px" }}>
-          <div>
-            <a onClick={(e) => e.preventDefault()}></a>
-            KIDS
-          </div>
-        </Dropdown>
-        <Dropdown overlay={drop[3]} style={{ marginLeft: "30px" }}>
-          <div>
-            <a onClick={(e) => e.preventDefault()}></a>
-            SPORTS
-          </div>
-        </Dropdown>
-        <div style={{ marginRight: "auto" }}>
-          <a
-            href=""
-            style={{ color: "black" }}
-            onClick={() => setRenderedPage("about")}
-          >
-            {" "}
-            COMPANY KARMA
-          </a>
+    <div id="nav-menu">
+      <img
+        src="https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dwfdab3d01/homepage/logo.svg"
+        alt=""
+      ></img>
+      <Dropdown overlay={drop[0]} style={{ marginLeft: "30px" }}>
+        <div>
+          <a onClick={(e) => e.preventDefault()}></a>
+          MEN
         </div>
-        <SearchOutlined
-          style={{
-            fontSize: "32px",
-            transform: "translateX(40px) translateY(15px)",
-            color: "grey",
-          }}
-        />
-        <input
-          type="search"
-          style={{
-            width: "15%",
-            height: "63px",
-            border: "0.1pt solid grey",
-            textIndent: "20%",
-            borderBottom: "none",
-            borderTop: "none",
-          }}
-        ></input>
-        <div
-          style={{
-            width: "10%",
-            height: "65px",
-            marginTop: "0px",
-            marginLeft: "0px",
-            border: "0.001pt solid grey",
-            textAlign: "center",
-            borderBottom: "none",
-            borderTop: "none",
-          }}
-        >
-          <a href="">
-            <HeartOutlined style={{ fontSize: "28px", color: "grey" }} />
-          </a>
+      </Dropdown>
+      <Dropdown overlay={drop[1]} style={{ marginLeft: "30px" }}>
+        <div>
+          <a onClick={(e) => e.preventDefault()}></a>
+          WOMEN
         </div>
-        <div
-          style={{
-            width: "10%",
-            height: "65px",
-            marginTop: "0px",
-            marginLeft: "0px",
-            border: "0.1pt solid grey",
-            textAlign: "center",
-            borderBottom: "none",
-            borderTop: "none",
-          }}
-        >
-          <a href="">
-            <ShoppingOutlined style={{ fontSize: "28px", color: "grey" }} />
-          </a>
+      </Dropdown>
+      <Dropdown overlay={drop[2]} style={{ marginLeft: "30px" }}>
+        <div>
+          <a onClick={(e) => e.preventDefault()}></a>
+          KIDS
         </div>
+      </Dropdown>
+      <Dropdown overlay={drop[3]} style={{ marginLeft: "30px" }}>
+        <div>
+          <a onClick={(e) => e.preventDefault()}></a>
+          SPORTS
+        </div>
+      </Dropdown>
+      <div style={{ marginRight: "auto" }}>
+        <Link to="/about" style={{ color: "black" }}>
+          COMPANY KARMA
+        </Link>
       </div>
-    </>
+      <SearchOutlined
+        style={{
+          fontSize: "32px",
+          transform: "translateX(40px) translateY(15px)",
+          color: "grey",
+        }}
+      />
+      <input
+        type="search"
+        style={{
+          width: "15%",
+          height: "63px",
+          border: "0.1pt solid grey",
+          textIndent: "20%",
+          borderBottom: "none",
+          borderTop: "none",
+        }}
+      ></input>
+      <div
+        style={{
+          width: "10%",
+          height: "65px",
+          marginTop: "0px",
+          marginLeft: "0px",
+          border: "0.001pt solid grey",
+          textAlign: "center",
+          borderBottom: "none",
+          borderTop: "none",
+        }}
+      >
+        <a href="">
+          <HeartOutlined style={{ fontSize: "28px", color: "grey" }} />
+        </a>
+      </div>
+      <div
+        style={{
+          width: "10%",
+          height: "65px",
+          marginTop: "0px",
+          marginLeft: "0px",
+          border: "0.1pt solid grey",
+          textAlign: "center",
+          borderBottom: "none",
+          borderTop: "none",
+        }}
+      >
+        <a href="">
+          <ShoppingOutlined style={{ fontSize: "28px", color: "grey" }} />
+        </a>
+      </div>
+    </div>
   );
 }
