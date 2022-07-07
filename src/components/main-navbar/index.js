@@ -1,8 +1,8 @@
 import {SearchOutlined, HeartOutlined,ShoppingOutlined} from '@ant-design/icons'
 import { Dropdown } from 'antd';
 import "./navbar.css"
-import { useState } from "react"
-import { HomePage, AboutPage } from "../../pages"
+// import { useState } from "react"
+// import { HomePage, AboutPage,FavouritePage} from "../../pages"
 
 const drop = ([
     <div id="drop-men" style={{ width: '1360px', height: '500px', display: 'flex', border: '1pt solid black',backgroundColor:'#f5f6fa' }}>
@@ -236,10 +236,6 @@ const drop = ([
 ]);
 
 export default function Navbar() {
-    const [renderedPage, setRenderedPage] = useState("home")
-    renderedPage === "home" ? <HomePage setRenderedPage={setRenderedPage} /> : <AboutPage />
-    
-
     return (
         <>
             <div id="nav-menu">
@@ -269,18 +265,18 @@ export default function Navbar() {
                     </div>
                 </Dropdown>
                 <div style={{marginRight:'auto'}}>
-                    <a href="" style={{ color: 'black' }} onClick={() => setRenderedPage('about')}> COMPANY KARMA</a>
+                    <a href="" style={{ color: 'black' }}> COMPANY KARMA</a>
                 </div>
                 <SearchOutlined style={{fontSize:'32px',transform:'translateX(40px) translateY(15px)', color:'grey'}}/>
                 <input type="search" style={{width:'15%', height:'63px',border:'0.1pt solid grey',textIndent:'20%',borderBottom:'none',borderTop:'none'}}></input>
                 <div style={{width:'10%', height:'65px',marginTop:'0px',marginLeft:'0px',border:'0.001pt solid grey',textAlign:'center',borderBottom:'none',borderTop:'none'}}>
                     <a href="">
-                        <HeartOutlined style={{fontSize:'28px',color:'grey'}}/> 
+                        <HeartOutlined style={{fontSize:'18px',color:'grey'}}/> 
                     </a>
                 </div>
                 <div style={{width:'10%', height:'65px',marginTop:'0px',marginLeft:'0px',border:'0.1pt solid grey',textAlign:'center',borderBottom:'none',borderTop:'none'}}>
                     <a href="">
-                    <ShoppingOutlined style={{fontSize:'28px',color:'grey'}}/>
+                    <ShoppingOutlined style={{fontSize:'18px',color:'grey'}}/>
                     </a>
                 </div>
             </div>
