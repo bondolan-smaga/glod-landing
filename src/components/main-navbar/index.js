@@ -7,7 +7,7 @@ import {
 } from "@ant-design/icons";
 import "./navbar.css";
 
-const drop = [
+const drop = [  
   <div
     id="drop-men"
     style={{
@@ -68,13 +68,11 @@ const drop = [
           MEN'S CLOTHING
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           TShirt
         </a>
-        <a href="" style={{ color: "black" }}>
-          {" "}
+        <Link to="/catalogue" style={{ color: "black" }}>
           SweatShirt
-        </a>
+        </Link>
         <a href="" style={{ color: "black" }}>
           Jackets
         </a>
@@ -82,19 +80,15 @@ const drop = [
           Shirts
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Pants
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Tracksuits
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Baselayer and underwear
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Hive Apparel
         </a>
       </li>
@@ -115,11 +109,9 @@ const drop = [
           MEN'S SHOES
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Trainers
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Handball Shoes
         </a>
         <a href="" style={{ color: "black" }}>
@@ -129,11 +121,9 @@ const drop = [
           Indoor Shoes
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Slide
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           HIVE Sneakers
         </a>
       </li>
@@ -166,7 +156,6 @@ const drop = [
           Others Bags
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Others Accesories
         </a>
       </li>
@@ -265,7 +254,6 @@ const drop = [
           WOMEN'S CLOTHING
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           TShirt and Tops
         </a>
         <a href="" style={{ color: "black" }}>
@@ -278,27 +266,21 @@ const drop = [
           Shirts
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Pants
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Tracksuits
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Baselayer and underwear
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Dresses
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           jackets
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Hive Apparel
         </a>
       </li>
@@ -319,11 +301,9 @@ const drop = [
           WOMEN'S SHOES
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Trainers
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Handball Shoes
         </a>
         <a href="" style={{ color: "black" }}>
@@ -333,11 +313,9 @@ const drop = [
           Indoor Shoes
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Slide
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           HIVE Sneakers
         </a>
       </li>
@@ -373,7 +351,6 @@ const drop = [
           Others Bags
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Others Accesories
         </a>
       </li>
@@ -481,7 +458,6 @@ const drop = [
           Bodysuits
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Sweatshirts
         </a>
         <a href="" style={{ color: "black" }}>
@@ -494,7 +470,6 @@ const drop = [
           Tracksuits
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           One Pieces
         </a>
         <a href="" style={{ color: "black" }}>
@@ -536,7 +511,6 @@ const drop = [
           T-shirt and tops
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Hoodies and sweatshirts
         </a>
         <a href="" style={{ color: "black" }}>
@@ -738,31 +712,24 @@ const drop = [
           FOOTBALL
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Football Jerseys
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Football Shorts
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Football Pants
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Football Socks
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Football Jackets
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Football and Accesories
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Goalkeeper and Referee
         </a>
       </li>
@@ -783,11 +750,9 @@ const drop = [
           HANDBALL
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Handball Shorts
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Handball Shoes
         </a>
         <a href="" style={{ color: "black" }}>
@@ -797,11 +762,9 @@ const drop = [
           Handball Pants
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           Handball and Accesories
         </a>
         <a href="" style={{ color: "black" }}>
-          {" "}
           XK Collection
         </a>
       </li>
@@ -934,10 +897,10 @@ const drop = [
 export default function Navbar() {
   return (
     <div id="nav-menu">
-      <img
-        src="https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dwfdab3d01/homepage/logo.svg"
-        alt=""
-      ></img>
+      <Link to="/" id="logo">
+        <img src="https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dwfdab3d01/homepage/logo.svg"
+        alt=""></img>
+      </Link>
       <Dropdown overlay={drop[0]} style={{ marginLeft: "30px" }}>
         <div>
           <a onClick={(e) => e.preventDefault()}></a>
@@ -970,7 +933,7 @@ export default function Navbar() {
       <SearchOutlined
         style={{
           fontSize: "32px",
-          transform: "translateX(40px) translateY(15px)",
+          transform: "translateX(40px)",
           color: "grey",
         }}
       />
@@ -997,9 +960,9 @@ export default function Navbar() {
           borderTop: "none",
         }}
       >
-        <a href="">
+        <Link to="/favourite">
           <HeartOutlined style={{ fontSize: "28px", color: "grey" }} />
-        </a>
+        </Link>
       </div>
       <div
         style={{
