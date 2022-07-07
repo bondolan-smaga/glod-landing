@@ -1,16 +1,15 @@
-import { useState } from "react"
+import { Routes, Route, Link } from "react-router-dom";
+
 // pages
-import { HomePage, AboutPage } from "./pages"
+import { HomePage, AboutPage, FavouritePage } from "./pages";
 
 function App() {
-  const [renderedPage, setRenderedPage] = useState("home")
-
   return (
-    <>
-      {
-        renderedPage === "home" ? <HomePage setRenderedPage={setRenderedPage} /> : <AboutPage />
-      }
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/favourite" element={<FavouritePage />} />
+    </Routes>
   );
 }
 

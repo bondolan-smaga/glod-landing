@@ -11,6 +11,8 @@ import {
   List,
 } from "antd";
 import { DoubleRightOutlined, DoubleLeftOutlined } from "@ant-design/icons";
+import Navbar from "../../components/main-navbar";
+import MainFooter from "../../components/main-footer";
 
 const { Header, Content } = Layout;
 const { Title, Paragraph } = Typography;
@@ -47,6 +49,7 @@ const contentStyle = {
 };
 
 export default function AboutPage() {
+ 
   const [current, setCurrent] = useState("mail");
 
   const onClick = (e) => {
@@ -60,13 +63,13 @@ export default function AboutPage() {
 
   return (
     <Layout>
-      {/* <Header
+      <Header
         style={{
           backgroundColor: "white",
         }}
       >
-        <h2>MAIN NAVBAR</h2>
-      </Header> */}
+        <Navbar/>
+      </Header>
       <Header
         style={{
           backgroundColor: "#ebebeb",
@@ -325,7 +328,7 @@ export default function AboutPage() {
             </Row>
           </Col>
         </Row>
-        <h2>MAIN FOOTER</h2>
+        <MainFooter/>
       </Content>
     </Layout>
   );
