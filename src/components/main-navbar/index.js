@@ -275,12 +275,12 @@ export default function Navbar() {
                 <input type="search" style={{width:'15%', height:'63px',border:'0.1pt solid grey',textIndent:'20%',borderBottom:'none',borderTop:'none'}}></input>
                 <div style={{width:'10%', height:'65px',marginTop:'0px',marginLeft:'0px',border:'0.001pt solid grey',textAlign:'center',borderBottom:'none',borderTop:'none'}}>
                     <a href="">
-                        <HeartOutlined style={{fontSize:'28px',color:'grey'}}/> 
+                        <HeartOutlined style={{fontSize:'18px',color:'grey'}}/> 
                     </a>
                 </div>
                 <div style={{width:'10%', height:'65px',marginTop:'0px',marginLeft:'0px',border:'0.1pt solid grey',textAlign:'center',borderBottom:'none',borderTop:'none'}}>
                     <a href="">
-                    <ShoppingOutlined style={{fontSize:'28px',color:'grey'}}/>
+                    <ShoppingOutlined style={{fontSize:'18px',color:'grey'}}/>
                     </a>
                 </div>
             </div>
