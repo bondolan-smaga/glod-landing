@@ -1,4 +1,4 @@
-import { Carousel, Row, Col, Typography, Button, Slider } from 'antd';
+import { Carousel, Row, Col, Typography, Button} from 'antd';
 import { React, useRef } from 'react';
 import ProductCard from '../product-card';
 import { DoubleRightOutlined, DoubleLeftOutlined } from "@ant-design/icons"
@@ -7,11 +7,7 @@ const { Title } = Typography
 
 
 export default function CarouselProductCard() {
-    // const onChange = (currentSlide) => {
-    //     console.log(currentSlide);
-    // }
     const slider = useRef()
-
 
     return (
         <>
