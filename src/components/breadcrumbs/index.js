@@ -1,4 +1,7 @@
 import { Breadcrumb, Row } from "antd";
+import {
+  DoubleLeftOutlined
+} from '@ant-design/icons';
 
 export default function Breadcrumbs() {
   return (
@@ -19,7 +22,10 @@ export default function Breadcrumbs() {
           }}
         >
           <Breadcrumb.Item>
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMzBweCcgaGVpZ2h0PSczMHB4JyB2aWV3Qm94PScwIDAgMzAgMzAnIHZlcnNpb249JzEuMScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayc+CiAgICA8ZyBzdHJva2U9J25vbmUnIHN0cm9rZS13aWR0aD0nMScgZmlsbD0nbm9uZScgZmlsbC1ydWxlPSdldmVub2RkJz4KICAgICAgICA8cGF0aCBkPSdNMjAsMTEgTDE2LDE1IEwyMCwxOSBNMTUsMTEgTDExLDE1IEwxNSwxOScgc3Ryb2tlPScjMDAwMDAwJyBzdHJva2Utd2lkdGg9JzEuNSc+PC9wYXRoPgogICAgPC9nPgo8L3N2Zz4=" />
+            <DoubleLeftOutlined style={{
+              marginRight: "5px",
+              fontSize: "12px",
+            }} />
             BACK
           </Breadcrumb.Item>
           <Breadcrumb.Item>
