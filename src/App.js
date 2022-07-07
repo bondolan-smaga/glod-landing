@@ -1,19 +1,15 @@
-import "antd/dist/antd.css"
+import { Routes, Route, Link } from "react-router-dom";
 
-// import HomePage from "./pages/home";
-import { useState } from "react"
 // pages
-import { HomePage, AboutPage,FavouritePage } from "./pages"
+import { HomePage, AboutPage, FavouritePage } from "./pages";
 
 function App() {
-  const [renderedPage, setRenderedPage] = useState("home")
-
   return (
-    <>
-      {
-        renderedPage === "home" ? <HomePage setRenderedPage={setRenderedPage} /> :<AboutPage/>
-      }
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/favourite" element={<FavouritePage />} />
+    </Routes>
   );
 }
 
