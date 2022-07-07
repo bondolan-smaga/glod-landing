@@ -932,7 +932,7 @@ export default function Navbar() {
       </div>
       <SearchOutlined
         style={{
-          fontSize: "32px",
+          fontSize: "20px",
           transform: "translateX(40px)",
           color: "grey",
         }}
@@ -943,7 +943,7 @@ export default function Navbar() {
           width: "15%",
           height: "63px",
           border: "0.1pt solid grey",
-          textIndent: "20%",
+          textIndent: "25%",
           borderBottom: "none",
           borderTop: "none",
         }}
@@ -961,7 +961,7 @@ export default function Navbar() {
         }}
       >
         <Link to="/favourite">
-          <HeartOutlined style={{ fontSize: "28px", color: "grey" }} />
+          <HeartOutlined style={{ fontSize: "18px", color: "grey" }} />
         </Link>
       </div>
       <div
@@ -977,7 +977,7 @@ export default function Navbar() {
         }}
       >
         <a href="">
-          <ShoppingOutlined style={{ fontSize: "28px", color: "grey" }} />
+          <ShoppingOutlined style={{ fontSize: "18px", color: "grey" }} />
         </a>
       </div>
     </div>
