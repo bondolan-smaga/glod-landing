@@ -1,9 +1,9 @@
-import { hover } from "@testing-library/user-event/dist/hover";
 import { Col, Row, Typography, Button, Image } from "antd";
-import ProductCard from "../product-card";
+import { DoubleRightOutlined, DoubleLeftOutlined } from "@ant-design/icons"
+import CarouselProductCard from "../carousel-product-card";
 const { Title, Paragraph } = Typography
 
-const favList = []
+// const favList = []
 
 export default function FavouriteLIst() {
     return (
@@ -18,7 +18,7 @@ export default function FavouriteLIst() {
                     </Paragraph>
                     <Row style={{ marginTop: '80px' }}>
                         <Paragraph style={{ marginRight: 'auto' }}>YOU HAVE 2 PRODUCTS UNDER MY FAVOURITE </Paragraph>
-                        <Button id="save_btn" style={{ marginRight: '5px',bottom:'11px', backgroundColor: 'white', color: 'black', }}>LOGIN AND SAVE</Button>
+                        <Button hoverable id="save_btn" style={{ marginRight: '5px', bottom: '11px', backgroundColor: 'white', color: 'black', }}>LOGIN AND SAVE</Button>
                     </Row>
                     <Row style={{
                         borderTop: '1pt solid grey',
@@ -40,7 +40,7 @@ export default function FavouriteLIst() {
                                     fontSize: "12px",
                                     fontWeight: "700",
                                 }}
-                                >
+                            >
                                 19,97 €
                             </p>
                             <p
@@ -78,7 +78,7 @@ export default function FavouriteLIst() {
                                     fontSize: "12px",
                                     fontWeight: "700",
                                 }}
-                                >
+                            >
                                 19,97 €
                             </p>
                             <p
@@ -116,7 +116,7 @@ export default function FavouriteLIst() {
                                     fontSize: "12px",
                                     fontWeight: "700",
                                 }}
-                                >
+                            >
                                 19,97 €
                             </p>
                             <p
@@ -136,11 +136,26 @@ export default function FavouriteLIst() {
                     </Row>
                 </Col>
             </Col>
-            <Row style={{ marginTop: '250px', justifyContent: 'center' }}>
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-            </Row>
+            <Col span={18} style={{ marginTop: '100px', marginLeft: '100px' }}>
+                <Row style={{ display: 'flex', justifyContent: 'center' }}>
+                    <Title
+                        style={{
+                            textTransform: "uppercase",
+                            display: "inline-block",
+                            marginRight: "auto",
+                        }}
+                        level={3}
+                    >
+                        YOU MAY ALSO LIKE
+                    </Title>
+                    <div>
+                        <Button icon={<DoubleLeftOutlined />}></Button>
+                        <Button style={{ color: 'white', backgroundColor: 'black' }} icon={<DoubleRightOutlined />}></Button>
+                    </div>
+                </Row>
+            </Col>
+            <CarouselProductCard />
+
         </>
     )
 }
