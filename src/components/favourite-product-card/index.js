@@ -136,24 +136,6 @@ export default function FavouriteLIst() {
                     </Row>
                 </Col>
             </Col>
-            <Col span={18} style={{ marginTop: '100px', marginLeft: '100px' }}>
-                <Row style={{ display: 'flex', justifyContent: 'center' }}>
-                    <Title
-                        style={{
-                            textTransform: "uppercase",
-                            display: "inline-block",
-                            marginRight: "auto",
-                        }}
-                        level={3}
-                    >
-                        YOU MAY ALSO LIKE
-                    </Title>
-                    <div>
-                        <Button icon={<DoubleLeftOutlined />}></Button>
-                        <Button style={{ color: 'white', backgroundColor: 'black' }} icon={<DoubleRightOutlined />}></Button>
-                    </div>
-                </Row>
-            </Col>
             <CarouselProductCard />
 
         </>
