@@ -7,6 +7,7 @@ import Banner from "../../components/home-banner";
 import ProductCard from "../../components/product-card";
 import MainFooter from "../../components/main-footer";
 import Newslettersignup from "../../components/newsletter-signup";
+import FavouriteLIst from "../../components/favourite-product-card";
 
 const { Title } = Typography;
 const { Header, Content, Footer } = Layout;

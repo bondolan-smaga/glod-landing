@@ -49,6 +49,7 @@ const contentStyle = {
 };
 
 export default function AboutPage() {
+ 
   const [current, setCurrent] = useState("mail");
 
   const onClick = (e) => {
