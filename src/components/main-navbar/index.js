@@ -877,7 +877,7 @@ export default function Navbar() {
 
   return (
     <div id="nav-menu">
-      <Link to="/">
+      <Link to="/" id="logo">
         <img
           src="https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dwfdab3d01/homepage/logo.svg"
           alt=""
@@ -914,8 +914,8 @@ export default function Navbar() {
       </div>
       <SearchOutlined
         style={{
-          fontSize: "32px",
-          transform: "translateX(40px) translateY(15px)",
+          fontSize: "20px",
+          transform: "translateX(40px)",
           color: "grey",
         }}
       />
@@ -925,7 +925,7 @@ export default function Navbar() {
           width: "15%",
           height: "63px",
           border: "0.1pt solid grey",
-          textIndent: "20%",
+          textIndent: "25%",
           borderBottom: "none",
           borderTop: "none",
         }}

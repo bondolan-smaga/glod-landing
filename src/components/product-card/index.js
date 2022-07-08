@@ -1,4 +1,5 @@
 import { Card } from "antd";
+import { HeartOutlined } from '@ant-design/icons';
 
 export default function ProductCard() {
   return (
@@ -15,9 +16,8 @@ export default function ProductCard() {
           hoverable
           cover={
             <div>
-              <div id="image-tittle">
+              <div>
                 <p
-                  id="discount"
                   style={{
                     backgroundColor: "#d03a3a",
                     color: "#fff",
@@ -28,13 +28,24 @@ export default function ProductCard() {
                     padding: "4px 15px 3px",
                     fontFamily: "Gibson-SemiBold, sans-serif",
                     position: "absolute",
-                    marginTop: "50px",
+                    marginTop: "20px",
+                    fontWeight: "bold"
                   }}
                 >
                   -50%
                 </p>
+                <HeartOutlined style={{
+                  fontSize: "20px",
+                  display: "inline-block",
+                  transition: "all .15s ease-in-out",
+                  backgroundPosition: "center",
+                  fontFamily: "Gibson-SemiBold, sans-serif",
+                  position: "absolute",
+                  marginTop: "20px",
+                  marginLeft: "90%",
+                }} />
               </div>
-              <div id="card-image">
+              <div>
                 <img
                   alt="img not found"
                   src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dweb8efc1e/images/model/216641-2001_A.png?sw=350&sh=465&q=70"
