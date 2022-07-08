@@ -1,9 +1,6 @@
 import { Col, Row, Typography, Button, Image } from "antd";
-import { DoubleRightOutlined, DoubleLeftOutlined } from "@ant-design/icons"
 import CarouselProductCard from "../carousel-product-card";
 const { Title, Paragraph } = Typography
-
-// const favList = []
 
 export default function FavouriteLIst() {
     return (
@@ -20,7 +17,7 @@ export default function FavouriteLIst() {
                         <Paragraph style={{ marginRight: 'auto' }}>YOU HAVE 2 PRODUCTS UNDER MY FAVOURITE </Paragraph>
                         <Button hoverable id="save_btn" style={{ marginRight: '5px', bottom: '11px', backgroundColor: 'white', color: 'black', }}>LOGIN AND SAVE</Button>
                     </Row>
-                    <Row style={{
+                    <Row id="fav-list" style={{
                         borderTop: '1pt solid grey',
                         borderBottom: '1pt solid grey'
                     }}>
@@ -28,7 +25,7 @@ export default function FavouriteLIst() {
                         <Col style={{ marginTop: '35px', marginLeft: '20px', height: '130px', marginRight: 'auto' }}>
                             <h3>Nama barang</h3>
                             <h3 style={{ marginBottom: '60px' }}>COLOR : LIGHTGREY</h3>
-                            <a style={{ textDecoration: 'underline' }}>Remove</a>
+                            <a id="rmv-fav-list" style={{ textDecoration: 'underline' }}>Remove</a>
                         </Col>
                         <Col style={{ marginTop: '35px', textAlign: 'right' }}>
                             <p
