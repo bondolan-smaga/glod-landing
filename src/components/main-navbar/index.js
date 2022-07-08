@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Dropdown} from "antd";
+import { Dropdown } from "antd";
 import {
   SearchOutlined,
   HeartOutlined,
@@ -919,17 +919,20 @@ export default function Navbar() {
           color: "grey",
         }}
       />
-      <input
-        type="search"
-        style={{
-          width: "15%",
-          height: "63px",
-          border: "0.1pt solid grey",
-          textIndent: "25%",
-          borderBottom: "none",
-          borderTop: "none",
-        }}
-      ></input>
+      <form style={{width:'200px'}}>
+        <input
+          type="search"
+          style={{
+            width: "100%",
+            height: "63px",
+            border: "0.1pt solid grey",
+            textIndent: "25%",
+            borderBottom: "none",
+            borderTop: "none",
+          }}
+        ></input>
+
+      </form>
       <div
         style={{
           width: "10%",
@@ -940,10 +943,11 @@ export default function Navbar() {
           textAlign: "center",
           borderBottom: "none",
           borderTop: "none",
+          borderRight:"0.1pt solid grey"
         }}
       >
         <Link to="/favourite">
-          <HeartOutlined style={{ fontSize: "28px", color: "grey" }} />
+          <HeartOutlined style={{ fontSize: "18px", color: "grey" }} />
         </Link>
       </div>
     </div>
