@@ -1,7 +1,6 @@
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-// pages
-import { HomePage, AboutPage, FavouritePage,CataloguePage} from "./pages";
+import { HomePage, AboutPage, FavouritePage, CataloguePage } from "./pages";
 
 function App() {
   return (

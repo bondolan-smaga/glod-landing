@@ -1,11 +1,7 @@
 import { Link } from "react-router-dom";
 import { Dropdown } from "antd";
-import {
-  SearchOutlined,
-  HeartOutlined,
-} from "@ant-design/icons";
+import { SearchOutlined, HeartOutlined } from "@ant-design/icons";
 import "./navbar.css";
-
 
 const drop = [
   <div
@@ -61,7 +57,8 @@ const drop = [
           marginLeft: "30px",
         }}
       >
-        <Link to="/"
+        <Link
+          to="/"
           style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           MEN'S CLOTHING
@@ -101,7 +98,8 @@ const drop = [
           color: "black",
         }}
       >
-        <Link to="/"
+        <Link
+          to="/"
           style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           MEN'S SHOES
@@ -135,7 +133,8 @@ const drop = [
           color: "black",
         }}
       >
-        <Link to="/"
+        <Link
+          to="/"
           style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           ACCESORIES
@@ -166,7 +165,8 @@ const drop = [
           color: "black",
         }}
       >
-        <Link to="/"
+        <Link
+          to="/"
           style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           SPORT
@@ -243,7 +243,8 @@ const drop = [
           marginLeft: "30px",
         }}
       >
-        <Link to="/"
+        <Link
+          to="/"
           style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           WOMEN'S CLOTHING
@@ -289,7 +290,8 @@ const drop = [
           color: "black",
         }}
       >
-        <Link to="/"
+        <Link
+          to="/"
           style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           WOMEN'S SHOES
@@ -323,7 +325,8 @@ const drop = [
           color: "black",
         }}
       >
-        <Link to="/"
+        <Link
+          to="/"
           style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           ACCESORIES
@@ -357,7 +360,8 @@ const drop = [
           color: "black",
         }}
       >
-        <Link to="/"
+        <Link
+          to="/"
           style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           SPORT
@@ -440,7 +444,8 @@ const drop = [
           marginLeft: "30px",
         }}
       >
-        <Link to="/"
+        <Link
+          to="/"
           style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           BABY 0-4 YEARS
@@ -492,7 +497,9 @@ const drop = [
           color: "black",
         }}
       >
-        <Link to="/" style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
+        <Link
+          to="/"
+          style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           BABY 4-6 YEARS
         </Link>
@@ -543,7 +550,8 @@ const drop = [
           color: "black",
         }}
       >
-        <Link to="/"
+        <Link
+          to="/"
           style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           KID SHOES
@@ -577,7 +585,8 @@ const drop = [
           color: "black",
         }}
       >
-        <Link to="/"
+        <Link
+          to="/"
           style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           OUTWEAR
@@ -614,7 +623,8 @@ const drop = [
           color: "black",
         }}
       >
-        <Link to="/"
+        <Link
+          to="/"
           style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           SPORTWEAR
@@ -691,7 +701,8 @@ const drop = [
           marginLeft: "30px",
         }}
       >
-        <Link to="/"
+        <Link
+          to="/"
           style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           FOOTBALL
@@ -728,7 +739,8 @@ const drop = [
           color: "black",
         }}
       >
-        <Link to="/"
+        <Link
+          to="/"
           style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           HANDBALL
@@ -762,7 +774,8 @@ const drop = [
           color: "black",
         }}
       >
-        <Link to="/"
+        <Link
+          to="/"
           style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           FITNESS
@@ -793,7 +806,8 @@ const drop = [
           color: "black",
         }}
       >
-        <Link to="/"
+        <Link
+          to="/"
           style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           VOLLEYBALL
@@ -821,7 +835,8 @@ const drop = [
           color: "black",
         }}
       >
-        <Link to="/"
+        <Link
+          to="/"
           style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           CLUB JERSEYS
@@ -852,7 +867,9 @@ const drop = [
           color: "black",
         }}
       >
-        <Link to="/" style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
+        <Link
+          to="/"
+          style={{ color: "black", fontSize: "large", fontWeight: "bold" }}
         >
           OTHERS
         </Link>
@@ -873,8 +890,7 @@ const drop = [
   </div>,
 ];
 
-export default function Navbar() {
-
+export default function MainNavbar() {
   return (
     <div id="nav-menu">
       <Link to="/" id="logo">
@@ -919,7 +935,7 @@ export default function Navbar() {
           color: "grey",
         }}
       />
-      <form style={{width:'200px'}}>
+      <form style={{ width: "200px" }}>
         <input
           type="search"
           style={{
@@ -931,7 +947,6 @@ export default function Navbar() {
             borderTop: "none",
           }}
         ></input>
-
       </form>
       <div
         style={{
@@ -943,7 +958,7 @@ export default function Navbar() {
           textAlign: "center",
           borderBottom: "none",
           borderTop: "none",
-          borderRight:"0.1pt solid grey"
+          borderRight: "0.1pt solid grey",
         }}
       >
         <Link to="/favourite">
