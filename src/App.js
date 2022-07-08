@@ -1,7 +1,7 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 
 // pages
-import { HomePage, AboutPage, FavouritePage } from "./pages";
+import { HomePage, AboutPage, FavouritePage,CataloguePage} from "./pages";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/favourite" element={<FavouritePage />} />
+      <Route path="/catalogue" element={<CataloguePage />} />
     </Routes>
   );
 }
