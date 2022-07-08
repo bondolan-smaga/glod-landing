@@ -7,7 +7,7 @@ import {
 } from "@ant-design/icons";
 import "./navbar.css";
 
-const drop = [  
+const drop = [
   <div
     id="drop-men"
     style={{
@@ -894,12 +894,14 @@ const drop = [
   </div>,
 ];
 
-export default function Navbar() {
+export default function MainNavbar() {
   return (
     <div id="nav-menu">
       <Link to="/" id="logo">
-        <img src="https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dwfdab3d01/homepage/logo.svg"
-        alt=""></img>
+        <img
+          src="https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dwfdab3d01/homepage/logo.svg"
+          alt=""
+        ></img>
       </Link>
       <Dropdown overlay={drop[0]} style={{ marginLeft: "30px" }}>
         <div>
