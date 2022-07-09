@@ -14,7 +14,7 @@ export default function MainLayout({ children, meta, ...props }) {
         <meta name="title" content={title} />
       </Helmet>
       <Header style={{ backgroundColor: "#ffffff" }}>
-        <MainNavbar />
+        <MainNavbar/>
       </Header>
       <Content style={{ backgroundColor: "#ffffff", padding: "0 15px" }}>
         {children}
@@ -25,3 +25,4 @@ export default function MainLayout({ children, meta, ...props }) {
     </Layout>
   );
 }
+

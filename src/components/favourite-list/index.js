@@ -1,6 +1,6 @@
 import { Col, Row, Typography, Button, Image } from "antd";
 import CarouselProductCard from "../carousel-product-card";
-
+import { Link } from "react-router-dom";
 const { Title, Paragraph } = Typography;
 
 export default function FavouriteList() {
@@ -16,20 +16,22 @@ export default function FavouriteList() {
               marginBottom: 0,
               fontWeight: "bolder",
               textAlign: "center",
+              fontFamily:'Edu VIC WA NT Beginner', 
+              fontSize:'larger'
             }}
             level={2}
           >
             MY FAVORITES
           </Title>
-          <Paragraph>
+          <Paragraph style={{fontFamily:'Edu VIC WA NT Beginner', fontSize:'larger'}}>
             My Favourites is a great way to keep track of your personal
             must-haves and their availability. And, most importantly, it just
             takes one click to move an item from the list and into your shopping
             cart.
           </Paragraph>
-          <Row style={{ marginTop: "80px" }}>
+          <Row style={{ marginTop: "80px",fontFamily:'Edu VIC WA NT Beginner', fontSize:'larger'}}>
             <Paragraph style={{ marginRight: "auto" }}>
-              YOU HAVE 2 PRODUCTS UNDER MY FAVOURITE{" "}
+              YOU HAVE 2 PRODUCTS UNDER MY FAVOURITE
             </Paragraph>
             <Button
               hoverable
@@ -64,7 +66,7 @@ export default function FavouriteList() {
             >
               <h3>Nama barang</h3>
               <h3 style={{ marginBottom: "60px" }}>COLOR : LIGHTGREY</h3>
-              <a style={{ textDecoration: "underline" }}>Remove</a>
+              <Link to="/" style={{ textDecoration: "underline" }}>Remove</Link>
             </Col>
             <Col style={{ marginTop: "35px", textAlign: "right" }}>
               <p
@@ -124,7 +126,7 @@ export default function FavouriteList() {
             >
               <h3>Nama barang</h3>
               <h3 style={{ marginBottom: "60px" }}>COLOR : LIGHTGREY</h3>
-              <a style={{ textDecoration: "underline" }}>Remove</a>
+              <Link to="/" style={{ textDecoration: "underline" }}>Remove</Link>
             </Col>
             <Col style={{ marginTop: "35px", textAlign: "right" }}>
               <p
@@ -184,7 +186,7 @@ export default function FavouriteList() {
             >
               <h3>Nama barang</h3>
               <h3 style={{ marginBottom: "60px" }}>COLOR : LIGHTGREY</h3>
-              <a style={{ textDecoration: "underline" }}>Remove</a>
+              <Link to="/" style={{ textDecoration: "underline" }}>Remove</Link>
             </Col>
             <Col style={{ marginTop: "35px", textAlign: "right" }}>
               <p

@@ -66,7 +66,7 @@ const drop = [
         <Link to="/" style={{ color: "black" }}>
           TShirt
         </Link>
-        <Link to="/" style={{ color: "black" }}>
+        <Link to="/catalogue" style={{ color: "black" }}>
           SweatShirt
         </Link>
         <Link to="/" style={{ color: "black" }}>
@@ -890,7 +890,9 @@ const drop = [
   </div>,
 ];
 
-export default function MainNavbar() {
+
+
+export default function MainNavbar(props) {
   return (
     <div id="nav-menu">
       <Link to="/" id="logo">
@@ -902,7 +904,7 @@ export default function MainNavbar() {
       <Dropdown overlay={drop[0]} style={{ marginLeft: "30px" }}>
         <div>
           <Link to="/" onClick={(e) => e.preventDefault()}></Link>
-          MEN
+            MEN
         </div>
       </Dropdown>
       <Dropdown overlay={drop[1]} style={{ marginLeft: "30px" }}>

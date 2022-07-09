@@ -7,7 +7,7 @@ export default function Banner(props) {
         id="pond"
         style={{
           display: "flex",
-          justifyContent: "center"
+          justifyContent: "center",
         }}
       >
         <div

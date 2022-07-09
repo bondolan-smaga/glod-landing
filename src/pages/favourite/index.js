@@ -2,7 +2,7 @@ import { Layout } from "antd";
 import FavouriteLIst from "../../components/favourite-list";
 import MainFooter from "../../components/main-footer";
 import Navbar from "../../components/main-navbar";
-
+import "./index.css"
 const { Header, Content, Footer } = Layout;
 
 export default function FavouritePage() {
@@ -11,7 +11,7 @@ export default function FavouritePage() {
       <Header style={{ backgroundColor: "white" }}>
         <Navbar />
       </Header>
-      <Content>
+      <Content >
         <FavouriteLIst />
       </Content>
       <Footer>
