@@ -1,0 +1,7 @@
+.ant-col a {
+  color: black;
+  font-weight: 600;
+}
+.ant-col a:hover {
+  color: black;
+}
