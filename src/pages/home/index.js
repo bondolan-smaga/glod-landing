@@ -21,7 +21,7 @@ export default function HomePage() {
       {/* MAIN CONTENTS */}
       <Row>
         <Col span={24}>
-          <Banner style={{ margin: "30px 0" }} />
+          <Banner style={{ margin: "0 0" }} />
         </Col>
         {/* BEST OF SALE */}
         <Col span={24}>
