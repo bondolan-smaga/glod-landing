@@ -13,13 +13,13 @@ export default function MainLayout({ children, meta, ...props }) {
         <title>{title}</title>
         <meta name="title" content={title} />
       </Helmet>
-      <Header style={{ backgroundColor: "#ffffff" }}>
+      <Header style={{ padding: "0 15px", backgroundColor: "#ffffff" }}>
         <MainNavbar/>
       </Header>
       <Content style={{ backgroundColor: "#ffffff", padding: "0 15px" }}>
         {children}
       </Content>
-      <Footer>
+      <Footer style={{ padding: "0" }}>
         <MainFooter />
       </Footer>
     </Layout>

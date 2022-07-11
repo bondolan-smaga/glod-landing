@@ -153,16 +153,5 @@ export default function HomePage() {
         </Col>
       </Row>
     </MainLayout>
-    // <Layout>
-    //   <Header style={{ backgroundColor: "#ffffff" }}>
-    //     <Navbar />
-    //   </Header>
-    //   <Content style={{ margin: "0 15px" }}>
-
-    //   </Content>
-    //   <Footer>
-    //     <MainFooter />
-    //   </Footer>
-    // </Layout>
   );
 }
