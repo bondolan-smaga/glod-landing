@@ -892,7 +892,7 @@ const drop = [
 
 
 
-export default function MainNavbar(props) {
+export default function MainNavbar() {
   return (
     <div id="nav-menu">
       <Link to="/" id="logo">
