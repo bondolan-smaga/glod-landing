@@ -90,7 +90,7 @@ export default function MainNavbar() {
           >
             <Link to="/favourite">
               <Button type="text">
-                <Badge count={count} size="small" offset={[3, 0]} showZero>
+                <Badge count={count} size="small" offset={[3, 0]} showZero color="cyan">
                   <HeartOutlined style={{ fontSize: "20px", color: "grey" }} />
                 </Badge>
               </Button>
