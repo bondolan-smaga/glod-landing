@@ -33,11 +33,13 @@ export default function MainNavbar() {
   return (
     <Row>
       <Col span={4}>
+        <Link to="/">
         <img
           src="https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dwfdab3d01/homepage/logo.svg"
           style={{ height: "25px" }}
           alt="hummel"
         />
+        </Link>
       </Col>
       <Col span={12}>
         <Row>
@@ -72,7 +74,9 @@ export default function MainNavbar() {
             style={{ textAlign: "center", borderRight: "1px solid grey" }}
           >
             <Button type="text">
+              <Link to="/favourite">
               <HeartOutlined style={{ fontSize: "18px", color: "grey" }} />
+              </Link>
             </Button>
           </Col>
         </Row>

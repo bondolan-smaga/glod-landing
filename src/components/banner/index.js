@@ -1,4 +1,9 @@
 import { Button } from "antd";
+const background= {
+  sales : "url(https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dw184bfe8a/homepage/UDSALG%20OG%20KAMPAGNER/1480x650_Hero_SALE_SS22_1.jpg)",
+  easy : "url(https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dwd1379773/homepage/STYLE/1480x650_Hero_Training_4.0.jpg)"
+}
+
 
 export default function Banner(props) {
   return (
@@ -12,14 +17,12 @@ export default function Banner(props) {
       >
         <div
           style={{
-            backgroundImage:
-              "url(https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dw184bfe8a/homepage/UDSALG%20OG%20KAMPAGNER/1480x650_Hero_SALE_SS22_1.jpg)",
+            backgroundImage: background.sales,
             width: "100%",
             height: "600px",
             backgroundPosition: "center center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
-            backgroundAttachment: "fixed",
             display: "flex",
             alignItems: "flex-end",
             objectFit: "contain",
@@ -46,10 +49,7 @@ export default function Banner(props) {
                 ghost
                 id="button-men"
                 style={{
-                  paddingTop: "12px",
-                  paddingRight: "8px",
-                  paddingBottom: "12px",
-                  paddingLeft: "8px",
+                  padding:'12px 8px',
                   display: "inline-block",
                   margin: "0px 10px 0px 0px",
                   color: "#000000",
@@ -104,7 +104,8 @@ export default function Banner(props) {
           display: "flex",
           justifyContent: "center",
         }}
-      ></div>
+      >
+      </div>
     </div>
   );
 }

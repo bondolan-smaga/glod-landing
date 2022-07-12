@@ -2,7 +2,7 @@ import { Col, Row, Typography, Button, Carousel, List } from "antd";
 import { DoubleRightOutlined, DoubleLeftOutlined } from "@ant-design/icons";
 
 import Banner from "../../components/banner";
-import { MainLayout } from "../../components";
+import { CarouselProductCard, MainLayout } from "../../components";
 
 const { Title } = Typography;
 
@@ -15,21 +15,21 @@ const contentStyle = {
 };
 const data = ["New in", "Sustainability", "Sportswear", "Sneakers"];
 
-export default function HomePage() {
+
+export default function HomePage(props) {
   return (
     <MainLayout meta={{ title: "Homepage | GLOD" }}>
       {/* MAIN CONTENTS */}
       <Row>
         <Col span={24}>
-          <Banner style={{ margin: "0 0" }} />
+          <Banner style={{ margin: "0 0"}} />
         </Col>
         {/* BEST OF SALE */}
         <Col span={24}>
           <Row>
             <Col span={24}>
-              <Title level={3}>BEST OF SALE</Title>
+              <CarouselProductCard tag={'BEST OF SALE'}/>
             </Col>
-            <Col span={24}>CAROUSEL DISINI</Col>
           </Row>
         </Col>
         <Col span={24}>
@@ -47,11 +47,10 @@ export default function HomePage() {
         </Col>
         {/* NEW SEASON OF FAVOURITES */}
         <Col span={24}>
-          <Row>
-            <Col span={24}>
-              <Title level={3}>NEW SEASON OF FAVOURITES</Title>
+          <Row span={24}>
+            <Col span={24}  style={{margin :'10px 0'}}>
+              <CarouselProductCard tag={'NEW SEASON FAVOURITES'}/>
             </Col>
-            <Col span={24}>CAROUSEL DISINI</Col>
           </Row>
         </Col>
         <Col span={24}>
