@@ -1,22 +1,16 @@
-import { Layout } from "antd";
+import { Row, Col } from "antd";
+import { MainLayout } from "../../components";
 import FavouriteLIst from "../../components/favourite-list";
-import MainFooter from "../../components/main-footer";
-import Navbar from "../../components/main-navbar";
 import "./index.css"
-const { Header, Content, Footer } = Layout;
 
 export default function FavouritePage() {
   return (
-    <Layout>
-      <Header style={{ backgroundColor: "white" }}>
-        <Navbar />
-      </Header>
-      <Content >
-        <FavouriteLIst />
-      </Content>
-      <Footer>
-        <MainFooter />
-      </Footer>
-    </Layout>
+    <MainLayout meta={{ title: 'Favourite || GLOD' }}>
+      <Row span={24}>
+        <Col>
+          <FavouriteLIst />
+        </Col>
+      </Row>
+    </MainLayout>
   );
 }
