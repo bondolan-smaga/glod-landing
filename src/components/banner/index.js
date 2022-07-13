@@ -1,32 +1,31 @@
-import { Button } from "antd";
+import { Button,Col,Row } from "antd";
+
 
 export default function Banner(props) {
   return (
-    <div {...props}>
-      <div
+    <Row {...props}>
+      <Col span={24}
         id="pond"
         style={{
           display: "flex",
           justifyContent: "center",
         }}
       >
-        <div
+        <Row
           style={{
-            backgroundImage:
-              "url(https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dw184bfe8a/homepage/UDSALG%20OG%20KAMPAGNER/1480x650_Hero_SALE_SS22_1.jpg)",
+            backgroundImage: props.background,
             width: "100%",
             height: "600px",
             backgroundPosition: "center center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
-            backgroundAttachment: "fixed",
             display: "flex",
             alignItems: "flex-end",
             objectFit: "contain",
             boxSizing: "border-box",
           }}
         >
-          <div
+          <Row
             id="button-heading-container"
             style={{
               width: "378px",
@@ -46,10 +45,7 @@ export default function Banner(props) {
                 ghost
                 id="button-men"
                 style={{
-                  paddingTop: "12px",
-                  paddingRight: "8px",
-                  paddingBottom: "12px",
-                  paddingLeft: "8px",
+                  padding:'12px 8px',
                   display: "inline-block",
                   margin: "0px 10px 0px 0px",
                   color: "#000000",
@@ -72,10 +68,7 @@ export default function Banner(props) {
                 ghost
                 id="button-woman"
                 style={{
-                  paddingTop: "12px",
-                  paddingRight: "8px",
-                  paddingBottom: "12px",
-                  paddingLeft: "8px",
+                  padding:'12px 8px',
                   display: "inline-block",
                   margin: "0px 10px 0px 0px",
                   color: "#000000",
@@ -95,9 +88,9 @@ export default function Banner(props) {
                 WOMEN
               </Button>
             </div>
-          </div>
-        </div>
-      </div>
+          </Row>
+        </Row>
+      </Col>
       <div
         id="pond"
         style={{
@@ -105,6 +98,6 @@ export default function Banner(props) {
           justifyContent: "center",
         }}
       ></div>
-    </div>
+    </Row>
   );
 }

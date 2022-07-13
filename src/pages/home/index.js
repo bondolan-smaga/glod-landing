@@ -21,7 +21,7 @@ export default function HomePage() {
       {/* MAIN CONTENTS */}
       <Row>
         <Col span={24}>
-          <Banner style={{ margin: "0 0" }} />
+          <Banner style={{ margin: "0 0" }} background={"url(https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dw184bfe8a/homepage/UDSALG%20OG%20KAMPAGNER/1480x650_Hero_SALE_SS22_1.jpg)"}/>
         </Col>
         {/* BEST OF SALE */}
         <Col span={24}>
@@ -33,15 +33,15 @@ export default function HomePage() {
           </Row>
         </Col>
         <Col span={24}>
-          <Banner style={{ margin: "30px 0" }} />
+          <Banner style={{ margin: "30px 0" }} background={"url(https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dwd1379773/homepage/STYLE/1480x650_Hero_Training_4.0.jpg)"}/>
         </Col>
         <Col span={24}>
           <Row gutter={[8, 0]}>
             <Col span={12}>
-              <Banner style={{ margin: "30px 0" }} />
+              <Banner style={{ margin: "30px 0" }} background={"url(https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dw6c9591c7/homepage/STYLE/720x600_Split_Legacy_Core_V2_2.0.jpg)"} />
             </Col>
             <Col span={12}>
-              <Banner style={{ margin: "30px 0" }} />
+              <Banner style={{ margin: "30px 0" }} background={"url(https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dwecfc136d/homepage/STYLE/720x600_Split_FTW_3.1.jpg)"}/>
             </Col>
           </Row>
         </Col>
@@ -55,7 +55,7 @@ export default function HomePage() {
           </Row>
         </Col>
         <Col span={24}>
-          <Banner style={{ margin: "30px 0" }} />
+          <Banner style={{ margin: "30px 0" }} background={"url(https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dw68b5796f/homepage/1480x650_SPORT_FOOTBALL_1.0.jpg)"}/>
         </Col>
       </Row>
       {/* recommendation */}
