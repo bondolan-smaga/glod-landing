@@ -6,13 +6,13 @@ const { Title } = Typography
 
 
 
-export default function CarouselProductCard() {
+export default function CarouselProductCard(props) {
     const slider = useRef()
 
     return (
         <>
-            <Col span={18} style={{ marginTop: '100px', marginLeft: '100px' }}>
-                <Row style={{ display: 'flex', justifyContent: 'center' }}>
+            <Col span={18} style={{ marginTop: '50px', marginLeft: '100px' }}>
+                <Row>
                     <Title
                         style={{
                             textTransform: "uppercase",
@@ -21,7 +21,7 @@ export default function CarouselProductCard() {
                         }}
                         level={3}
                     >
-                        YOU MAY ALSO LIKE
+                        {props.tag}
                     </Title>
                     <div style={{marginLeft:'auto'}}>
                         <Button onClick={e => { slider.current.prev(e) }} icon={<DoubleLeftOutlined />}></Button>
