@@ -228,7 +228,7 @@ export default function FavouriteList() {
           </Row>
         </Col>
       </Col>
-      <CarouselProductCard />
+      <CarouselProductCard style={{margin:'100px 0'}} tag={'YOU MAY ALSO LIKE'} />
     </>
   );
 }

@@ -1,7 +1,13 @@
-import { Card } from "antd";
-import { HeartOutlined } from '@ant-design/icons';
+// import { useState } from "react";
+import {Card} from "antd";
+// import { HeartOutlined } from '@ant-design/icons';
 
 export default function ProductCard() {
+  // const [count, setCount] = useState(0)
+  // const increase = () => {
+  //   setCount(count + 1)
+  // }
+
   return (
     <>
       <div
@@ -21,7 +27,6 @@ export default function ProductCard() {
                   style={{
                     backgroundColor: "#d03a3a",
                     color: "#fff",
-                    position: "relative",
                     marginRight: "5px",
                     fontSize: "10px",
                     letterSpacing: ".5px",
@@ -34,18 +39,11 @@ export default function ProductCard() {
                 >
                   -50%
                 </p>
-                <HeartOutlined style={{
-                  fontSize: "20px",
-                  display: "inline-block",
-                  transition: "all .15s ease-in-out",
-                  backgroundPosition: "center",
-                  fontFamily: "Gibson-SemiBold, sans-serif",
-                  position: "absolute",
-                  marginTop: "20px",
-                  marginLeft: "90%",
-                }} />
               </div>
               <div>
+                {/* <Button onClick={increase}>
+                  <HeartOutlined />
+                </Button> */}
                 <img
                   alt="img not found"
                   src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dweb8efc1e/images/model/216641-2001_A.png?sw=350&sh=465&q=70"

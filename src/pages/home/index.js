@@ -1,21 +1,14 @@
-import { Col, Row, Typography, Button, Carousel, List } from "antd";
-import { DoubleRightOutlined, DoubleLeftOutlined } from "@ant-design/icons";
+import { Col, Row, Typography, List } from "antd";
 
 import Banner from "../../components/banner";
-import { MainLayout } from "../../components";
+import { CarouselProductCard, MainLayout, Newslettersignup } from "../../components";
 
 const { Title } = Typography;
 
-const contentStyle = {
-  height: "160px",
-  color: "#fff",
-  lineHeight: "160px",
-  textAlign: "center",
-  background: "#364d79",
-};
 const data = ["New in", "Sustainability", "Sportswear", "Sneakers"];
 
-export default function HomePage() {
+
+export default function HomePage(props) {
   return (
     <MainLayout meta={{ title: "Homepage | GLOD" }}>
       {/* MAIN CONTENTS */}
@@ -27,9 +20,8 @@ export default function HomePage() {
         <Col span={24}>
           <Row>
             <Col span={24}>
-              <Title level={3}>BEST OF SALE</Title>
+              <CarouselProductCard tag={'BEST OF SALE'} />
             </Col>
-            <Col span={24}>CAROUSEL DISINI</Col>
           </Row>
         </Col>
         <Col span={24}>
@@ -47,11 +39,10 @@ export default function HomePage() {
         </Col>
         {/* NEW SEASON OF FAVOURITES */}
         <Col span={24}>
-          <Row>
-            <Col span={24}>
-              <Title level={3}>NEW SEASON OF FAVOURITES</Title>
+          <Row span={24}>
+            <Col span={24} style={{ margin: '10px 0' }}>
+              <CarouselProductCard tag={'NEW SEASON FAVOURITES'} />
             </Col>
-            <Col span={24}>CAROUSEL DISINI</Col>
           </Row>
         </Col>
         <Col span={24}>
@@ -61,38 +52,7 @@ export default function HomePage() {
       {/* recommendation */}
       <Row>
         <Col span={24}>
-          <Row>
-            <Title
-              style={{
-                textTransform: "uppercase",
-                display: "inline-block",
-                marginRight: "auto",
-              }}
-              level={3}
-            >
-              Get inspired by these styles
-            </Title>
-            <div>
-              <Button icon={<DoubleLeftOutlined />}></Button>
-              <Button icon={<DoubleRightOutlined />}></Button>
-            </div>
-          </Row>
-        </Col>
-        <Col span={24}>
-          <Carousel>
-            <div>
-              <h3 style={contentStyle}>1</h3>
-            </div>
-            <div>
-              <h3 style={contentStyle}>2</h3>
-            </div>
-            <div>
-              <h3 style={contentStyle}>3</h3>
-            </div>
-            <div>
-              <h3 style={contentStyle}>4</h3>
-            </div>
-          </Carousel>
+          <CarouselProductCard tag={'GET INSPIRED BY THIS STYLE'}/>
         </Col>
       </Row>
       {/* tranding */}
@@ -150,6 +110,11 @@ export default function HomePage() {
               />
             </Col>
           </Row>
+        </Col>
+      </Row>
+      <Row>
+        <Col span={24}>
+          <Newslettersignup />
         </Col>
       </Row>
     </MainLayout>
