@@ -2,41 +2,46 @@ import { Col, Row, Image, Carousel, Dropdown, Menu, message, Button, Space } fro
 import { Breadcrumbs, MainLayout } from "../../components";
 import { DownOutlined, UserOutlined } from '@ant-design/icons'
 
+const contentStyle = {
+    height: '450px',
+    color: '#fff',
+    lineHeight: '160px',
+    textAlign: 'center',
+    background: '#eaeaea',
+};
+
+const handleMenuClick = (e) => {
+    message.info('Click on menu item.');
+    console.log('click', e);
+};
+
+const menu = (
+    <Menu
+        onClick={handleMenuClick}
+        items={[
+            {
+                label: '1st menu item',
+                key: '1',
+                icon: <UserOutlined />,
+            },
+            {
+                label: '2nd menu item',
+                key: '2',
+                icon: <UserOutlined />,
+            },
+            {
+                label: '3rd menu item',
+                key: '3',
+                icon: <UserOutlined />,
+            },
+        ]}
+    />)
+
+const produckDetail = (
+    `Quality: Grey: 95% cotton, 5% viscose - other colors: 100% cotton Item No. 212571-7165`
+    )
+
 export default function DetailProductPage() {
-    const contentStyle = {
-        height: '450px',
-        color: '#fff',
-        lineHeight: '160px',
-        textAlign: 'center',
-        background: '#eaeaea',
-    };
-
-    const handleMenuClick = (e) => {
-        message.info('Click on menu item.');
-        console.log('click', e);
-    };
-
-    const menu = (
-        <Menu
-            onClick={handleMenuClick}
-            items={[
-                {
-                    label: '1st menu item',
-                    key: '1',
-                    icon: <UserOutlined />,
-                },
-                {
-                    label: '2nd menu item',
-                    key: '2',
-                    icon: <UserOutlined />,
-                },
-                {
-                    label: '3rd menu item',
-                    key: '3',
-                    icon: <UserOutlined />,
-                },
-            ]}
-        />)
     return (
         <MainLayout>
             <Row>
@@ -175,19 +180,26 @@ export default function DetailProductPage() {
                     </Row>
                     <Row>
                         <Col>
-                            <Dropdown overlay={menu}>
-                                <Button>
+                            <Dropdown overlay={produckDetail} trigger={['click']}>
+                                <a onClick={e => e.preventDefault()}>
                                     <Space>
-                                        Button
+                                        Product Detail
                                         <DownOutlined />
                                     </Space>
-                                </Button>
+                                </a>
                             </Dropdown>
                         </Col>
                     </Row>
                 </Col>
                 <Col span={8}>
-                    Search product
+                    <Dropdown overlay={menu}>
+                        <Button>
+                            <Space>
+                                Button
+                                <DownOutlined />
+                            </Space>
+                        </Button>
+                    </Dropdown>
                 </Col>
             </Row >
         </MainLayout >
