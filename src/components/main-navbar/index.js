@@ -1,7 +1,7 @@
 import "./index.css";
-
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Dropdown, Row, Col, Input, Button, Menu, Typography } from "antd";
+import { Dropdown, Row, Col, Input, Button, Menu, Typography, Badge } from "antd";
 import { SearchOutlined, HeartOutlined } from "@ant-design/icons";
 
 const { Title } = Typography;
@@ -30,14 +30,31 @@ const drop = (
 );
 
 export default function MainNavbar() {
+  const [count] = useState(0);
+  // const increase = () => {
+  //   setCount(count + 1);
+  // };
+
+  // const decline = () => {
+  //   let newCount = count - 1;
+
+  //   if (newCount < 0) {
+  //     newCount = 0;
+  //   }
+
+  //   setCount(newCount);
+  // }
+
   return (
     <Row>
       <Col span={4}>
-        <img
-          src="https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dwfdab3d01/homepage/logo.svg"
-          style={{ height: "25px" }}
-          alt="hummel"
-        />
+        <Link to="/">
+          <img
+            src="https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dwfdab3d01/homepage/logo.svg"
+            style={{ height: "25px" }}
+            alt="hummel"
+          />
+        </Link>
       </Col>
       <Col span={12}>
         <Row>
@@ -71,9 +88,13 @@ export default function MainNavbar() {
             span={8}
             style={{ textAlign: "center", borderRight: "1px solid grey" }}
           >
-            <Button type="text">
-              <HeartOutlined style={{ fontSize: "18px", color: "grey" }} />
-            </Button>
+            <Link to="/favourite">
+              <Button type="text">
+                <Badge count={count} size="small" offset={[3, 0]} showZero color="cyan">
+                  <HeartOutlined style={{ fontSize: "20px", color: "grey" }} />
+                </Badge>
+              </Button>
+            </Link>
           </Col>
         </Row>
       </Col>

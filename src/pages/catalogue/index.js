@@ -1,24 +1,9 @@
 import { Row, Col } from "antd";
-import { MainLayout, Newslettersignup, ProductCard, TrendingFooter } from "../../components";
-import Breadcrumbs from "../../components/breadcrumbs";
-import ProductFilter from "../../components/product-filter";
+import { MainLayout, Newslettersignup, ProductCard, TrendingFooter,Breadcrumbs,ProductFilter } from "../../components";
 // const { Header, Footer, Content } = Layout
 
 export default function CataloguePage() {
     return (
-        // <Layout>
-        //     <Header style={{ backgroundColor: 'white' }}>
-        //         <Navbar />
-        //     </Header>
-        //     <Content style={{ margin: '45px 45px' }}>
-        //         <Breadcrumbs />
-        //         <ProductFilter />
-        //     </Content>
-        //     <Footer>
-        //         <Newslettersignup />
-        //         <MainFooter />
-        //     </Footer>
-        // </Layout>
         <MainLayout meta={{ title: 'Catalogue || GLOD' }}>
             <Row style={{ margin: '15px 30px' }}>
                 <Breadcrumbs />
@@ -48,7 +33,6 @@ export default function CataloguePage() {
                     <ProductCard />
                 </Col>
             </Row>
-
             <Row span={24} justify='center'>
                 <Col>
                     <TrendingFooter/>
