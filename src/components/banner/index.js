@@ -6,7 +6,7 @@ import "./index.css"
 
 export default function Banner(props) {
   return (
-    <Row {...props}>
+    <Row id="banner-row" {...props}>
       <Col span={24}
         id="pond"
         style={{
@@ -48,7 +48,7 @@ export default function Banner(props) {
                 ghost
                 id="button-men"
                 style={{
-                  padding:'12px 8px',
+                  padding:'8px 8px',
                   display: "inline-block",
                   margin: "0px 10px 0px 0px",
                   color: "#000000",
@@ -57,7 +57,7 @@ export default function Banner(props) {
                   background: "#ffffff",
                   minWidth: "164px",
                   height: "50px",
-                  lineHeight: "25px",
+                  lineHeight: "100%",
                   borderRadius: "2px",
                   letterSpacing: ".5px",
                   position: "relative",
@@ -71,7 +71,7 @@ export default function Banner(props) {
                 ghost
                 id="button-woman"
                 style={{
-                  padding:'12px 8px',
+                  padding:'8px 8px',
                   display: "inline-block",
                   margin: "0px 10px 0px 0px",
                   color: "#000000",
@@ -80,7 +80,7 @@ export default function Banner(props) {
                   background: "#ffffff",
                   minWidth: "164px",
                   height: "50px",
-                  lineHeight: "25px",
+                  lineHeight: "100%",
                   borderRadius: "2px",
                   letterSpacing: ".5px",
                   position: "relative",

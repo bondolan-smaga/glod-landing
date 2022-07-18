@@ -1,4 +1,8 @@
 @media screen and (max-width:425px) {
+    #banner-row{
+        margin-bottom: 0px !important;
+    }
+
     #banner-img {
         width: 100% !important;
         height: 300px !important;

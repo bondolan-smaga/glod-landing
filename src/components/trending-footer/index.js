@@ -4,7 +4,7 @@ const trendingList = ["New in", "Sustainability", "Sportswear", "Sneakers"];
 
 export default function TrendingFooter() {
   return (
-    <Row>
+    <Row id="trending-row">
       <Col span={24}>
         <Title
           style={{
@@ -17,7 +17,7 @@ export default function TrendingFooter() {
       </Col>
       <Col span={24}>
         <Row>
-          <Col xs={{span:12}} xl={{span:8}}>
+          <Col xs={{span:12}} lg={{span:8}}>
             <List
               header={
                 <Title style={{ marginBottom: 0 }} level={5}>
