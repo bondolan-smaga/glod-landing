@@ -7,18 +7,19 @@
   color: black;
 }
 
+
 @media screen and (min-width:1440px) {
   #side-menu {
-      display: none;
+    display: none;
   }
-
-  #search-fav{
-      display: block;
+    
+  #menu{
+    display: block;
   }
-
+  
 }
 
-@media screen and (min-width:375px) {
+@media screen and (max-width:425px) {
   .ant-row {
       width: 100%;
       left: 10%;
@@ -33,7 +34,7 @@
   }
 
   #gambarlogo {
-      width: 140%;
+      width: 50%;
       height: 35px;
   }
 
@@ -64,12 +65,16 @@
       right: 23%;
   }
 
-  #menu {
-      display: none !important;
+  #search-fav {
+    display: inline-block;
+  }
+  
+  #responsive-nav {
+    height: 80%;
   }
 
-  #responsive-nav {
-      height: 80%;
+  #menu {
+      display: none;
   }
 
   #side-menu {
@@ -78,4 +83,3 @@
       border: none;
   }
 }
-

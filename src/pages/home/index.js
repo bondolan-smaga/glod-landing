@@ -1,7 +1,7 @@
 import { Col, Row, Typography, List } from "antd";
 
 import Banner from "../../components/banner";
-import { CarouselProductCard, MainLayout, Newslettersignup } from "../../components";
+import { CarouselProductCard, MainLayout, Newslettersignup, TrendingFooter } from "../../components";
 
 const { Title } = Typography;
 
@@ -14,7 +14,7 @@ export default function HomePage(props) {
       {/* MAIN CONTENTS */}
       <Row>
         <Col span={24}>
-          <Banner style={{ margin: "0 0" }} />
+          <Banner style={{ margin: "0 0" }} background={"url(https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dw184bfe8a/homepage/UDSALG%20OG%20KAMPAGNER/1480x650_Hero_SALE_SS22_1.jpg)"} />
         </Col>
         {/* BEST OF SALE */}
         <Col span={24}>
@@ -25,15 +25,15 @@ export default function HomePage(props) {
           </Row>
         </Col>
         <Col span={24}>
-          <Banner style={{ margin: "30px 0" }} />
+          <Banner style={{ margin: "30px 0" }} background={"url(https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dwd1379773/homepage/STYLE/1480x650_Hero_Training_4.0.jpg)"} />
         </Col>
         <Col span={24}>
           <Row gutter={[8, 0]}>
-            <Col span={12}>
-              <Banner style={{ margin: "30px 0" }} />
+            <Col xs={{ span: 24 }} xl={{ span: 12 }}>
+              <Banner style={{ margin: "20px 0" }} background={"url(https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dw6c9591c7/homepage/STYLE/720x600_Split_Legacy_Core_V2_2.0.jpg)"} />
             </Col>
-            <Col span={12}>
-              <Banner style={{ margin: "30px 0" }} />
+            <Col xs={{ span: 24 }} xl={{ span: 12 }}>
+              <Banner style={{ margin: "20px 0" }} background={"url(https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dwecfc136d/homepage/STYLE/720x600_Split_FTW_3.1.jpg)"} />
             </Col>
           </Row>
         </Col>
@@ -46,72 +46,12 @@ export default function HomePage(props) {
           </Row>
         </Col>
         <Col span={24}>
-          <Banner style={{ margin: "30px 0" }} />
+          <Banner style={{ margin: "30px 0" }} background={"url(https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dw68b5796f/homepage/1480x650_SPORT_FOOTBALL_1.0.jpg)"} />
         </Col>
       </Row>
       {/* recommendation */}
-      <Row>
-        <Col span={24}>
-          <CarouselProductCard tag={'GET INSPIRED BY THIS STYLE'}/>
-        </Col>
-      </Row>
-      {/* tranding */}
-      <Row
-        style={{
-          margin: "100px 235px",
-        }}
-      >
-        <Col span={24}>
-          <Title
-            style={{
-              textTransform: "uppercase",
-            }}
-            level={3}
-          >
-            What's trending at the moment
-          </Title>
-        </Col>
-        <Col span={24}>
-          <Row>
-            <Col span={8}>
-              <List
-                header={
-                  <Title style={{ marginBottom: 0 }} level={5}>
-                    Popular men's
-                  </Title>
-                }
-                split={false}
-                dataSource={data}
-                renderItem={(item) => <List.Item>{item}</List.Item>}
-              />
-            </Col>
-            <Col span={8}>
-              <List
-                header={
-                  <Title style={{ marginBottom: 0 }} level={5}>
-                    Popular men's
-                  </Title>
-                }
-                split={false}
-                dataSource={data}
-                renderItem={(item) => <List.Item>{item}</List.Item>}
-              />
-            </Col>
-            <Col span={8}>
-              <List
-                header={
-                  <Title style={{ marginBottom: 0 }} level={5}>
-                    Popular men's
-                  </Title>
-                }
-                split={false}
-                dataSource={data}
-                renderItem={(item) => <List.Item>{item}</List.Item>}
-              />
-            </Col>
-          </Row>
-        </Col>
-      </Row>
+      <CarouselProductCard tag={'GET INSPIRED BY THIS STYLE'} />
+      <TrendingFooter />
       <Row>
         <Col span={24}>
           <Newslettersignup />

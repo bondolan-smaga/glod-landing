@@ -7,7 +7,7 @@ import { SearchOutlined, HeartOutlined,MenuOutlined } from "@ant-design/icons";
 const { Title } = Typography;
 
 const drop = (
-  <Menu
+  <Menu style={{top:'1.3rem'}}
     items={[
       {
         key: "1",
@@ -59,12 +59,12 @@ export default function TryResponsive() {
       <Col span={12} id="menu">
         <Row>
           <Col span={3}>
-            <Dropdown overlay={drop} placement="bottom" arrow>
+            <Dropdown overlay={drop} placement="bottom" overlayStyle={{top:'30px'}}>
               <Link to="/">MEN</Link>
             </Dropdown>
           </Col>
           <Col span={3}>
-            <Dropdown overlay={drop} placement="bottom" arrow>
+            <Dropdown overlay={drop} placement="bottom" overlayStyle={{top:'30px'}}>
               <Link to="/">WOMAN</Link>
             </Dropdown>
           </Col>
@@ -73,7 +73,7 @@ export default function TryResponsive() {
           </Col>
         </Row>
       </Col>
-      <Col id="seach-fav" lg={{span:6}} xl={{span:8}} style={{ marginLeft: 'auto' }}>
+      <Col xs={{span:8}} lg={{span:6}} xl={{span:8}}>
         <Row>
           <Col
             span={16}
@@ -98,7 +98,7 @@ export default function TryResponsive() {
           </Col>
         </Row>
       </Col>
-      <Col span={3} id="side-menu">
+      <Col span={3} id="side-menu" >
         <Button style={{border:'none',height:'100%'}}>
           <MenuOutlined />
         </Button>

@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import {Card} from "antd";
+import {Card, Row} from "antd";
 // import { HeartOutlined } from '@ant-design/icons';
 
 export default function ProductCard() {
@@ -9,8 +9,7 @@ export default function ProductCard() {
   // }
 
   return (
-    <>
-      <div
+      <Row
         id="pond"
         style={{
           display: "flex",
@@ -119,7 +118,6 @@ export default function ProductCard() {
             </div>
           </div>
         </Card>
-      </div>
-    </>
+      </Row>
   );
 }

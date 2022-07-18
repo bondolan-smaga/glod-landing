@@ -7,14 +7,14 @@ import "./index.css"
 export default function Banner(props) {
   return (
     <Row {...props}>
-      <Col
+      <Col span={24}
         id="pond"
         style={{
           display: "flex",
           justifyContent: "center",
         }}
       >
-        <div id="banner-img"
+        <Row id="banner-img"
           style={{
             backgroundImage: props.background,
             width: "100%",
@@ -28,7 +28,7 @@ export default function Banner(props) {
             boxSizing: "border-box",
           }}
         >
-          <div
+          <Row
             id="button-heading-container"
             style={{
               width: "378px",
@@ -71,10 +71,7 @@ export default function Banner(props) {
                 ghost
                 id="button-woman"
                 style={{
-                  paddingTop: "12px",
-                  paddingRight: "8px",
-                  paddingBottom: "12px",
-                  paddingLeft: "8px",
+                  padding:'12px 8px',
                   display: "inline-block",
                   margin: "0px 10px 0px 0px",
                   color: "#000000",
@@ -94,9 +91,16 @@ export default function Banner(props) {
                 WOMEN
               </Button>
             </div>
-          </div>
-        </div>
+          </Row>
+        </Row>
       </Col>
+      <div
+        id="pond"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      ></div>
     </Row>
   );
 }
