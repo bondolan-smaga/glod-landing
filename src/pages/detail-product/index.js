@@ -15,22 +15,22 @@ const handleMenuClick = (e) => {
     console.log('click', e);
 };
 
-const menu = (
+const size = (
     <Menu
         onClick={handleMenuClick}
         items={[
             {
-                label: '1st menu item',
+                label: 'S',
                 key: '1',
                 icon: <UserOutlined />,
             },
             {
-                label: '2nd menu item',
+                label: 'M',
                 key: '2',
                 icon: <UserOutlined />,
             },
             {
-                label: '3rd menu item',
+                label: 'L',
                 key: '3',
                 icon: <UserOutlined />,
             },
@@ -38,8 +38,16 @@ const menu = (
     />)
 
 const produckDetail = (
-    `Quality: Grey: 95% cotton, 5% viscose - other colors: 100% cotton Item No. 212571-7165`
-    )
+    `Unisex. Quality: 100% acrylic. Item No. 212571-7165`
+)
+
+const sizeAndFit = (
+    `Fitting: Regular`
+)
+
+const deliveryAndReturns = (
+    `Free shipping on orders above 120 EUR. Easy returns.`
+)
 
 export default function DetailProductPage() {
     return (
@@ -97,7 +105,7 @@ export default function DetailProductPage() {
                         </div>
                     </Carousel>
                 </Col>
-                <Col span={8}>
+                <Col span={11}>
                     <Row>
                         <Col style={{
                             float: "left",
@@ -179,8 +187,19 @@ export default function DetailProductPage() {
                         </Col>
                     </Row>
                     <Row>
-                        <Col>
-                            <Dropdown overlay={produckDetail} trigger={['click']}>
+                        <Col style={{
+                            marginTop: "10px",
+                        }}>
+                            A classic style with the hummel® chevron update, this sweater has been created using a cotton sweat fabric with a brushed backside for increased comfort, softness and warmth. The hmlLEGACY SWEATSHIRT is cuffed at the waistband and sleeves to trap the body heat in and the cold air out. This style is unisex and fitted on men. For women, we recommend choosing one size smaller than you normally would.
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col style={{
+                            marginTop: "10px",
+                        }}>
+                            <Dropdown overlay={produckDetail} trigger={['click']} overlayStyle={{
+                                width: "300px",
+                            }} >
                                 <a onClick={e => e.preventDefault()}>
                                     <Space>
                                         Product Detail
@@ -190,16 +209,141 @@ export default function DetailProductPage() {
                             </Dropdown>
                         </Col>
                     </Row>
+                    <Row>
+                        <Col style={{
+                            marginTop: "10px",
+                        }}>
+                            <Dropdown overlay={sizeAndFit} trigger={['click']} overlayStyle={{
+                                width: "300px",
+                            }} >
+                                <a onClick={e => e.preventDefault()}>
+                                    <Space>
+                                        Size and fit
+                                        <DownOutlined />
+                                    </Space>
+                                </a>
+                            </Dropdown>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col style={{
+                            marginTop: "10px",
+                        }}>
+                            <Dropdown overlay={deliveryAndReturns} trigger={['click']} overlayStyle={{
+                                width: "300px",
+                            }} >
+                                <a onClick={e => e.preventDefault()}>
+                                    <Space>
+                                        Delivery and returns
+                                        <DownOutlined />
+                                    </Space>
+                                </a>
+                            </Dropdown>
+                        </Col>
+                    </Row>
                 </Col>
-                <Col span={8}>
-                    <Dropdown overlay={menu}>
-                        <Button>
-                            <Space>
-                                Button
-                                <DownOutlined />
-                            </Space>
-                        </Button>
-                    </Dropdown>
+                <Col span={5}>
+                    <Row>
+                        <Col>
+                            Color:
+                        </Col>
+                    </Row>
+                    <Row gutter={[8, 8]}>
+                        <Col span={4}>
+                            <Image style={{
+                                backgroundColor: "#eaeaea",
+                                marginTop: "6px",
+                                marginRight: "10px"
+                            }}
+                                width={40}
+                                src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dw029cc50d/images/packshot/212571-1116.png?sw=40&sh=40&q=70"
+                            />
+                        </Col>
+                        <Col span={4}>
+                            <Image style={{
+                                backgroundColor: "#eaeaea",
+                                marginTop: "6px",
+                                marginRight: "10px"
+                            }}
+                                width={40}
+                                src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dw2b25c34a/images/packshot/212571-2001.png?sw=40&sh=40&q=70"
+                            />
+                        </Col>
+                        <Col span={4}>
+                            <Image style={{
+                                backgroundColor: "#eaeaea",
+                                marginTop: "6px",
+                                marginRight: "10px"
+                            }}
+                                width={40}
+                                src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dwcff952a7/images/packshot/212571-2006.png?sw=40&sh=40&q=70"
+                            />
+                        </Col>
+                        <Col span={4}>
+                            <Image style={{
+                                backgroundColor: "#eaeaea",
+                                marginTop: "6px",
+                                marginRight: "10px"
+                            }}
+                                width={40}
+                                src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dw7d71ae15/images/packshot/212571-3306.png?sw=40&sh=40&q=70"
+                            />
+                        </Col>
+                        <Col span={4}>
+                            <Image style={{
+                                backgroundColor: "#eaeaea",
+                                marginTop: "6px",
+                                marginRight: "10px"
+                            }}
+                                width={40}
+                                src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dw6db60430/images/packshot/212571-6012.png?sw=40&sh=40&q=70"
+                            />
+                        </Col>
+                        <Col span={4}>
+                            <Image style={{
+                                backgroundColor: "#eaeaea",
+                                marginTop: "6px",
+                                marginRight: "10px"
+                            }}
+                                width={40}
+                                src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dw225cce97/images/packshot/212571-6219.png?sw=40&sh=40&q=70"
+                            />
+                        </Col>
+                        <Col span={4}>
+                            <Image style={{
+                                backgroundColor: "#eaeaea",
+                                marginTop: "6px",
+                                marginRight: "10px"
+                            }}
+                                width={40}
+                                src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dw2bdb0e76/images/packshot/212571-7165.png?sw=40&sh=40&q=70"
+                            />
+                        </Col>
+                        <Col span={4}>
+                            <Image style={{
+                                backgroundColor: "#eaeaea",
+                                marginTop: "6px",
+                                marginRight: "10px"
+                            }}
+                                width={40}
+                                src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dw0b4e751a/images/packshot/212571-7429.png?sw=40&sh=40&q=70"
+                            />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col style={{
+                            marginTop: "10px",
+                        }}>
+                            <Dropdown overlay={size}>
+                                <Button>
+                                    <Space>
+                                        Size
+                                        <DownOutlined />
+                                    </Space>
+                                </Button>
+                            </Dropdown>
+                        </Col>
+                    </Row>
                 </Col>
             </Row >
         </MainLayout >
