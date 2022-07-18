@@ -1,23 +1,22 @@
-import { Button } from "antd";
-const background= {
-  sales : "url(https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dw184bfe8a/homepage/UDSALG%20OG%20KAMPAGNER/1480x650_Hero_SALE_SS22_1.jpg)",
-  easy : "url(https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dwd1379773/homepage/STYLE/1480x650_Hero_Training_4.0.jpg)"
-}
+import { Button, Col, Row } from "antd";
+import "./index.css"
+
+
 
 
 export default function Banner(props) {
   return (
-    <div {...props}>
-      <div
+    <Row {...props}>
+      <Col
         id="pond"
         style={{
           display: "flex",
           justifyContent: "center",
         }}
       >
-        <div
+        <div id="banner-img"
           style={{
-            backgroundImage: background.sales,
+            backgroundImage: props.background,
             width: "100%",
             height: "600px",
             backgroundPosition: "center center",
@@ -97,15 +96,7 @@ export default function Banner(props) {
             </div>
           </div>
         </div>
-      </div>
-      <div
-        id="pond"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-      </div>
-    </div>
+      </Col>
+    </Row>
   );
 }
