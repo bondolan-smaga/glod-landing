@@ -53,19 +53,27 @@ const right = [
   "hummel HIVE",
 ];
 const rightest = [
-  <>
+  <Row>
     <Col>
       <h2>Social</h2>
-      <div style={{ fontSize: "50px" }}>
-        <FacebookOutlined />
-        <TwitterOutlined />
-        <InstagramOutlined />
-        <YoutubeOutlined />
-      </div>
+      <Row style={{ fontSize: "30px" }}>
+        <Link to="/">
+          <FacebookOutlined style={{ marginRight: '10px' }} />
+        </Link>
+        <Link to="/">
+          <TwitterOutlined style={{ marginRight: '10px' }} />
+        </Link>
+        <Link to="/">
+          <InstagramOutlined style={{ marginRight: '10px' }} />
+        </Link>
+        <Link to="/">
+          <YoutubeOutlined style={{ marginRight: '10px' }} />
+        </Link>
+      </Row>
 
       {/* tanda tangan */}
     </Col>
-  </>,
+  </Row>
 ];
 
 export default function MainFooter() {
@@ -133,7 +141,7 @@ export default function MainFooter() {
           split={false}
           dataSource={right}
           renderItem={(item) => (
-            <List.Item style={{ fontSize: "smaller" }}>{item}</List.Item>
+            <List.Item style={{ fontSize: "smaller"}}>{item}</List.Item>
           )}
         />
       </Col>
