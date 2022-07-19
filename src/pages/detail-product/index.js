@@ -1,6 +1,6 @@
 import { Col, Row, Image, Carousel, Dropdown, Menu, message, Button, Space } from "antd";
 import { Breadcrumbs, MainLayout } from "../../components";
-import { DownOutlined, UserOutlined } from '@ant-design/icons'
+import { DownOutlined, UserOutlined, DownloadOutlined } from '@ant-design/icons'
 
 const contentStyle = {
     height: '450px',
@@ -330,18 +330,49 @@ export default function DetailProductPage() {
                             />
                         </Col>
                     </Row>
-                    <Row>
-                        <Col style={{
-                            marginTop: "10px",
-                        }}>
-                            <Dropdown overlay={size}>
+                    <Row gutter={[8, 8]} style={{
+                        marginTop: "10px",
+                    }}>
+                        <Col span={4}>
+                            <div style={{
+                                width: "40px",
+                                height: "40px",
+                                borderStyle: "groove",
+                                textAlign: "center center",
+                                backgroundColor: "#eaeaea",
+                            }}>
+                                S
+                            </div>
+                            {/* <Dropdown overlay={size}>
                                 <Button>
                                     <Space>
                                         Size
                                         <DownOutlined />
                                     </Space>
                                 </Button>
-                            </Dropdown>
+                            </Dropdown> */}
+                        </Col>
+                        <Col span={4}>
+                            <div style={{
+                                width: "40px",
+                                height: "40px",
+                                borderStyle: "groove",
+                                textAlign: "center center",
+                                backgroundColor: "#eaeaea",
+                            }}>
+                                M
+                            </div>
+                        </Col>
+                        <Col span={4}>
+                            <div style={{
+                                width: "40px",
+                                height: "40px",
+                                borderStyle: "groove",
+                                textAlign: "center center",
+                                backgroundColor: "#eaeaea",
+                            }}>
+                                L
+                            </div>
                         </Col>
                     </Row>
                 </Col>
