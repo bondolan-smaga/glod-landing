@@ -1,16 +1,15 @@
-// import { useState } from "react";
-import {Card} from "antd";
-// import { HeartOutlined } from '@ant-design/icons';
+import { useState } from "react";
+import {Card, Row,Button} from "antd";
+import { HeartOutlined } from '@ant-design/icons';
 
 export default function ProductCard() {
-  // const [count, setCount] = useState(0)
-  // const increase = () => {
-  //   setCount(count + 1)
-  // }
+  const [count, setCount] = useState(0)
+  const increase = () => {
+    setCount(count + 1)
+  }
 
   return (
-    <>
-      <div
+      <Row
         id="pond"
         style={{
           display: "flex",
@@ -21,7 +20,7 @@ export default function ProductCard() {
         <Card
           hoverable
           cover={
-            <div>
+            <Row>
               <div>
                 <p
                   style={{
@@ -41,20 +40,15 @@ export default function ProductCard() {
                 </p>
               </div>
               <div>
-                {/* <Button onClick={increase}>
-                  <HeartOutlined />
-                </Button> */}
+                <Button onClick={increase} style={{display:"inline-block", position:"absolute",left:'80%',top:'2.5%',background:'transparent',border:'none'}}>
+                  <HeartOutlined style={{fontSize:'20px'}}/>
+                </Button>
                 <img
                   alt="img not found"
                   src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dweb8efc1e/images/model/216641-2001_A.png?sw=350&sh=465&q=70"
                 />
-                {/* <img
-                  class="overlay"
-                  alt="img not found"
-                  src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dwd3c94151/images/model/216641-2001_B.png?sw=350&sh=465&q=70"
-                /> */}
               </div>
-            </div>
+            </Row>
           }
         >
           <div id="product title">
@@ -119,7 +113,6 @@ export default function ProductCard() {
             </div>
           </div>
         </Card>
-      </div>
-    </>
+      </Row>
   );
 }

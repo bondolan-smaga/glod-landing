@@ -2,12 +2,12 @@ import "./index.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Dropdown, Row, Col, Input, Button, Menu, Typography, Badge } from "antd";
-import { SearchOutlined, HeartOutlined } from "@ant-design/icons";
+import { SearchOutlined, HeartOutlined,MenuOutlined } from "@ant-design/icons";
 
 const { Title } = Typography;
 
 const drop = (
-  <Menu
+  <Menu style={{top:'1.3rem'}}
     items={[
       {
         key: "1",
@@ -29,7 +29,7 @@ const drop = (
   />
 );
 
-export default function MainNavbar() {
+export default function TryResponsive() {
   const [count] = useState(0);
   // const increase = () => {
   //   setCount(count + 1);
@@ -46,34 +46,34 @@ export default function MainNavbar() {
   // }
 
   return (
-    <Row>
-      <Col span={4}>
+    <Row id="responsive-nav">
+      <Col lg={{span:4}} xl={{span:4}} id="logo">
         <Link to="/">
-          <img
+          <img id="gambarlogo"
             src="https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dwfdab3d01/homepage/logo.svg"
             style={{ height: "25px" }}
             alt="hummel"
           />
         </Link>
       </Col>
-      <Col span={12}>
+      <Col span={12} id="menu">
         <Row>
           <Col span={3}>
-            <Dropdown overlay={drop} placement="bottom" arrow>
+            <Dropdown overlay={drop} placement="bottom" overlayStyle={{top:'30px'}}>
               <Link to="/">MEN</Link>
             </Dropdown>
           </Col>
           <Col span={3}>
-            <Dropdown overlay={drop} placement="bottom" arrow>
+            <Dropdown overlay={drop} placement="bottom" overlayStyle={{top:'30px'}}>
               <Link to="/">WOMAN</Link>
             </Dropdown>
           </Col>
-          <Col span={18}>
+          <Col span={12} id="about">
             <Link to="/about">ABOUT US</Link>
           </Col>
         </Row>
       </Col>
-      <Col span={8}>
+      <Col xs={{span:8}} lg={{span:6}} xl={{span:8}}>
         <Row>
           <Col
             span={16}
@@ -97,6 +97,11 @@ export default function MainNavbar() {
             </Link>
           </Col>
         </Row>
+      </Col>
+      <Col span={3} id="side-menu" >
+        <Button style={{border:'none',height:'100%'}}>
+          <MenuOutlined />
+        </Button>
       </Col>
     </Row>
   );
