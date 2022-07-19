@@ -198,43 +198,11 @@ export default function DetailProductPage() {
                             marginTop: "10px",
                         }}>
                             <Dropdown overlay={produckDetail} trigger={['click']} overlayStyle={{
-                                width: "300px",
+                                width: "350px",
                             }} >
                                 <a onClick={e => e.preventDefault()}>
                                     <Space>
                                         Product Detail
-                                        <DownOutlined />
-                                    </Space>
-                                </a>
-                            </Dropdown>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col style={{
-                            marginTop: "10px",
-                        }}>
-                            <Dropdown overlay={sizeAndFit} trigger={['click']} overlayStyle={{
-                                width: "300px",
-                            }} >
-                                <a onClick={e => e.preventDefault()}>
-                                    <Space>
-                                        Size and fit
-                                        <DownOutlined />
-                                    </Space>
-                                </a>
-                            </Dropdown>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col style={{
-                            marginTop: "10px",
-                        }}>
-                            <Dropdown overlay={deliveryAndReturns} trigger={['click']} overlayStyle={{
-                                width: "300px",
-                            }} >
-                                <a onClick={e => e.preventDefault()}>
-                                    <Space>
-                                        Delivery and returns
                                         <DownOutlined />
                                     </Space>
                                 </a>
@@ -330,49 +298,47 @@ export default function DetailProductPage() {
                             />
                         </Col>
                     </Row>
-                    <Row gutter={[8, 8]} style={{
+                    <Row gutter={[0, 0]} style={{
                         marginTop: "10px",
                     }}>
-                        <Col span={4}>
-                            <div style={{
-                                width: "40px",
-                                height: "40px",
-                                borderStyle: "groove",
-                                textAlign: "center center",
-                                backgroundColor: "#eaeaea",
-                            }}>
-                                S
-                            </div>
-                            {/* <Dropdown overlay={size}>
-                                <Button>
-                                    <Space>
-                                        Size
-                                        <DownOutlined />
-                                    </Space>
-                                </Button>
-                            </Dropdown> */}
+                        <Col span={4} style={{
+                            width: "40px",
+                            height: "40px",
+                            borderStyle: "solid",
+                            borderWidth: "1px",
+                            borderRadius: "3px",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            marginRight: "5px"
+                        }}>
+                            S
                         </Col>
-                        <Col span={4}>
-                            <div style={{
-                                width: "40px",
-                                height: "40px",
-                                borderStyle: "groove",
-                                textAlign: "center center",
-                                backgroundColor: "#eaeaea",
-                            }}>
-                                M
-                            </div>
+                        <Col span={4} style={{
+                            width: "40px",
+                            height: "40px",
+                            borderStyle: "solid",
+                            borderWidth: "1px",
+                            borderRadius: "3px",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            marginRight: "5px"
+                        }}>
+                            M
                         </Col>
-                        <Col span={4}>
-                            <div style={{
-                                width: "40px",
-                                height: "40px",
-                                borderStyle: "groove",
-                                textAlign: "center center",
-                                backgroundColor: "#eaeaea",
-                            }}>
-                                L
-                            </div>
+                        <Col span={4} style={{
+                            width: "40px",
+                            height: "40px",
+                            borderStyle: "solid",
+                            borderWidth: "1px",
+                            borderRadius: "3px",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            marginRight: "5px"
+                        }}>
+                            L
                         </Col>
                     </Row>
                 </Col>
