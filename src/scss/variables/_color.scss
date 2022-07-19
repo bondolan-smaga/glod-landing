@@ -1,0 +1,90 @@
+$white: #ffffff;
+$pd-color-light-gray: #f2f5f7;
+$pd-color-gray: #cccccc;
+$pd-color-dark-gray: #777777;
+$pd-color-darker-gray: #414040;
+$pd-color-darker-gray-70: rgba(65, 64, 64, 0.7);
+$pd-color-darker-gray-60: rgba(65, 64, 64, 0.6);
+$pd-color-darker-gray-50: rgba(65, 64, 64, 0.4);
+$pd-color-darker-gray-40: rgba(65, 64, 64, 0.4);
+$pd-color-darker-gray-20: rgba(65, 64, 64, 0.2);
+$pd-color-darker-gray-10: rgba(65, 64, 64, 0.1);
+$pd-color-black: #18191f;
+$pd-color-red: #ff0000;
+$pd-color-cerulean-blue: #2154a8;
+$pd-color-cyan-blue: #334756;
+
+// color theme
+$primary-color: $white;
+$secondary-color: lighten($primary-color, 20);
+$button-color: $pd-color-cerulean-blue;
+
+$gld-blue-primary: #2154a8;
+$gld-blue-secondary: #0596df;
+$gld-blue-background: #f6fafa;
+$gld-blue-background-uploader: #f5f5ff;
+$gld-blue-withdraw: #eaf6f5;
+$gld-blue-text-deco: #e8edf6;
+$gld-blue-footer: #f7fbfd;
+$gld-blue-chat-background: #f3f4f6;
+$gld-blue-chat-button: #c4cee1;
+$gld-blue-chat-system: #e3f4fa;
+$gld-blue-52: rgba(211, 221, 238, 0.52);
+$gld-blue-primary-20: rgba(33, 84, 168, 0.2);
+$gld-soft-blue: #667580;
+$gld-grey-blue: #334756;
+$gld-grey-border: #cfcfcf;
+$gld-grey: #c4c4c4;
+$gld-grey-shadow: #c4c4c414;
+$gld-grey-search: #9fa6b0;
+$gld-grey-background: #fcfcfc;
+$gld-grey-uploader-background: #f2f2f2;
+$gld-grey-result: #787878;
+$gld-dark-blue: #163870;
+$gld-darkest-blue: #102a54;
+$gld-white-20: rgba(255, 255, 255, 0.1);
+$gld-blue-cta: #071122;
+$gld-gray-text: #474a57;
+$gld-gray-upload: #efefef;
+$gld-black-icon-uploader: #112a54;
+$gld-orange: #ffb019;
+$gld-yellow-fw: #f4a512;
+$gld-blue-fw-soft: #ebf6f6;
+$gld-blue-fw: #216bff;
+$gld-yellow-fw-text: #bc7a00;
+$gld-yellow-fw-border: #e0c432;
+$gld-blue-fw-border: #10249f;
+$gld-gray-badge: $gld-grey;
+$gld-red-badge: #ff5252;
+$gld-blue-border: #b5c6e2;
+$gld-black-shadow: #0000001a;
+$gld-gray: #a7a7a7;
+$gld-pink: #f14949;
+$gld-dark-pink: #e03939;
+$gld-light-pink: #ee7261;
+$gld-pink-12: #f149491f;
+$gld-pink-25: #f1494940;
+$gld-pink-30: #f149494d;
+$gld-pink-40: #f1494966;
+
+$gld-toast-red-background: #ffe7e7;
+$gld-toast-red: #ee362b;
+
+$gld-toast-red-transaction: #d24567;
+
+$gld-toast-green-background: #dcf8e7;
+$gld-toast-green: #5ca52d;
+$gld-green-badge: #00ce46;
+
+$gld-toast-yellow-background: #fff7df;
+$gld-toast-yellow: #d99f00;
+
+$gld-toast-blue-background: #e4eeff;
+$gld-toast-blue: $gld-blue-primary;
+
+$gld-orange: #feb51b;
+$gld-yellow: #ffb019;
+
+$gld-blue-sender: #0084fc;
+$gld-blue-transaction: #00b2ff;
+$gld-blue-bg-sold: #c5d3e8;

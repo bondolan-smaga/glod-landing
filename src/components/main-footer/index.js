@@ -14,14 +14,16 @@ export default function MainFooter() {
   return (
     <Row>
       <Col xs={{ span: 12 }} xl={{ span: 12 }}>
-        <Footer
+        <img src="" alt="failed load image">
+        </img>
+        <Title
           style={{
             width: "200px",
             textAlign: "center",
           }}
         >
           Ant Design ©2018 Created by Ant UED
-        </Footer>
+        </Title>
       </Col>
       <Col>
         <Title level={3}>Social</Title>
