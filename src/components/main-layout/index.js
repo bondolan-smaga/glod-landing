@@ -19,7 +19,7 @@ export default function MainLayout({ children, meta, ...props }) {
       <Content style={{ backgroundColor: "#ffffff", padding: "0 15px" }}>
         {children}
       </Content>
-      <Footer style={{ padding: "0" }}>
+      <Footer style={{ padding: "0",height:'40px' }}>
         <MainFooter />
       </Footer>
     </Layout>
