@@ -1,0 +1,12 @@
+@media screen and (max-width:425px) {
+    #logofooter{
+        margin-top: 10px;
+    }
+
+    #copyright{
+        font-size: smaller;
+        text-align:left ;
+
+    }
+
+} 
