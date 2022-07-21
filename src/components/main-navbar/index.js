@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Dropdown, Row, Col, Input, Button, Menu, Typography, Badge } from "antd";
 import { SearchOutlined, HeartOutlined,MenuOutlined } from "@ant-design/icons";
+import logoNavbar from "../../assets/GLOD WEB/LOGO GLOD LATN W.jpg"
 
 const { Title } = Typography;
 
@@ -47,12 +48,12 @@ export default function TryResponsive() {
 
   return (
     <Row id="responsive-nav">
-      <Col lg={{span:4}} xl={{span:4}} id="logo">
-        <Link to="/">
+      <Col xs={{span:6}} xl={{span:4}} id="logo" style={{left:'2.5%'}}>
+        <Link to="/" >
           <img id="gambarlogo"
-            src="https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dwfdab3d01/homepage/logo.svg"
-            style={{ height: "25px" }}
-            alt="hummel"
+            src={logoNavbar}
+            style={{ width:'75px', height: "64px"}}
+            alt="GLOD"
           />
         </Link>
       </Col>
@@ -73,7 +74,7 @@ export default function TryResponsive() {
           </Col>
         </Row>
       </Col>
-      <Col xs={{span:8}} lg={{span:6}} xl={{span:8}}>
+      <Col xs={{span:15}} lg={{span:6}} xl={{span:8}}>
         <Row>
           <Col
             span={16}
