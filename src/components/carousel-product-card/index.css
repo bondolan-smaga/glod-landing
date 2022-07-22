@@ -1,13 +1,3 @@
-@media screen and (min-width:1440px) {
-    #prev-btn {
-        display: block;
-    }
-
-    #next-btn {
-        display: block;
-    }
-}
-
 @media screen and (max-width:425px) {
     .ant-col .ant-col-24 {
         margin:0px 0px ;
