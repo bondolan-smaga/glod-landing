@@ -14,15 +14,14 @@ export default function MainLayout({ children, meta, ...props }) {
         <meta name="title" content={title} />
       </Helmet>
       <Header style={{ padding: "0 15px", backgroundColor: "#ffffff" }}>
-        <MainNavbar/>
+        <MainNavbar />
       </Header>
       <Content style={{ backgroundColor: "#ffffff", padding: "0 15px" }}>
         {children}
       </Content>
-      <Footer style={{ padding: "0",height:'40px', marginTop:'10px' }}>
+      <Footer style={{ padding: "0", height: "40px", marginTop: "10px" }}>
         <MainFooter />
       </Footer>
     </Layout>
   );
 }
-

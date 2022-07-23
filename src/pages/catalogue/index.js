@@ -33,8 +33,8 @@ export default function CataloguePage() {
                     <ProductCard />
                 </Col>
             </Row>
-            <Row span={24} justify='center'>
-                <Col>
+            <Row>
+                <Col  xs={{span:24}} xl={{span:24}}>
                     <TrendingFooter/>
                     <Newslettersignup/>                
                 </Col>

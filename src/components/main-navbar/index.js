@@ -2,18 +2,17 @@ import "./index.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Dropdown, Row, Col, Input, Button, Menu, Typography, Badge } from "antd";
-import { SearchOutlined, HeartOutlined,MenuOutlined } from "@ant-design/icons";
-import logoNavbar from "../../assets/GLOD WEB/LOGO GLOD LATN W.jpg"
+import { SearchOutlined, HeartOutlined, MenuOutlined } from "@ant-design/icons";
+import logoNavbar from "../../assets/GLOD WEB/LOGO GLOD TXT W.jpg"
 
 const { Title } = Typography;
-
 const drop = (
-  <Menu style={{top:'1.3rem'}}
+  <Menu style={{ top: '1.3rem' }}
     items={[
       {
         key: "1",
         label: (
-          <Link to={"/"}>
+          <Link to={"/catalogue"}>
             <Title level={5}>Jersey</Title>
           </Link>
         ),
@@ -21,7 +20,7 @@ const drop = (
       {
         key: "2",
         label: (
-          <Link to={"/"}>
+          <Link to={"/ctalogue"}>
             <Title level={5}>Accessories</Title>
           </Link>
         ),
@@ -30,7 +29,7 @@ const drop = (
   />
 );
 
-export default function TryResponsive() {
+export default function MainNavbar() {
   const [count] = useState(0);
   // const increase = () => {
   //   setCount(count + 1);
@@ -48,11 +47,11 @@ export default function TryResponsive() {
 
   return (
     <Row id="responsive-nav">
-      <Col xs={{span:6}} xl={{span:4}} id="logo" style={{left:'2.5%'}}>
+      <Col xs={{ span: 6 }} xl={{ span: 4 }} id="logo">
         <Link to="/" >
           <img id="gambarlogo"
             src={logoNavbar}
-            style={{ width:'75px', height: "64px"}}
+            style={{ width: '150px', height: "64px" }}
             alt="GLOD"
           />
         </Link>
@@ -60,12 +59,12 @@ export default function TryResponsive() {
       <Col span={12} id="menu">
         <Row>
           <Col span={3}>
-            <Dropdown overlay={drop} placement="bottom" overlayStyle={{top:'30px'}}>
+            <Dropdown overlay={drop} placement="bottom" overlayStyle={{ top: '30px' }}>
               <Link to="/">MEN</Link>
             </Dropdown>
           </Col>
           <Col span={3}>
-            <Dropdown overlay={drop} placement="bottom" overlayStyle={{top:'30px'}}>
+            <Dropdown overlay={drop} placement="bottom" overlayStyle={{ top: '30px' }}>
               <Link to="/">WOMAN</Link>
             </Dropdown>
           </Col>
@@ -74,7 +73,7 @@ export default function TryResponsive() {
           </Col>
         </Row>
       </Col>
-      <Col xs={{span:15}} lg={{span:6}} xl={{span:8}}>
+      <Col xs={{ span: 15 }} lg={{ span: 6 }} xl={{ span: 8 }}>
         <Row>
           <Col
             span={16}
@@ -89,9 +88,9 @@ export default function TryResponsive() {
             span={8}
             style={{ textAlign: "center", borderRight: "1px solid grey" }}
           >
-            <Link to="/favourite">
+            <Link to="/favorite">
               <Button type="text">
-                <Badge count={count} size="small" offset={[3, 0]} showZero color="cyan">
+                <Badge count={count} size="small" offset={[3, 0]} showZero color="black">
                   <HeartOutlined style={{ fontSize: "20px", color: "grey" }} />
                 </Badge>
               </Button>
@@ -100,7 +99,7 @@ export default function TryResponsive() {
         </Row>
       </Col>
       <Col span={3} id="side-menu" >
-        <Button style={{border:'none',height:'100%'}}>
+        <Button style={{ border: 'none', height: '100%' }}>
           <MenuOutlined />
         </Button>
       </Col>

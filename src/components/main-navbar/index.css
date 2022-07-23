@@ -10,81 +10,86 @@
 
 @media screen and (min-width:1440px) {
   #side-menu {
-    display: none;
+    display: none !important;
   }
-    
-  #menu{
+
+  #menu {
     display: block;
   }
 
-  #gambarlogo{
-    width: 100px;
-    height: 80px;
-}
-  
+  #gambarlogo {
+    width: 80%;
+    height: 80%;
+  }
+
 }
 
 @media screen and (max-width:425px) {
+  #gambarlogo {
+    width: 80px !important;
+    height: 50px !important;
+  }
+
   .ant-row {
-      width: 100%;
-      left: 10%;
-      display: flex;
-      justify-content: right;
+    width: 100%;
+    left: 10%;
+    display: flex;
+    justify-content: right;
   }
 
   .ant-col .ant-col-4 {
-      width: 15%;
-      max-height: 45px;
-      display: inline-block
+    width: 15%;
+    max-height: 45px;
+    display: inline-block
   }
 
   #gambarlogo {
-      width: 50%;
-      height: 35px;
+    width: 50%;
+    height: 35px;
   }
 
   .ant-col .ant-col-12 {
-      display: flex;
-      margin-right: auto;
+    display: flex;
+    margin-right: auto;
   }
 
   .ant-col .ant-col-3 {
-      font-size: smaller;
-      margin-left: 15px;
-      left: 10%;
+    font-size: smaller;
+    margin-left: 15px;
+    left: 10%;
   }
 
   .ant-col .ant-col-18 {
-      font-size: smaller;
-      margin-left: 5px;
+    font-size: smaller;
+    margin-left: 5px;
   }
 
   #about {
-      font-size: smaller;
-      margin-left: 5px;
-      left: 25%;
+    font-size: smaller;
+    margin-left: 5px;
+    left: 25%;
   }
-  
+
   .ant-btn.ant-btn-text {
-      width:30px;
-      right: 14%;
+    width: 30px;
+    right: 14%;
   }
 
   #search-fav {
     display: inline-block;
   }
-  
+
   #responsive-nav {
     height: 80%;
   }
 
   #menu {
-      display: none;
+    display: none;
   }
 
   #side-menu {
-      display: block;
-      left:1%;
-      border: none;
+    display: block;
+    left: 1%;
+    border: none;
   }
 }
