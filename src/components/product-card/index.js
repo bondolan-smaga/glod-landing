@@ -2,7 +2,7 @@ import { useState } from "react";
 import {Card, Row,Button} from "antd";
 import { HeartOutlined } from '@ant-design/icons';
 
-export default function ProductCard() {
+export default function ProductCard(props) {
   const [count, setCount] = useState(0)
   const increase = () => {
     setCount(count + 1)
@@ -45,7 +45,7 @@ export default function ProductCard() {
                 </Button>
                 <img
                   alt="img not found"
-                  src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dweb8efc1e/images/model/216641-2001_A.png?sw=350&sh=465&q=70"
+                  src={props.image}
                 />
               </div>
             </Row>
@@ -64,7 +64,7 @@ export default function ProductCard() {
                   fontWeight: "700",
                 }}
               >
-                HMLOSCAR TAPERED PANTS
+                {props.product}
               </p>
             </div>
             <div
@@ -84,7 +84,7 @@ export default function ProductCard() {
                   textDecoration: "line-through",
                 }}
               >
-                39,95 €
+                {props.price}
               </p>
               <p
                 id="discount price"
@@ -96,7 +96,7 @@ export default function ProductCard() {
                   fontWeight: "700",
                 }}
               >
-                19,97 €
+                Rp {props.price - (50/100* (props.price))}
               </p>
             </div>
             <div id="product color">
@@ -108,7 +108,7 @@ export default function ProductCard() {
                   fontWeight: "700",
                 }}
               >
-                3 Colors
+                Warna Tersedia: {props.colors}
               </p>
             </div>
           </div>

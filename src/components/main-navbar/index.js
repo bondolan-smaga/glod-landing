@@ -13,7 +13,7 @@ const drop = (
       {
         key: "1",
         label: (
-          <Link to={"/"}>
+          <Link to={"/catalogue"}>
             <Title level={5}>Jersey</Title>
           </Link>
         ),
@@ -21,7 +21,7 @@ const drop = (
       {
         key: "2",
         label: (
-          <Link to={"/"}>
+          <Link to={"/catalogue"}>
             <Title level={5}>Accessories</Title>
           </Link>
         ),
