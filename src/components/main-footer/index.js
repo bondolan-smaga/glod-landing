@@ -18,7 +18,7 @@ export default function MainFooter() {
     <Row style={{ backgroundColor: "black", color: 'white' }}>
       <Col id="logofooter" xs={{ span: 12 }} xl={{ span: 8 }} style={{textAlign:'center'}}>
         <img src={logoFooter1} alt="" style={{width:'50px', height:'50px'}}/>
-        <img src={logoFooter2} alt="" style={{width:'50px', height:'50px'}}/>
+        {/* <img src={logoFooter2} alt="" style={{width:'50px', height:'50px'}}/> */}
       </Col>
       <Col xs={{ span: 12 }} xl={{ span: 8 }} style={{textAlign:'center'}}>
         <Title id="copyright" level={5} style={{ color: "white",padding:'10px 0px',fontSize:'15px' }}>
@@ -27,7 +27,6 @@ export default function MainFooter() {
       </Col>
       <Col id="social" xs={{ span: 24 }} xl={{ span: 8 }} style={{textAlign:'center'}} >
         <Row  style={{ fontSize: "30px", color: "white" }} justify="center">
-          <Title level={5} style={{ color: "white",padding:'10px 0px' }}>Social</Title>
             <Link to="/">
               <FacebookOutlined style={{ margin: ' 0px 20px', color: "white",fontSize:'25px' }} />
             </Link>
