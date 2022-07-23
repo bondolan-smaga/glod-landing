@@ -3,10 +3,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Dropdown, Row, Col, Input, Button, Menu, Typography, Badge } from "antd";
 import { SearchOutlined, HeartOutlined,MenuOutlined } from "@ant-design/icons";
-import logoNavbar from "../../assets/GLOD WEB/LOGO GLOD LATN W.jpg"
+import logoNavbar from "../../assets/GLOD WEB/LOGO GLOD TXT W.jpg"
 
 const { Title } = Typography;
-
 const drop = (
   <Menu style={{top:'1.3rem'}}
     items={[
@@ -30,7 +29,7 @@ const drop = (
   />
 );
 
-export default function TryResponsive() {
+export default function MainNavbar() {
   const [count] = useState(0);
   // const increase = () => {
   //   setCount(count + 1);
@@ -48,11 +47,11 @@ export default function TryResponsive() {
 
   return (
     <Row id="responsive-nav">
-      <Col xs={{span:6}} xl={{span:4}} id="logo" style={{left:'2.5%'}}>
+      <Col xs={{span:6}} xl={{span:4}} id="logo">
         <Link to="/" >
           <img id="gambarlogo"
             src={logoNavbar}
-            style={{ width:'75px', height: "64px"}}
+            style={{ width:'150px', height: "64px"}}
             alt="GLOD"
           />
         </Link>
@@ -91,7 +90,7 @@ export default function TryResponsive() {
           >
             <Link to="/favourite">
               <Button type="text">
-                <Badge count={count} size="small" offset={[3, 0]} showZero color="cyan">
+                <Badge count={count} size="small" offset={[3, 0]} showZero color="black">
                   <HeartOutlined style={{ fontSize: "20px", color: "grey" }} />
                 </Badge>
               </Button>
