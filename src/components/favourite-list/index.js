@@ -1,108 +1,45 @@
 import { Col, Row, Typography, Button, Image } from "antd";
 import CarouselProductCard from "../carousel-product-card";
 import { Link } from "react-router-dom";
-const { Title, Paragraph } = Typography;
+import "./index.css";
+const { Title, Paragraph } = Typography
 
 export default function FavouriteList() {
   return (
-    <>
+    <Row id="product-row">
       <Col
         span={24}
-        style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}
+        style={{ display: "flex", justifyContent: "center", marginTop: "3.125em" }}
       >
-        <Col span={16}>
+        <Col span={20}>
           <Title
             style={{
               marginBottom: 0,
               fontWeight: "bolder",
               textAlign: "center",
-              fontFamily:'Edu VIC WA NT Beginner', 
-              fontSize:'larger'
+              fontFamily: 'Gibson-SemiBold, sans-serif',
             }}
             level={2}
           >
             MY FAVORITES
           </Title>
-          <Paragraph style={{fontFamily:'Edu VIC WA NT Beginner', fontSize:'larger'}}>
-            My Favourites is a great way to keep track of your personal
-            must-haves and their availability. And, most importantly, it just
-            takes one click to move an item from the list and into your shopping
-            cart.
-          </Paragraph>
-          <Row style={{ marginTop: "80px",fontFamily:'Edu VIC WA NT Beginner', fontSize:'larger'}}>
-            <Paragraph style={{ marginRight: "auto" }}>
-              YOU HAVE 2 PRODUCTS UNDER MY FAVOURITE
-            </Paragraph>
-            <Button
-              hoverable
-              id="save_btn"
-              style={{
-                marginRight: "5px",
-                bottom: "11px",
-                backgroundColor: "white",
-                color: "black",
-              }}
-            >
-              LOGIN AND SAVE
-            </Button>
-          </Row>
-          <Row
-            style={{
-              borderTop: "1pt solid grey",
-              borderBottom: "1pt solid grey",
-            }}
-          >
-            <Image
-              style={{ margin: "30px 0px" }}
-              src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dwce12e8d3/images/packshot/212573-7165.png?sw=150&sh=150&q=70"
-            ></Image>
-            <Col
-              style={{
-                marginTop: "35px",
-                marginLeft: "20px",
-                height: "130px",
-                marginRight: "auto",
-              }}
-            >
-              <h3>Nama barang</h3>
-              <h3 style={{ marginBottom: "60px" }}>COLOR : LIGHTGREY</h3>
-              <Link to="/" style={{ textDecoration: "underline" }}>Remove</Link>
+          <Row style={{ marginTop: "5em", fontFamily: 'Gibson-SemiBold, sans-serif' }}>
+            <Col span={8}>
+              <Paragraph style={{ marginRight: "auto" }}>
+                YOU HAVE 2 PRODUCTS UNDER MY FAVOURITE
+              </Paragraph>
             </Col>
-            <Col style={{ marginTop: "35px", textAlign: "right" }}>
-              <p
-                id="discount price"
-                style={{
-                  color: "#c00",
-                  fontFamily: "Gibson-SemiBold, sans-serif",
-                  letterSpacing: "0",
-                  fontSize: "12px",
-                  fontWeight: "700",
-                }}
-              >
-                19,97 €
-              </p>
-              <p
-                style={{
-                  color: "#000",
-                  letterSpacing: "0",
-                  fontSize: "12px",
-                  fontFamily: "Gibson-Regular,sans-serif",
-                  textDecoration: "line-through",
-                  marginBottom: "60px",
-                }}
-              >
-                39,95 €
-              </p>
+            <Col span={16}>
               <Button
-                id="size_btn"
+                id="save_btn"
                 style={{
-                  backgroundColor: "black",
-                  color: "white",
-                  width: "150px",
-                  height: "45px",
+                  marginRight: "0.3em",
+                  bottom: "0.6em",
+                  backgroundColor: "white",
+                  color: "black",
                 }}
               >
-                CHOOSE SIZE
+                LOGIN AND SAVE
               </Button>
             </Col>
           </Row>
@@ -112,30 +49,32 @@ export default function FavouriteList() {
               borderBottom: "1pt solid grey",
             }}
           >
-            <Image
-              style={{ margin: "30px 0px" }}
-              src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dwce12e8d3/images/packshot/212573-7165.png?sw=150&sh=150&q=70"
-            ></Image>
+            <Col>
+              <Image
+                style={{ margin: "1.875em 0em" }}
+                src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dwce12e8d3/images/packshot/212573-7165.png?sw=150&sh=150&q=70"
+              ></Image>
+            </Col>
             <Col
               style={{
-                marginTop: "35px",
-                marginLeft: "20px",
-                height: "130px",
+                marginTop: "2em",
+                marginLeft: "1.25em",
+                height: "8em",
                 marginRight: "auto",
               }}
             >
               <h3>Nama barang</h3>
-              <h3 style={{ marginBottom: "60px" }}>COLOR : LIGHTGREY</h3>
+              <h3 style={{ marginBottom: "3.75em" }}>COLOR : LIGHTGREY</h3>
               <Link to="/" style={{ textDecoration: "underline" }}>Remove</Link>
             </Col>
-            <Col style={{ marginTop: "35px", textAlign: "right" }}>
+            <Col style={{ marginTop: "2.1875em", textAlign: "right" }}>
               <p
                 id="discount price"
                 style={{
                   color: "#c00",
                   fontFamily: "Gibson-SemiBold, sans-serif",
                   letterSpacing: "0",
-                  fontSize: "12px",
+                  fontSize: "0.75rem",
                   fontWeight: "700",
                 }}
               >
@@ -145,10 +84,10 @@ export default function FavouriteList() {
                 style={{
                   color: "#000",
                   letterSpacing: "0",
-                  fontSize: "12px",
+                  fontSize: "0.75rem",
                   fontFamily: "Gibson-Regular,sans-serif",
                   textDecoration: "line-through",
-                  marginBottom: "60px",
+                  marginBottom: "3.75em",
                 }}
               >
                 39,95 €
@@ -158,68 +97,8 @@ export default function FavouriteList() {
                 style={{
                   backgroundColor: "black",
                   color: "white",
-                  width: "150px",
-                  height: "45px",
-                }}
-              >
-                CHOOSE SIZE
-              </Button>
-            </Col>
-          </Row>
-          <Row
-            style={{
-              borderTop: "1pt solid grey",
-              borderBottom: "1pt solid grey",
-            }}
-          >
-            <Image
-              style={{ margin: "30px 0px" }}
-              src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dwce12e8d3/images/packshot/212573-7165.png?sw=150&sh=150&q=70"
-            ></Image>
-            <Col
-              style={{
-                marginTop: "35px",
-                marginLeft: "20px",
-                height: "130px",
-                marginRight: "auto",
-              }}
-            >
-              <h3>Nama barang</h3>
-              <h3 style={{ marginBottom: "60px" }}>COLOR : LIGHTGREY</h3>
-              <Link to="/" style={{ textDecoration: "underline" }}>Remove</Link>
-            </Col>
-            <Col style={{ marginTop: "35px", textAlign: "right" }}>
-              <p
-                id="discount price"
-                style={{
-                  color: "#c00",
-                  fontFamily: "Gibson-SemiBold, sans-serif",
-                  letterSpacing: "0",
-                  fontSize: "12px",
-                  fontWeight: "700",
-                }}
-              >
-                19,97 €
-              </p>
-              <p
-                style={{
-                  color: "#000",
-                  letterSpacing: "0",
-                  fontSize: "12px",
-                  fontFamily: "Gibson-Regular,sans-serif",
-                  textDecoration: "line-through",
-                  marginBottom: "60px",
-                }}
-              >
-                39,95 €
-              </p>
-              <Button
-                id="size_btn"
-                style={{
-                  backgroundColor: "black",
-                  color: "white",
-                  width: "150px",
-                  height: "45px",
+                  width: "9.375em",
+                  height: "2.8em",
                 }}
               >
                 CHOOSE SIZE
@@ -228,7 +107,7 @@ export default function FavouriteList() {
           </Row>
         </Col>
       </Col>
-      <CarouselProductCard style={{margin:'100px 0'}} tag={'YOU MAY ALSO LIKE'} />
-    </>
+      <CarouselProductCard style={{ margin: '6.25em 0' }} tag={'YOU MAY ALSO LIKE'} />
+    </Row>
   );
 }

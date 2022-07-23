@@ -1,4 +1,4 @@
-import { Col, Row} from "antd";
+import { Col, Row } from "antd";
 
 import Banner from "../../components/banner";
 import { CarouselProductCard, MainLayout, Newslettersignup, TrendingFooter } from "../../components";
@@ -48,7 +48,7 @@ export default function HomePage(props) {
       <CarouselProductCard tag={'GET INSPIRED BY THIS STYLE'} />
       <TrendingFooter />
       <Row>
-        <Col xs={{span:24}} xl={{span:24}}>
+        <Col xs={{ span: 24 }} xl={{ span: 24 }}>
           <Newslettersignup />
         </Col>
       </Row>

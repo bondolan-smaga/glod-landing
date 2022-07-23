@@ -6,7 +6,7 @@ import "./index.css"
 export default function FavouritePage() {
   return (
     <MainLayout meta={{ title: 'Favourite || GLOD' }}>
-      <Row span={24}>
+      <Row>
         <Col>
           <FavouriteLIst />
         </Col>
