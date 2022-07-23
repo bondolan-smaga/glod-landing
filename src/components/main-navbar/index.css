@@ -16,6 +16,11 @@
   #menu{
     display: block;
   }
+
+  #gambarlogo{
+    width: 100px;
+    height: 80px;
+}
   
 }
 
@@ -62,7 +67,7 @@
   
   .ant-btn.ant-btn-text {
       width:30px;
-      right: 23%;
+      right: 14%;
   }
 
   #search-fav {

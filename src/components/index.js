@@ -1,7 +1,7 @@
 import Banner from "./banner";
 import Breadcrumbs from "./breadcrumbs";
 import CarouselProductCard from "./carousel-product-card";
-import FavouriteList from "./favourite-list";
+import FavoriteList from "./favorite-list";
 import MainFooter from "./main-footer";
 import MainLayout from "./main-layout";
 import MainNavbar from "./main-navbar";
@@ -14,7 +14,7 @@ export {
   Banner,
   Breadcrumbs,
   CarouselProductCard,
-  FavouriteList,
+  FavoriteList,
   MainFooter,
   MainLayout,
   MainNavbar,

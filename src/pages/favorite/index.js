@@ -1,14 +1,14 @@
 import { Row, Col } from "antd";
 import { MainLayout } from "../../components";
-import FavouriteLIst from "../../components/favourite-list";
+import FavoriteLIst from "../../components/favorite-list";
 import "./index.css"
 
-export default function FavouritePage() {
+export default function FavoritePage() {
   return (
-    <MainLayout meta={{ title: 'Favourite || GLOD' }}>
+    <MainLayout meta={{ title: 'Favorite || GLOD' }}>
       <Row>
         <Col>
-          <FavouriteLIst />
+          <FavoriteLIst />
         </Col>
       </Row>
     </MainLayout>
