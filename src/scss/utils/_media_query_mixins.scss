@@ -1,4 +1,4 @@
-@import 'scss/variables/index';
+@import '../variables';
 
 @mixin for-mobile-up {
   @media (min-width: $phone) {

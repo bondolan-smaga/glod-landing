@@ -1,8 +1,11 @@
 import { Image, Row, Col, Typography, Button, Carousel, List } from "antd";
-import { DoubleRightOutlined, DoubleLeftOutlined } from "@ant-design/icons";
-import { MainLayout } from "../../components";
+import {
+  MainLayout,
+  CarouselProductCard,
+  TrendingFooter,
+} from "../../components";
 
-const { Title, Paragraph } = Typography;
+const { Title, Paragraph, Text } = Typography;
 
 const data = ["New in", "Sustainability", "Sportswear", "Sneakers"];
 const contentStyle = {
@@ -21,185 +24,79 @@ export default function AboutPage() {
   return (
     <MainLayout>
       {/* main content */}
-      <Row>
-        {/* banner */}
-        <Col
-          style={{
-            margin: "30px 0",
-          }}
-          span={24}
-        >
-          <Image
-            width="100%"
-            src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dw50f4ac1a/Company Karma/1480c650_Karma_Videoposter.jpg"
-          />
+      {/* about us */}
+      <Row style={{ maxWidth: "1000px", margin: "auto auto" }} justify="center">
+        <Col span={24}>
+          <Title className="gld-align-center" level={2}>
+            About Us
+          </Title>
+          <Title className="gld-align-center" level={5}>
+            Glod Sportwear adalah penyedia pakaian olah raga yang berada di Kota
+            Solo - Jawa Tengah
+          </Title>
+          <Title className="gld-align-center" level={5}>
+            Tim desain Glod sangat memperhatikan pola patrun baju yang nyaman
+            enak dipakai dan konsep desain artwork Jersey printing yang sangat
+            detail dan keren.
+          </Title>
         </Col>
-        {/* ceo */}
-        <Col
-          style={{
-            marginBottom: "16px",
-          }}
-          span={24}
-        >
-          <Row>
-            <Col span={12}>
-              <Image
-                width="100%"
-                src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dw5fe0f700/Company Karma/KARMA_Landingpage_575x600_Allan_4.jpg"
-              />
+        {/* images */}
+        <Row gutter={[12, 12]}>
+          <Col span={8}>
+            <Image src="https://lh3.googleusercontent.com/p/AF1QipM4np4MHlmVOYqp7nxYbr1EnbDabXks1fx48IX4=w768-h768-n-o-v1" />
+          </Col>
+          <Col span={8}>
+            <Image src="https://lh3.googleusercontent.com/p/AF1QipMd_41KkMJPNTM_0t7jxHItVoEZSaN2n3UTATp-=w768-h768-n-o-v1" />
+          </Col>
+          <Col span={8}>
+            <Image src="https://lh3.googleusercontent.com/p/AF1QipNE7xWOoJP_5R1PEBIv2xJ6vsDd574Ccwmw7ah8=w960-h960-n-o-v1" />
+          </Col>
+          <Col span={8}>
+            <Image src="https://lh3.googleusercontent.com/p/AF1QipP1dH9ygUID5p78R-ZoHGqql8YTEspW6U09lsSh=w768-h768-n-o-v1" />
+          </Col>
+          <Col span={8}>
+            <Image src="https://lh3.googleusercontent.com/p/AF1QipNc8NjP7msJvLJE0C3MAMPy1WmUm2HaNTZ3rMYx=w960-h960-n-o-v1" />
+          </Col>
+          <Col span={8}>
+            <Image src="https://lh3.googleusercontent.com/p/AF1QipNU6ZA9a31CAcgUaDb8yI6a_ehaTfGjoh-EDRK7=w960-h960-n-o-v1" />
+          </Col>
+          <Col span={8}>
+            <Image src="https://lh3.googleusercontent.com/p/AF1QipPYV7af5f2H1UtS5s14WBAA7WBvdZzyJONIPp7b=w960-h960-n-o-v1" />
+          </Col>
+          <Col span={8}>
+            <Image src="https://lh3.googleusercontent.com/p/AF1QipNNG94U9MUOSS9MYXH5T5knxjdfj4yaa0R7_Hah=w960-h960-n-o-v1" />
+          </Col>
+          <Col span={8}>
+            <Image src="https://lh3.googleusercontent.com/p/AF1QipMpcAuQdpg0HYYOJePbCLp7VBQjQwvTZbUf0-B2=w960-h960-n-o-v1" />
+          </Col>
+        </Row>
+        <Col span={24}>
+          <Title className="gld-align-center" level={2}>
+            History
+          </Title>
+          <Row gutter={[28, 0]}>
+            <Col xs={24} sm={12}>
+              <Title className="gld-align-justify" level={5}>
+                Dari tahun 2016 Glod sudah banyak memproduksi Jersey Custom dari
+                berbagai jenis Jersey / pakaian olah raga, mulai dari jersey
+                futsal, jersey sepakbola, jersey volley, jersey basket, jersey
+                sepeda MTB bahkan jersey Roadbike.
+              </Title>
             </Col>
-            <Col span={12}>
-              <Row style={{ height: "100%" }} justify="center" align="middle">
-                <Col
-                  style={{
-                    textAlign: "center",
-                    padding: "60px",
-                  }}
-                  span={24}
-                >
-                  <Title level={4}>
-                    <em>
-                      “As a company, we believe in acting responsibly. For
-                      hummel®, Company Karma means that you get what you give.
-                      We are committed to do business while doing more good in
-                      the world. It’s our mission.
-                    </em>
-                  </Title>
-                  <Title level={4}>
-                    <em>
-                      Through People, Planet and Purpose we seek to grow and act
-                      sustainably – with the aim to drive change and pave the
-                      way for a better tomorrow. For our planet, as well as for
-                      our people.”
-                    </em>
-                  </Title>
-                  <Paragraph>- Allan Vad Nielsen, CEO hummel®.</Paragraph>
-                </Col>
-              </Row>
+            <Col xs={24} sm={12}>
+              <Title className="gld-align-justify" level={5}>
+                Glod sudah banyak di percaya menjalin kerja sama dengan Club
+                futsal / Sepakbola dan Komunitas sepeda yang sudah terkenal
+              </Title>
             </Col>
           </Row>
-        </Col>
-        {/* navigation */}
-        <Col
-          style={{
-            marginBottom: "50px",
-          }}
-          span={24}
-        >
-          <Row gutter={[32, 0]}>
-            <Col span={6}>
-              <Image
-                style={{
-                  width: "100%",
-                }}
-                src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dwa1d4e23b/Company%20Karma/KARMA_Landingpage_700x700_People_1.jpg"
-              />
-            </Col>
-            <Col span={6}>
-              <Image
-                style={{
-                  width: "100%",
-                }}
-                src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dwadbc8695/Company%20Karma/KARMA_Landingpage_700x700_Planet_1.jpg"
-              />
-            </Col>
-            <Col span={6}>
-              <Image
-                style={{
-                  width: "100%",
-                }}
-                src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dw55c4629a/Company%20Karma/KARMA_Landingpage_700x700_Purpose_1.jpg"
-              />
-            </Col>
-            <Col span={6}>
-              <Image
-                style={{
-                  width: "100%",
-                }}
-                src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dwdf0fdd43/Company%20Karma/KARMA_Landingpage_700x700_Materials_2.jpg"
-              />
-            </Col>
-          </Row>
-        </Col>
-        {/* company karma */}
-        <Col
-          style={{
-            textAlign: "center",
-            marginBottom: "50px",
-          }}
-          span={24}
-        >
-          <Title level={1}>WHAT IS COMPANY KARMA?</Title>
-          <Paragraph>
-            We seek to grow sustainably and have done so for more than 20 years.
-            Through our PURPOSE projects, we want to make a true impact by
-            initiating change and supporting others to do the same. Challenging
-            conventions. Fighting for empowerment and inclusivity, while
-            celebrating the game. Changing perspectives. We’re known for being a
-            bit ballsy, stepping outside the lines, and providing the playing
-            field needed to create understanding, respect, and unity.
-          </Paragraph>
-          <Paragraph>
-            We have an equal urge to work just as passionately with PLANET by
-            reducing our footprint and with our PEOPLE by making sure that
-            everyone working for or at hummel® is treated with respect.
-            Ultimately, our Company Karma Strategy and our 3 P's are a long-term
-            commitment to do better.
-          </Paragraph>
-          <Paragraph>Let's Play For Change.</Paragraph>
-        </Col>
-        {/* banner */}
-        <Col
-          style={{
-            marginBottom: "50px",
-          }}
-          span={24}
-        >
-          <Image
-            width="100%"
-            src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dw50f4ac1a/Company Karma/1480c650_Karma_Videoposter.jpg"
-          />
         </Col>
       </Row>
       {/* recommendation */}
-      <Row>
-        <Col span={24}>
-          <Row>
-            <Title
-              style={{
-                textTransform: "uppercase",
-                display: "inline-block",
-                marginRight: "auto",
-              }}
-              level={3}
-            >
-              Get inspired by these styles
-            </Title>
-            <div>
-              <Button icon={<DoubleLeftOutlined />}></Button>
-              <Button icon={<DoubleRightOutlined />}></Button>
-            </div>
-          </Row>
-        </Col>
-        <Col span={24}>
-          <Carousel afterChange={onChange}>
-            <div>
-              <h3 style={contentStyle}>1</h3>
-            </div>
-            <div>
-              <h3 style={contentStyle}>2</h3>
-            </div>
-            <div>
-              <h3 style={contentStyle}>3</h3>
-            </div>
-            <div>
-              <h3 style={contentStyle}>4</h3>
-            </div>
-          </Carousel>
-        </Col>
-      </Row>
+      <CarouselProductCard tag={"GET INSPIRED BY THIS STYLE"} />
       {/* tranding */}
-      <Row
+      <TrendingFooter />
+      {/* <Row
         style={{
           margin: "100px 235px",
         }}
@@ -254,7 +151,7 @@ export default function AboutPage() {
             </Col>
           </Row>
         </Col>
-      </Row>
+      </Row> */}
     </MainLayout>
   );
 }
