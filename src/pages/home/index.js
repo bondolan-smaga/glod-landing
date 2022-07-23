@@ -3,7 +3,7 @@ import { Col, Row} from "antd";
 import Banner from "../../components/banner";
 import { CarouselProductCard, MainLayout, Newslettersignup, TrendingFooter } from "../../components";
 
-export default function HomePage(props) {
+export default function HomePage() {
   return (
     <MainLayout meta={{ title: "Homepage | GLOD" }}>
       {/* MAIN CONTENTS */}
@@ -15,7 +15,7 @@ export default function HomePage(props) {
         <Col span={24}>
           <Row>
             <Col span={24}>
-              <CarouselProductCard tag={'BEST OF SALE'} />
+              <CarouselProductCard tag={'BEST OF SALE'} show={4} scroll={4} />
             </Col>
           </Row>
         </Col>
@@ -36,7 +36,7 @@ export default function HomePage(props) {
         <Col span={24}>
           <Row span={24}>
             <Col span={24} style={{ margin: '10px 0' }}>
-              <CarouselProductCard tag={'NEW SEASON FAVOURITES'} />
+              <CarouselProductCard tag={'NEW SEASON FAVOURITES'} show={4} scroll={4}/>
             </Col>
           </Row>
         </Col>
@@ -45,7 +45,7 @@ export default function HomePage(props) {
         </Col>
       </Row>
       {/* recommendation */}
-      <CarouselProductCard tag={'GET INSPIRED BY THIS STYLE'} />
+      <CarouselProductCard tag={'GET INSPIRED BY THIS STYLE'} show={4} scroll={4} />
       <TrendingFooter />
       <Row>
         <Col xs={{span:24}} xl={{span:24}}>
