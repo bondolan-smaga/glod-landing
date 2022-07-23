@@ -46,6 +46,7 @@ export default function HomePage(props) {
       </Row>
       {/* recommendation */}
       <CarouselProductCard tag={'GET INSPIRED BY THIS STYLE'} />
+      {/* trending */}
       <TrendingFooter />
       <Row>
         <Col xs={{span:24}} xl={{span:24}}>
