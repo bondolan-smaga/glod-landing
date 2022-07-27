@@ -1,21 +1,21 @@
 @media screen and (max-width:425px) {
     .ant-col .ant-col-24 {
-        margin:0px 0px ;
+        margin: 0px 0px;
     }
 
-    #carousel-row{
+    #carousel-row {
         margin-top: 20px !important;
     }
 
-    #carousel-tag{
+    #carousel-tag {
         font-size: medium;
     }
 
     #prev-btn {
-        display: none ;
+        display: none;
     }
 
     #next-btn {
-        display: none ;
+        display: none;
     }
 }

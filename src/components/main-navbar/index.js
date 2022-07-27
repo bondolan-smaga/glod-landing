@@ -126,7 +126,7 @@ export default function MainNavbar() {
             span={8}
             style={{ textAlign: "center", borderRight: "1px solid grey" }}
           >
-            <Link to="/favourite">
+            <Link to="/favorite">
               <Button type="text">
                 <Badge count={count} size="small" offset={[3, 0]} showZero color="black">
                   <HeartOutlined style={{ fontSize: "20px", color: "grey" }} />

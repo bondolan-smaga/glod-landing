@@ -57,7 +57,7 @@ export default function CarouselProductCard(props) {
     const slider = useRef()
 
     return (
-        <Row id='carousel-row' style={{marginTop:'60px'}}>
+        <Row id='carousel-row' style={{ marginTop: '60px' }}>
             <Col span={24}>
                 <Row>
                     <Title id='carousel-tag'
