@@ -2,12 +2,12 @@ import "./index.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Dropdown, Row, Col, Input, Button, Menu, Typography, Badge } from "antd";
-import { SearchOutlined, HeartOutlined,MenuOutlined } from "@ant-design/icons";
+import { SearchOutlined, HeartOutlined, MenuOutlined } from "@ant-design/icons";
 import logoNavbar from "../../assets/GLOD WEB/LOGO GLOD TXT W.jpg"
-
 const { Title } = Typography;
+
 const drop = (
-  <Menu style={{top:'1.3rem'}}
+  <Menu style={{ top: '1.3rem' }}
     items={[
       {
         key: "1",
@@ -20,7 +20,7 @@ const drop = (
       {
         key: "2",
         label: (
-          <Link to={"/ctalogue"}>
+          <Link to={"/catalogue"}>
             <Title level={5}>Accessories</Title>
           </Link>
         ),
@@ -29,7 +29,39 @@ const drop = (
   />
 );
 
+const burgerBar = (
+  <Menu style={{ top: '1.3rem' }}
+    items={[
+      {
+        key: "1",
+        label: (
+          <Title level={5}>
+            MEN
+          </Title>
+        ),
+        children: [{
+          label : drop
+        }]
+      },
+      {
+        key: "2",
+        label: (
+          <Title level={5}>
+            WOMEN
+          </Title>
+        ),
+        children: [
+          {
+            label: drop
+          }
+        ]
+      },
+    ]}
+  />
+);
+
 export default function MainNavbar() {
+
   const [count] = useState(0);
   // const increase = () => {
   //   setCount(count + 1);
@@ -45,13 +77,14 @@ export default function MainNavbar() {
   //   setCount(newCount);
   // }
 
+
   return (
     <Row id="responsive-nav">
-      <Col xs={{span:6}} xl={{span:4}} id="logo">
+      <Col xs={{ span: 6 }} xl={{ span: 4 }} id="logo">
         <Link to="/" >
           <img id="gambarlogo"
             src={logoNavbar}
-            style={{ width:'150px', height: "64px"}}
+            style={{ width: '150px', height: "64px" }}
             alt="GLOD"
           />
         </Link>
@@ -59,12 +92,12 @@ export default function MainNavbar() {
       <Col span={12} id="menu">
         <Row>
           <Col span={3}>
-            <Dropdown overlay={drop} placement="bottom" overlayStyle={{top:'30px'}}>
+            <Dropdown overlay={drop} placement="bottom" overlayStyle={{ top: '30px' }} >
               <Link to="/">MEN</Link>
             </Dropdown>
           </Col>
           <Col span={3}>
-            <Dropdown overlay={drop} placement="bottom" overlayStyle={{top:'30px'}}>
+            <Dropdown overlay={drop} placement="bottom" overlayStyle={{ top: '30px' }}>
               <Link to="/">WOMAN</Link>
             </Dropdown>
           </Col>
@@ -73,7 +106,7 @@ export default function MainNavbar() {
           </Col>
         </Row>
       </Col>
-      <Col xs={{span:15}} lg={{span:6}} xl={{span:8}}>
+      <Col xs={{ span: 15 }} lg={{ span: 6 }} xl={{ span: 8 }}>
         <Row>
           <Col
             span={16}
@@ -82,7 +115,12 @@ export default function MainNavbar() {
               borderRight: "1px solid grey",
             }}
           >
-            <Input size="large" placeholder="search" bordered={false} prefix={<SearchOutlined />} />
+            <Input
+              size="large"
+              placeholder="search"
+              bordered={false}
+              prefix={<SearchOutlined />}
+            />
           </Col>
           <Col
             span={8}
@@ -99,8 +137,10 @@ export default function MainNavbar() {
         </Row>
       </Col>
       <Col span={3} id="side-menu" >
-        <Button style={{border:'none',height:'100%'}}>
-          <MenuOutlined />
+        <Button style={{ border: 'none', height: '100%' }}>
+          <Dropdown overlay={burgerBar} placement={"bottom"} overlayStyle={{ width: '400px', height: '50px'}}>
+            <MenuOutlined />
+          </Dropdown>
         </Button>
       </Col>
     </Row>
