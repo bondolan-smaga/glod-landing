@@ -20,7 +20,7 @@ const drop = (
       {
         key: "2",
         label: (
-          <Link to={"/ctalogue"}>
+          <Link to={"/catalogue"}>
             <Title level={5}>Accessories</Title>
           </Link>
         ),
