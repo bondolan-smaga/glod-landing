@@ -57,7 +57,7 @@ export default function ProductCard(props) {
               <Button onClick={increase} style={{
                 display: "inline-block",
                 position: "absolute",
-                left: '20em',
+                right: '0.05em',
                 top: '4%',
                 background: 'transparent',
                 border: 'none'
