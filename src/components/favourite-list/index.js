@@ -55,7 +55,7 @@ export default function FavouriteList() {
             <Image
               style={{ margin: "30px 0px" }}
               src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dwce12e8d3/images/packshot/212573-7165.png?sw=150&sh=150&q=70"
-            ></Image>
+            />
             <Col
               style={{
                 marginTop: "35px",

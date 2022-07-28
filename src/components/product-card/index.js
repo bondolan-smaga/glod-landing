@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Card, Row, Button } from "antd";
+import { Card, Row, Button, Col } from "antd";
 import Icon from '@ant-design/icons'
 
 
@@ -28,104 +28,111 @@ export default function ProductCard(props) {
         marginBottom: "40px",
       }}
     >
-            <Card
-            style={{margin:'10px 10px', borderRadius:'5%'}}
-              hoverable
-              cover={
-                <Row gutter={[0,16]}>
-                  <div>
-                    <p  
-                      style={{
-                        backgroundColor: "#d03a3a",
-                        color: "#fff",
-                        marginRight: "5px",
-                        fontSize: "10px",
-                        letterSpacing: ".5px",
-                        padding: "4px 15px 3px",
-                        fontFamily: "Gibson-SemiBold, sans-serif",
-                        position: "absolute",
-                        marginTop: "20px",
-                        fontWeight: "bold"
-                      }}
-                    >
-                      -50%
-                    </p>
-                  </div>
-                  <div>
-                    <Button onClick={increase} style={{ display: "inline-block", position: "absolute", left: '80%', top: '1.5%', background: 'transparent', border: 'none' }}>
-                      <HeartIcon style={{ fontSize: '28px',color:'hotpink' }} />
-                    </Button>
-                    <img
-                      alt="img not found"
-                      src={props.image}
-                      style={{width:'100%', height :'100%'}}
-                    />
-                  </div>
-                </Row>
-              }
+      <Card
+        style={{ margin: '10px 10px', borderRadius: '5%' }}
+        hoverable
+        cover={
+          <Row style={{
+            backgroundImage: props.image,
+            height: "10em"
+          }}>
+            <Col span={12}>
+              <p
+                style={{
+                  backgroundColor: "#d03a3a",
+                  color: "#fff",
+                  fontSize: "10px",
+                  padding: "4px 15px 3px",
+                  width: "5em",
+                  fontFamily: "Gibson-SemiBold, sans-serif",
+                  // position: "absolute",
+                  marginTop: "20px",
+                  fontWeight: "bold",
+                }}
+              >
+                -50%
+              </p>
+            </Col>
+            <Col span={12}>
+              <HeartIcon style={{
+                fontSize: '28px',
+                color: '#D03A3A',
+                // position: "absolute",
+                background: 'transparent',
+                border: 'none',
+                marginTop: "20px",
+              }} />
+            </Col>
+            {/* <img
+              alt="img not found"
+              src={props.image}
+              style={{ width: '100%', height: '100%' }}
+            /> */}
+          </Row>
+        }
+      >
+        <Row id="product title">
+          <Col id="product name">
+            <p
+              id="title"
+              style={{
+                color: "#000",
+                lineHeight: "20px",
+                fontSize: "14px",
+                marginBottom: "10px",
+                fontFamily: "Gibson-Medium,sans-serif",
+                fontWeight: "700",
+              }}
             >
-              <div id="product title">
-                <div id="product name">
-                  <p
-                    id="title"
-                    style={{
-                      color: "#000",
-                      lineHeight: "20px",
-                      fontSize: "14px",
-                      marginBottom: "10px",
-                      fontFamily: "Gibson-Medium,sans-serif",
-                      fontWeight: "700",
-                    }}
-                  >
-                    {props.product}
-                  </p>
-                </div>
-                <div
-                  id="pricetag"
-                  style={{
-                    display: "flex",
-                    justifyContent: "flex-start",
-                  }}
-                >
-                  <p
-                    style={{
-                      color: "#000",
-                      letterSpacing: "0",
-                      fontSize: "12px",
-                      fontFamily: "Gibson-Regular,sans-serif",
-                      marginRight: "10px",
-                      textDecoration: "line-through",
-                    }}
-                  >
-                   Rp {props.price}
-                  </p>
-                  <p
-                    id="discount price"
-                    style={{
-                      color: "#c00",
-                      fontFamily: "Gibson-SemiBold, sans-serif",
-                      letterSpacing: "0",
-                      fontSize: "12px",
-                      fontWeight: "700",
-                    }}
-                  >
-                   Rp {props.price - (50/100 * props.price)}
-                  </p>
-                </div>
-                <div id="product color">
-                  <p
-                    style={{
-                      fontSize: "14px",
-                      letterSpacing: ".5px",
-                      fontFamily: "Gibson-Regular, sans-serif",
-                      fontWeight: "700",
-                    }}
-                  >
-                    Warna Tersedia: {props.colors} Warna
-                  </p>
-                </div>
-              </div>
-            </Card>
+              {props.product}
+            </p>
+          </Col>
+          <Col
+            id="pricetag"
+            style={{
+              display: "flex",
+              justifyContent: "flex-start",
+            }}
+          >
+            <p
+              style={{
+                color: "#000",
+                letterSpacing: "0",
+                fontSize: "12px",
+                fontFamily: "Gibson-Regular,sans-serif",
+                marginRight: "10px",
+                textDecoration: "line-through",
+              }}
+            >
+              Rp {props.price}
+            </p>
+            <p
+              id="discount price"
+              style={{
+                color: "#c00",
+                fontFamily: "Gibson-SemiBold, sans-serif",
+                letterSpacing: "0",
+                fontSize: "12px",
+                fontWeight: "700",
+              }}
+            >
+              Rp {props.price - (50 / 100 * props.price)}
+            </p>
+          </Col>
+          <Col id="product color">
+            <p
+              style={{
+                fontSize: "14px",
+                letterSpacing: ".5px",
+                fontFamily: "Gibson-Regular, sans-serif",
+                fontWeight: "700",
+              }}
+            >
+              Warna Tersedia: {props.colors} Warna
+            </p>
+          </Col>
+        </Row>
+      </Card>
     </Row>
   );
 }
