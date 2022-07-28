@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import {
   HomePage,
   AboutPage,
-  FavouritePage,
+  FavoritePage,
   CataloguePage,
   DetailProductPage,
 } from "./pages";
@@ -14,7 +14,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/about" element={<AboutPage />} />
-      <Route path="/favourite" element={<FavouritePage />} />
+      <Route path="/favorite" element={<FavoritePage />} />
       <Route path="/catalogue" element={<CataloguePage />} />
       <Route path="/product/:id" element={<DetailProductPage />} />
     </Routes>
