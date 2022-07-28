@@ -1,6 +1,8 @@
 import { Col, Row, Image, Carousel, Dropdown, Menu, message, Button, Space } from "antd";
-import { Breadcrumbs, MainLayout } from "../../components";
 import { DownOutlined, UserOutlined, DownloadOutlined } from '@ant-design/icons'
+
+import { Breadcrumbs, MainLayout } from "../../components";
+import { seo_meta } from "../../constants/seo";
 
 const contentStyle = {
     height: '450px',
@@ -51,7 +53,7 @@ const deliveryAndReturns = (
 
 export default function DetailProductPage() {
     return (
-        <MainLayout>
+        <MainLayout meta={seo_meta.detailProduct.title}>
             <Row>
                 <Breadcrumbs>
                 </Breadcrumbs>
