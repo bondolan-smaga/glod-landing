@@ -8,7 +8,7 @@
 }
 
 
-@media screen and (min-width:1440px) {
+@media only screen and (min-width:1440px) {
   #side-menu {
     display: none !important;
   }
