@@ -17,7 +17,7 @@ const carouselProducts = [
       image: BRSFC01,
       product: 'BRSFC 01',
       price: 50000,
-      colors: '3'
+      colors: ['red', 'black']
     },
   
     {
@@ -25,7 +25,7 @@ const carouselProducts = [
       product: 'BRSFC 02',
       image: BRSFC02,
       price: 50000,
-      colors: '3'
+      colors: ['red', 'black']
     },
   
     {
@@ -33,21 +33,21 @@ const carouselProducts = [
       image: BRSFC03,
       product: 'BRSFC 03',
       price: 50000,
-      colors: '3'
+      colors: ['red', 'black']
     },
     {
       id: 4,
       image: BRSFC04,
       product: 'BRSFC 04',
       price: 50000,
-      colors: '3'
+      colors: ['red', 'black']
     },
     {
       id: 5,
       image: BRSFC05,
       product: 'BRSFC 05',
       price: 50000,
-      colors: '3'
+      colors: ['red', 'black']
     }
   ]
 
