@@ -1,8 +1,8 @@
 import { Carousel, Row, Col, Typography, Button } from 'antd';
 import { React, useRef } from 'react';
-import {ProductCard} from '../../components/index';
+import { ProductCard } from '../../components/index';
 import { DoubleRightOutlined, DoubleLeftOutlined } from "@ant-design/icons"
-import "./index.css"
+import "./index.scss"
 
 import BRSFC01 from "../../assets/GLOD WEB/BRSFC 01.jpg"
 import BRSFC02 from "../../assets/GLOD WEB/BRSFC 02.jpg"
@@ -13,48 +13,78 @@ import BRSFC05 from "../../assets/GLOD WEB/BRSFC 05.jpg"
 const { Title } = Typography
 const carouselProducts = [
     {
-      id: 1,
-      image: BRSFC01,
-      product: 'BRSFC 01',
-      price: 50000,
-      colors: '3'
+        id: 1,
+        image: BRSFC01,
+        product: 'BRSFC 01',
+        price: 50000,
+        colors: '3'
     },
-  
+
     {
-      id: 2,
-      product: 'BRSFC 02',
-      image: BRSFC02,
-      price: 50000,
-      colors: '3'
+        id: 2,
+        product: 'BRSFC 02',
+        image: BRSFC02,
+        price: 50000,
+        colors: '3'
     },
-  
+
     {
-      id: 3,
-      image: BRSFC03,
-      product: 'BRSFC 03',
-      price: 50000,
-      colors: '3'
-    },
-    {
-      id: 4,
-      image: BRSFC04,
-      product: 'BRSFC 04',
-      price: 50000,
-      colors: '3'
+        id: 3,
+        image: BRSFC03,
+        product: 'BRSFC 03',
+        price: 50000,
+        colors: '3'
     },
     {
-      id: 5,
-      image: BRSFC05,
-      product: 'BRSFC 05',
-      price: 50000,
-      colors: '3'
+        id: 4,
+        image: BRSFC04,
+        product: 'BRSFC 04',
+        price: 50000,
+        colors: '3'
+    },
+    {
+        id: 5,
+        image: BRSFC05,
+        product: 'BRSFC 05',
+        price: 50000,
+        colors: '3'
     }
-  ]
+]
 
 
 
 export default function CarouselProductCard(props) {
     const slider = useRef()
+
+    let settings = {
+        slidesToScroll: 4,
+        slidesToShow: 4,
+        responsive: [
+            {
+                breakpoint: 1440,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    infinite: false,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 425,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            }
+        ]
+    }
+
 
     return (
         <Row id='carousel-row' style={{ marginTop: '60px' }}>
@@ -78,19 +108,24 @@ export default function CarouselProductCard(props) {
             </Col>
             <Col span={24}>
                 <Carousel
+                {...settings}
                     ref={ref => {
                         slider.current = ref
                     }}
-                    slidesToShow={props.show}
-                    slidesToScroll={props.scroll}
                 >
                     {
                         carouselProducts.map((e) => {
-                            const {id, image,product, price,colors} = e
+                            const { id, image, product, price, colors } = e
                             return (
-                                <ProductCard id={id} image={image} product={product} price={price} colors={colors}/>
+                                <ProductCard
+                                    id={id}
+                                    image={image}
+                                    product={product}
+                                    price={price}
+                                    colors={colors} 
+                                />
                             )
-                    })}
+                        })}
                 </Carousel>
             </Col>
         </Row>

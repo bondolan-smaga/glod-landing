@@ -1,5 +1,5 @@
 import { Row, Col } from "antd";
-import { MainLayout, Newslettersignup, TrendingFooter, Breadcrumbs, ProductFilter,ProductCard } from "../../components";
+import { MainLayout, Newslettersignup, Breadcrumbs, ProductFilter, ProductCard } from "../../components";
 import { seo_meta } from "../../constants/seo";
 
 import BRSFC01 from "../../assets/GLOD WEB/BRSFC 01.jpg"
@@ -81,28 +81,23 @@ export default function CataloguePage(props) {
             <Row style={{ margin: '15px 30px' }}>
                 <ProductFilter />
             </Row>
-                <Col xs={{ span: 12 }} xl={{ span: 6 }}>
-                    {
-                        filteredProducts.map((filteredProduct => {
-                            const { id, image, tags, product, price, colors } = filteredProduct
-                            return (
-                                <ProductCard
-                                    id={id}
-                                    image={image}
-                                    tags={tags}
-                                    product={product}
-                                    price={price}
-                                    colors={colors}
-                                />
-                            )
-                        }))
-                    }
-                </Col>
-            <Row span={24} justify='center'>
-                <Col>
-                    <TrendingFooter />
-                </Col>
-            </Row>
+            <Col xs={{ span: 12 }} xl={{ span: 6 }}>
+                {
+                    filteredProducts.map((filteredProduct => {
+                        const { id, image, tags, product, price, colors } = filteredProduct
+                        return (
+                            <ProductCard
+                                id={id}
+                                image={image}
+                                tags={tags}
+                                product={product}
+                                price={price}
+                                colors={colors}
+                            />
+                        )
+                    }))
+                }
+            </Col>
             <Row>
                 <Col span={24}>
                     <Newslettersignup />
