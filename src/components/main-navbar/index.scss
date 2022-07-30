@@ -6,6 +6,8 @@
 .ant-col a:hover {
   color: black;
 }
+
+
 @media only screen and (max-width:425px) {
   #gambarlogo {
     width: 80px !important;
@@ -65,29 +67,52 @@
     height: 80%;
   }
 
+  // #menu {
+  //   display: none;
+  // }
+
+}
+
+@media only screen and (max-width:768px) {
+  #gambarlogo {
+     width: 80px !important;
+    height: 50px !important;
+  }
+  
+  .main-menu {
+    margin-right: 1.2em;
+  }
+
   #menu {
     display: none;
   }
 
-  #side-menu {
-    display: block;
-    left: 1%;
-    border: none;
+  #side-menu{
+    left: 3%;
   }
-}
+
+} 
 
 @media only screen and (min-width:768px) {
   #gambarlogo {
     width: 120px !important;
     height: 70px !important;
   }
+
+  #menu {
+    display: block;
+  }
   
   .main-menu {
     margin-right: 1.2em;
   }
+
+  #side-menu{
+    display: none;
+  }
 } 
 
-@media only screen and (min-width:992px) {
+@media only screen and (min-width:992px) and (max-width:1440px){
   #gambarlogo {
     width: 120px !important;
     height: 70px !important;
@@ -103,9 +128,9 @@
     display: none;
   }
 
-  #menu {
-    display: block;
-  }
+  // #menu {
+  //   display: block;
+  // }
 
   #gambarlogo {
     width: 170px !important;
