@@ -1,4 +1,4 @@
-import "./index.css";
+import "./index.scss";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Dropdown, Row, Col, Input, Button, Menu, Typography, Badge } from "antd";
@@ -6,56 +6,39 @@ import { SearchOutlined, HeartOutlined, MenuOutlined } from "@ant-design/icons";
 import logoNavbar from "../../assets/GLOD WEB/LOGO GLOD TXT W.jpg"
 const { Title } = Typography;
 
-const drop = (
-  <Menu style={{ top: '1.3rem' }}
-    items={[
-      {
-        key: "1",
-        label: (
-          <Link to={"/catalogue"}>
-            <Title level={5}>Jersey</Title>
-          </Link>
-        ),
-      },
-      {
-        key: "2",
-        label: (
-          <Link to={"/catalogue"}>
-            <Title level={5}>Accessories</Title>
-          </Link>
-        ),
-      },
-    ]}
-  />
-);
 
 const burgerBar = (
   <Menu style={{ top: '1.3rem' }}
     items={[
       {
-        key: "1",
+        key: "men",
         label: (
-          <Title level={5}>
-            MEN
-          </Title>
+          <Link to="/catalogue">
+            <Title level={5}>
+              JERSEYS
+            </Title>
+          </Link>
         ),
-        children: [{
-          label : drop
-        }]
       },
       {
-        key: "2",
+        key: "accessories",
         label: (
-          <Title level={5}>
-            WOMEN
-          </Title>
+          <Link to="/catalogue">
+            <Title level={5}>
+              ACCESSORIES
+            </Title>
+          </Link>
         ),
-        children: [
-          {
-            label: drop
-          }
-        ]
       },
+      {
+        label: (
+          <Link to="/about">
+            <Title level={5}>
+              ABOUT US
+            </Title>
+          </Link>
+        )
+      }
     ]}
   />
 );
@@ -80,7 +63,7 @@ export default function MainNavbar() {
 
   return (
     <Row id="responsive-nav">
-      <Col xs={{ span: 6 }} xl={{ span: 4 }} id="logo">
+      <Col xs={{ span: 6 }} md={{ span: 4 }} lg={{span:4}} xl={{ span: 4 }} id="logo">
         <Link to="/" >
           <img id="gambarlogo"
             src={logoNavbar}
@@ -89,24 +72,12 @@ export default function MainNavbar() {
           />
         </Link>
       </Col>
-      <Col span={12} id="menu">
-        <Row>
-          <Col span={3}>
-            <Dropdown overlay={drop} placement="bottom" overlayStyle={{ top: '30px' }} >
-              <Link to="/">MEN</Link>
-            </Dropdown>
-          </Col>
-          <Col span={3}>
-            <Dropdown overlay={drop} placement="bottom" overlayStyle={{ top: '30px' }}>
-              <Link to="/">WOMAN</Link>
-            </Dropdown>
-          </Col>
-          <Col span={12} id="about">
-            <Link to="/about">ABOUT US</Link>
-          </Col>
-        </Row>
+      <Col md={{ span: 12 }} lg={{span:12}} xl={{ span: 12 }} id="menu">
+            <Link to="/catalogue" className="main-menu">JERSEYS</Link>
+            <Link to="/catalogue" className="main-menu" >ACCESSORIES</Link>
+            <Link to="/about" className="main-menu" >ABOUT US</Link>
       </Col>
-      <Col xs={{ span: 15 }} lg={{ span: 6 }} xl={{ span: 8 }}>
+      <Col xs={{ span: 15 }} md={{ span: 8 }} xl={{ span: 8 }}>
         <Row>
           <Col
             span={16}
@@ -138,7 +109,7 @@ export default function MainNavbar() {
       </Col>
       <Col span={3} id="side-menu" >
         <Button style={{ border: 'none', height: '100%' }}>
-          <Dropdown overlay={burgerBar} placement={"bottom"} overlayStyle={{ width: '400px', height: '50px'}}>
+          <Dropdown overlay={burgerBar} placement={"bottomLeft"} overlayStyle={{ width: '100%', height: '50px' }}>
             <MenuOutlined />
           </Dropdown>
         </Button>
