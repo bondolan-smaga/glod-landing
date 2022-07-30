@@ -134,12 +134,12 @@ export default function CataloguePage(props) {
                 <ProductFilter />
             </Row>
             <Row>
-                <Col span={24} style={{ display: 'flex', flexDirection: 'row',flexWrap:'wrap' }}>
+                <Col span={24} style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
                     {
                         filteredProducts.map((filteredProduct => {
                             const { id, image, tags, product, price, colors } = filteredProduct
                             return (
-                                <Col xs={{span:12}} md={{span:8}} lg={{span:6}} xl={{span:6}}>
+                                <Col xs={{ span: 12 }} md={{ span: 8 }} lg={{ span: 6 }} xl={{ span: 6 }}>
                                     <ProductCard
                                         id={id}
                                         image={image}

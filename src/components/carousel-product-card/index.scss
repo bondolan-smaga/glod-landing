@@ -1,4 +1,4 @@
-@media screen and (max-width:425px) {
+@media only screen and (max-width:425px) {
     .ant-col .ant-col-24 {
         margin: 0px 0px;
     }
@@ -18,4 +18,6 @@
     #next-btn {
         display: none;
     }
+
 }
+

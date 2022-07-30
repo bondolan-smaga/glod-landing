@@ -1,4 +1,4 @@
-import { Image, Row, Col, Typography} from "antd";
+import { Image, Row, Col, Typography } from "antd";
 import {
   MainLayout,
   CarouselProductCard,
@@ -8,11 +8,7 @@ import "./index.css"
 
 const { Title } = Typography;
 
-
-
 export default function AboutPage() {
-  
-
   return (
     <MainLayout meta={seo_meta.about.title}>
       {/* main content */}
@@ -87,7 +83,7 @@ export default function AboutPage() {
       {/* recommendation */}
       <Row>
         <Col span={24}>
-          <CarouselProductCard tag={"GET INSPIRED BY THIS STYLE"} show={4} scroll={4}/>
+          <CarouselProductCard tag={"GET INSPIRED BY THIS STYLE"} show={4} scroll={4} />
         </Col>
 
       </Row>

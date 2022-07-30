@@ -111,7 +111,7 @@ export default function FavoriteList() {
           }
         </Col>
       </Col>
-      <CarouselProductCard style={{ margin: '6.25em 0' }} tag={'YOU MAY ALSO LIKE'} />
+        <CarouselProductCard style={{ margin: '6.25em 0' }} tag={'YOU MAY ALSO LIKE'} />
     </Row >
   );
 }

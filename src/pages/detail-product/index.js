@@ -1,5 +1,5 @@
-import { Col, Row, Image, Carousel, Dropdown, Menu, message, Button, Space } from "antd";
-import { DownOutlined, UserOutlined, DownloadOutlined } from '@ant-design/icons'
+import { Col, Row, Image, Carousel, Dropdown, Menu, message, Space } from "antd";
+import { DownOutlined, UserOutlined} from '@ant-design/icons'
 
 import { Breadcrumbs, MainLayout } from "../../components";
 import { seo_meta } from "../../constants/seo";
