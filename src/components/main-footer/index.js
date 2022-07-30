@@ -8,7 +8,6 @@ import {
 } from "@ant-design/icons";
 import "./index.css"
 import logoFooter1 from "../../assets/GLOD WEB/LOGO GLOD MONOCR B.jpg"
-import logoFooter2 from "../../assets/GLOD WEB/LOGO GLOD LATN B.jpg"
 
 
 const { Title } = Typography;

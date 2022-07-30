@@ -1,4 +1,4 @@
-import { Image, Row, Col, Typography, Button, Carousel, List } from "antd";
+import { Image, Row, Col, Typography } from "antd";
 import {
   MainLayout,
   CarouselProductCard,
@@ -6,21 +6,10 @@ import {
 } from "../../components";
 import { seo_meta } from "../../constants/seo";
 
-const { Title, Paragraph, Text } = Typography;
+const { Title} = Typography;
 
-const data = ["New in", "Sustainability", "Sportswear", "Sneakers"];
-const contentStyle = {
-  height: "160px",
-  color: "#fff",
-  lineHeight: "160px",
-  textAlign: "center",
-  background: "#364d79",
-};
 
 export default function AboutPage() {
-  const onChange = (currentSlide) => {
-    console.log(currentSlide);
-  };
 
   return (
     <MainLayout meta={seo_meta.about.title}>
