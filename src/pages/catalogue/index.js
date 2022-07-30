@@ -22,7 +22,7 @@ const catalogueProducts = [
         id: 2,
         tags: ['BRSFC', 'jersey'],
         image: BRSFC02,
-        product: 'BRSFC 01',
+        product: 'BRSFC 02',
         price: 50000,
         colors: ['red', 'black']
     },
@@ -30,7 +30,7 @@ const catalogueProducts = [
         id: 3,
         tags: ['BRSFC', 'jersey'],
         image: BRSFC03,
-        product: 'BRSFC 01',
+        product: 'BRSFC 03',
         price: 50000,
         colors: ['red', 'black']
     },
@@ -38,7 +38,7 @@ const catalogueProducts = [
         id: 4,
         tags: ['BRSFC', 'jersey'],
         image: BRSFC04,
-        product: 'BRSFC 01',
+        product: 'BRSFC 04',
         price: 50000,
         colors: ['red', 'black']
     },
@@ -46,30 +46,31 @@ const catalogueProducts = [
         id: 5,
         tags: ['BRSFC', 'jersey'],
         image: BRSFC05,
-        product: 'BRSFC 01',
+        product: 'BRSFC 05',
         price: 50000,
         colors: ['red', 'black']
     }
-]
 
+
+]
 
 export default function CataloguePage(props) {
     const tagFilter = ['jersey']
     let filteredProducts = []
 
     // dipanggill di fitur search/*
-        for (let i = 0; i < catalogueProducts.length; i++) {
-            for (let j = 0; j < catalogueProducts[i].tags.length; j++) {
-                for (let k = 0; k < tagFilter.length; k++) {
-                    if (catalogueProducts[i].tags[j] === tagFilter[k]) {
-                        console.log(catalogueProducts[i].tags[j])
-                        filteredProducts.push(catalogueProducts[i])
-                        console.log(filteredProducts)
-                        console.log('iso')
-                    }
+    for (let i = 0; i < catalogueProducts.length; i++) {
+        for (let j = 0; j < catalogueProducts[i].tags.length; j++) {
+            for (let k = 0; k < tagFilter.length; k++) {
+                if (catalogueProducts[i].tags[j] === tagFilter[k]) {
+                    console.log(catalogueProducts[i].tags[j])
+                    filteredProducts.push(catalogueProducts[i])
+                    console.log(filteredProducts)
+                    console.log('iso')
                 }
             }
         }
+    }
 
 
     return (
@@ -80,27 +81,25 @@ export default function CataloguePage(props) {
             <Row style={{ margin: '15px 30px' }}>
                 <ProductFilter />
             </Row>
-            <Row span={24} gutter={[8, 0]} style={{ backgroundColor: 'transparent', margin: '15px 15px' }}>
-                <Col span={6}>
-                    {
-                        filteredProducts.map((filteredProduct => {
-                            const { id, image, tags, product, price, colors } = filteredProduct
-                            return (
-                                <ProductCard
-                                    id={id}
-                                    image={image}
-                                    tags={tags}
-                                    product={product}
-                                    price={price}
-                                    colors={colors}
-                                />
-                            )
-                        }))
-                    }
-                </Col>
-            </Row>
-            <Row span={24} justify='center'>
-                <Col>
+            <Col xs={{ span: 12 }} xl={{ span: 6 }}>
+                {
+                    filteredProducts.map((filteredProduct => {
+                        const { id, image, tags, product, price, colors } = filteredProduct
+                        return (
+                            <ProductCard
+                                id={id}
+                                image={image}
+                                tags={tags}
+                                product={product}
+                                price={price}
+                                colors={colors}
+                            />
+                        )
+                    }))
+                }
+            </Col>
+            <Row>
+                <Col span={24}>
                     <Newslettersignup />
                 </Col>
             </Row>
