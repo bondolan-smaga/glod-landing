@@ -52,6 +52,7 @@ const catalogueProducts = [
 
 
 ]
+import { seo_meta } from "../../constants/seo";
 
 export default function CataloguePage(props) {
     const tagFilter = ['jersey']
@@ -73,7 +74,7 @@ export default function CataloguePage(props) {
 
 
     return (
-        <MainLayout meta={{ title: 'Catalogue || GLOD' }}>
+        <MainLayout meta={seo_meta.catalogue.title}>
             <Row style={{ margin: '15px 30px' }}>
                 <Breadcrumbs />
             </Row>

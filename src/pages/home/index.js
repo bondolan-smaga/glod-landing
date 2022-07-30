@@ -7,10 +7,11 @@ import {
   Newslettersignup,
   TrendingFooter,
 } from "../../components";
+import { seo_meta } from "../../constants/seo";
 
 export default function HomePage() {
   return (
-    <MainLayout meta={{ title: "Homepage | GLOD" }}>
+    <MainLayout meta={seo_meta.home.title}>
       {/* MAIN CONTENTS */}
       <Row>
         <Col span={24}>

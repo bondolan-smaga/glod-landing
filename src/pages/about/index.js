@@ -4,6 +4,7 @@ import {
   CarouselProductCard,
   TrendingFooter,
 } from "../../components";
+import { seo_meta } from "../../constants/seo";
 
 const { Title, Paragraph, Text } = Typography;
 
@@ -22,7 +23,7 @@ export default function AboutPage() {
   };
 
   return (
-    <MainLayout>
+    <MainLayout meta={seo_meta.about.title}>
       {/* main content */}
       {/* about us */}
       <Row style={{ maxWidth: "1000px", margin: "auto auto" }} justify="center">
