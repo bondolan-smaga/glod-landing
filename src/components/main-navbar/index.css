@@ -8,23 +8,7 @@
 }
 
 
-@media screen and (min-width:1440px) {
-  #side-menu {
-    display: none !important;
-  }
-
-  #menu {
-    display: block;
-  }
-
-  #gambarlogo {
-    width: 80%;
-    height: 80%;
-  }
-
-}
-
-@media screen and (max-width:425px) {
+@media only screen and (max-width:425px) {
   #gambarlogo {
     width: 80px !important;
     height: 50px !important;
@@ -92,4 +76,20 @@
     left: 1%;
     border: none;
   }
+}
+
+@media only screen and (min-width:1440px) {
+  #side-menu {
+    display: none;
+  }
+
+  #menu {
+    display: block;
+  }
+
+  #gambarlogo {
+    width: 80%;
+    height: 80%;
+  }
+
 }
