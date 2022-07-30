@@ -7,7 +7,12 @@ import BRSFC02 from "../../assets/GLOD WEB/BRSFC 02.jpg"
 import BRSFC03 from "../../assets/GLOD WEB/BRSFC 03.jpg"
 import BRSFC04 from "../../assets/GLOD WEB/BRSFC 04.jpg"
 import BRSFC05 from "../../assets/GLOD WEB/BRSFC 05.jpg"
-
+import SHINDYO1 from "../../assets/GLOD WEB/SHINDY 00101.jpg"
+import SHINDYO2 from "../../assets/GLOD WEB/SHINDY 00102.jpg"
+import SHINDYO3 from "../../assets/GLOD WEB/SHINDY 00103.jpg"
+import SHINDYO4 from "../../assets/GLOD WEB/SHINDY 00201.jpg"
+import SHINDYO5 from "../../assets/GLOD WEB/SHINDY 00202.jpg"
+import SHINDYO6 from "../../assets/GLOD WEB/SHINDY 00203.jpg"
 
 const catalogueProducts = [
     {
@@ -49,8 +54,55 @@ const catalogueProducts = [
         product: 'BRSFC 05',
         price: 50000,
         colors: ['red', 'black']
-    }
-
+    },
+    {
+        id: 6,
+        tags: ['SHINDY', 'jersey'],
+        image: SHINDYO1,
+        product: 'SHINDY 01',
+        price: 50000,
+        colors: ['red', 'black']
+    },
+    {
+        id: 7,
+        tags: ['SHINDY', 'jersey'],
+        image: SHINDYO2,
+        product: 'SHINDY 02',
+        price: 50000,
+        colors: ['red', 'black']
+    },
+    {
+        id: 8,
+        tags: ['SHINDY', 'jersey'],
+        image: SHINDYO3,
+        product: 'SHINDY 03',
+        price: 50000,
+        colors: ['red', 'black']
+    },
+    {
+        id: 9,
+        tags: ['SHINDY', 'jersey'],
+        image: SHINDYO4,
+        product: 'SHINDY 04',
+        price: 50000,
+        colors: ['red', 'black']
+    },
+    {
+        id: 10,
+        tags: ['SHINDY', 'jersey'],
+        image: SHINDYO5,
+        product: 'SHINDY 05',
+        price: 50000,
+        colors: ['red', 'black']
+    },
+    {
+        id: 11,
+        tags: ['SHINDY', 'jersey'],
+        image: SHINDYO6,
+        product: 'SHINDY 06',
+        price: 50000,
+        colors: ['red', 'black']
+    },
 
 ]
 
@@ -81,24 +133,28 @@ export default function CataloguePage(props) {
             <Row style={{ margin: '15px 30px' }}>
                 <ProductFilter />
             </Row>
-            <Col xs={{ span: 12 }} xl={{ span: 6 }}>
-                {
-                    filteredProducts.map((filteredProduct => {
-                        const { id, image, tags, product, price, colors } = filteredProduct
-                        return (
-                            <ProductCard
-                                id={id}
-                                image={image}
-                                tags={tags}
-                                product={product}
-                                price={price}
-                                colors={colors}
-                            />
-                        )
-                    }))
-                }
-            </Col>
             <Row>
+                <Col span={24} style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+                    {
+                        filteredProducts.map((filteredProduct => {
+                            const { id, image, tags, product, price, colors } = filteredProduct
+                            return (
+                                <Col xs={{ span: 12 }} md={{ span: 8 }} lg={{ span: 6 }} xl={{ span: 6 }}>
+                                    <ProductCard
+                                        id={id}
+                                        image={image}
+                                        tags={tags}
+                                        product={product}
+                                        price={price}
+                                        colors={colors}
+                                    />
+                                </Col>
+                            )
+                        }))
+                    }
+                </Col>
+                <Row span={24} justify='center'>
+                </Row>
                 <Col span={24}>
                     <Newslettersignup />
                 </Col>

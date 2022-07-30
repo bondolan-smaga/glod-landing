@@ -13,41 +13,41 @@ import BRSFC05 from "../../assets/GLOD WEB/BRSFC 05.jpg"
 const { Title } = Typography
 const carouselProducts = [
     {
-        id: 1,
-        image: BRSFC01,
-        product: 'BRSFC 01',
-        price: 50000,
-        colors: '3'
+      id: 1,
+      image: BRSFC01,
+      product: 'BRSFC 01',
+      price: 50000,
+      colors: ['red', 'black']
     },
 
     {
-        id: 2,
-        product: 'BRSFC 02',
-        image: BRSFC02,
-        price: 50000,
-        colors: '3'
+      id: 2,
+      product: 'BRSFC 02',
+      image: BRSFC02,
+      price: 50000,
+      colors: ['red', 'black']
     },
 
     {
-        id: 3,
-        image: BRSFC03,
-        product: 'BRSFC 03',
-        price: 50000,
-        colors: '3'
+      id: 3,
+      image: BRSFC03,
+      product: 'BRSFC 03',
+      price: 50000,
+      colors: ['red', 'black']
     },
     {
-        id: 4,
-        image: BRSFC04,
-        product: 'BRSFC 04',
-        price: 50000,
-        colors: '3'
+      id: 4,
+      image: BRSFC04,
+      product: 'BRSFC 04',
+      price: 50000,
+      colors: ['red', 'black']
     },
     {
-        id: 5,
-        image: BRSFC05,
-        product: 'BRSFC 05',
-        price: 50000,
-        colors: '3'
+      id: 5,
+      image: BRSFC05,
+      product: 'BRSFC 05',
+      price: 50000,
+      colors: ['red', 'black']
     }
 ]
 

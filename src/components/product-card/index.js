@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { Card, Row, Button } from "antd";
+import { Card, Row, Button, Col,Typography } from "antd";
 import Icon from '@ant-design/icons'
+
+const {Title} = Typography
 
 
 
@@ -79,9 +81,9 @@ export default function ProductCard(props) {
           </Row>
         }
       >
-        <div id="product title">
-          <div id="product name">
-            <p
+        <Row id="product title">
+          <Col xs={{span:24}} id="product name">
+            <Title
               id="title"
               style={{
                 color: "#000",
@@ -93,9 +95,9 @@ export default function ProductCard(props) {
               }}
             >
               {props.product}
-            </p>
-          </div>
-          <div
+            </Title>
+          </Col>
+          <Row
             id="pricetag"
             style={{
               display: "flex",
@@ -126,7 +128,7 @@ export default function ProductCard(props) {
             >
               Rp {props.price - (50 / 100 * props.price)}
             </p>
-          </div>
+          </Row>
           <div id="product color">
             <p
               style={{
@@ -135,10 +137,10 @@ export default function ProductCard(props) {
                 fontWeight: "700",
               }}
             >
-              Warna Tersedia: {props.colors} Warna
+              Warna Tersedia: {props.colors.join(', ')}
             </p>
           </div>
-        </div>
+        </Row>
       </Card>
     </Row>
   );
