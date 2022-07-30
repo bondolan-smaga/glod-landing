@@ -1,5 +1,6 @@
 import { Row, Col } from "antd";
 import { MainLayout, Newslettersignup, TrendingFooter, Breadcrumbs, ProductFilter,ProductCard } from "../../components";
+import { seo_meta } from "../../constants/seo";
 
 import BRSFC01 from "../../assets/GLOD WEB/BRSFC 01.jpg"
 import BRSFC02 from "../../assets/GLOD WEB/BRSFC 02.jpg"
@@ -52,7 +53,6 @@ const catalogueProducts = [
 
 
 ]
-import { seo_meta } from "../../constants/seo";
 
 export default function CataloguePage(props) {
     const tagFilter = ['jersey']
