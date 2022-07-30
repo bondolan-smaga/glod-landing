@@ -6,8 +6,6 @@
 .ant-col a:hover {
   color: black;
 }
-
-
 @media only screen and (max-width:425px) {
   #gambarlogo {
     width: 80px !important;
@@ -78,6 +76,28 @@
   }
 }
 
+@media only screen and (min-width:768px) {
+  #gambarlogo {
+    width: 120px !important;
+    height: 70px !important;
+  }
+  
+  .main-menu {
+    margin-right: 1.2em;
+  }
+} 
+
+@media only screen and (min-width:992px) {
+  #gambarlogo {
+    width: 120px !important;
+    height: 70px !important;
+  }
+  
+  .main-menu {
+    margin-right: 2em;
+  }
+} 
+
 @media only screen and (min-width:1440px) {
   #side-menu {
     display: none;
@@ -88,8 +108,13 @@
   }
 
   #gambarlogo {
-    width: 80%;
-    height: 80%;
+    width: 170px !important;
+    height: 74px !important;
   }
 
+  .main-menu {
+    margin-right: 5em;
+    font-size: 1rem;
+  }
 }
+
