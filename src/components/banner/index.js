@@ -40,7 +40,7 @@ export default function Banner(props) {
               style={{
                 padding: "30px",
                 display: "flex",
-                width: "378px",
+                width: "fit-content",
                 height: "50px",
               }}
             >
