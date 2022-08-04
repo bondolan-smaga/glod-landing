@@ -73,13 +73,15 @@ export default function CarouselProductCard(props) {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
+                    infinite:false,
                 }
             },
             {
                 breakpoint: 425,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToScroll: 2,
+                    infinite:false
                 }
             }
         ]
