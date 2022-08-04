@@ -63,7 +63,7 @@ export default function MainNavbar() {
 
   return (
     <Row id="responsive-nav">
-      <Col xs={{ span: 6 }} md={{ span: 4 }} lg={{span:4}} xl={{ span: 4 }} id="logo">
+      <Col xs={{ span: 6 }} sm={{ span: 4 }} md={{ span: 4 }} lg={{ span: 4 }} xl={{ span: 4 }}>
         <Link to="/" >
           <img id="gambarlogo"
             src={logoNavbar}
@@ -72,12 +72,12 @@ export default function MainNavbar() {
           />
         </Link>
       </Col>
-      <Col md={{ span: 12 }} lg={{span:12}} xl={{ span: 12 }} id="menu">
-            <Link to="/catalogue" className="main-menu">JERSEYS</Link>
-            <Link to="/catalogue" className="main-menu" >ACCESSORIES</Link>
-            <Link to="/about" className="main-menu" >ABOUT US</Link>
+      <Col md={{ span: 12 }} lg={{ span: 12 }} xl={{ span: 12 }} id="menu">
+        <Link to="/catalogue" className="main-menu">JERSEYS</Link>
+        <Link to="/catalogue" className="main-menu" >ACCESSORIES</Link>
+        <Link to="/about" className="main-menu" >ABOUT US</Link>
       </Col>
-      <Col xs={{ span: 15 }} md={{ span: 8 }} xl={{ span: 8 }}>
+      <Col xs={{ span: 15}} sm={{ span: 17 }} md={{ span: 8 }} lg={{ span: 8 }} xl={{ span: 8 }}>
         <Row>
           <Col
             span={16}

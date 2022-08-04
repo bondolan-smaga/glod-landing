@@ -38,7 +38,7 @@ export default function Banner(props) {
             <div
               id="button-container"
               style={{
-                padding: "30px",
+                padding:'30px',
                 display: "flex",
                 width: "fit-content",
                 height: "50px",
