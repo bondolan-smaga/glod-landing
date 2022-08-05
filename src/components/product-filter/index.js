@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom"
 import { DownOutlined } from "@ant-design/icons";
-import { Button, Dropdown, Menu, Row, Space,Typography } from "antd";
-import {FilterOutlined } from "@ant-design/icons";
+import { Button, Col, Dropdown, Menu, Row, Space} from "antd";
+import { FilterOutlined } from "@ant-design/icons";
 import "./index.scss"
+import SubMenu from "antd/lib/menu/SubMenu";
+import MenuItem from "antd/lib/menu/MenuItem";
 
-const {Title} = Typography
 
 const size = (
   <Menu
@@ -17,15 +19,15 @@ const size = (
     }}
     items={[
       {
-        label: <a href="link">XS</a>,
+        label: <Link to="/catalogue">XS</Link>,
         key: "0",
       },
       {
-        label: <a href="link">S</a>,
+        label: <Link to="/catalogue">S</Link>,
         key: "1",
       },
       {
-        label: <a href="link">M</a>,
+        label: <Link to="/catalogue">M</Link>,
         key: "3",
       },
     ]}
@@ -43,15 +45,15 @@ const colour = (
     }}
     items={[
       {
-        label: <a href="link">Beige</a>,
+        label: <Link to="/catalogue">Beige</Link>,
         key: "0",
       },
       {
-        label: <a href="link">Black</a>,
+        label: <Link to="/catalogue">Black</Link>,
         key: "1",
       },
       {
-        label: <a href="link">Blue</a>,
+        label: <Link to="/catalogue">Blue</Link>,
         key: "3",
       },
     ]}
@@ -69,15 +71,15 @@ const fitting = (
     }}
     items={[
       {
-        label: <a href="link">Loose</a>,
+        label: <Link to="/catalogue">Loose</Link>,
         key: "0",
       },
       {
-        label: <a href="link">Regular</a>,
+        label: <Link to="/catalogue">Regular</Link>,
         key: "1",
       },
       {
-        label: <a href="link">Slim</a>,
+        label: <Link to="/catalogue">Slim</Link>,
         key: "3",
       },
     ]}
@@ -95,15 +97,15 @@ const price = (
     }}
     items={[
       {
-        label: <a href="link">10.0000</a>,
+        label: <Link to="/catalogue">10.0000</Link>,
         key: "0",
       },
       {
-        label: <a href="link">20.000</a>,
+        label: <Link to="/catalogue">20.000</Link>,
         key: "1",
       },
       {
-        label: <a href="link">30.000</a>,
+        label: <Link to="/catalogue">30.000</Link>,
         key: "3",
       },
     ]}
@@ -121,15 +123,15 @@ const features = (
     }}
     items={[
       {
-        label: <a href="link">Antibacterial</a>,
+        label: <Link to="/catalogue">Antibacterial</Link>,
         key: "0",
       },
       {
-        label: <a href="link">BCI</a>,
+        label: <Link to="/catalogue">BCI</Link>,
         key: "1",
       },
       {
-        label: <a href="link">BeeCool</a>,
+        label: <Link to="/catalogue">BeeCool</Link>,
         key: "3",
       },
     ]}
@@ -137,53 +139,33 @@ const features = (
 );
 
 const filterButton = (
-  <Menu
-    style={{
-      color: "black",
-      fontSize: "14px",
-      fontFamily: "Gibson-SemiBold, sans-serif",
-      lineHeight: "14px",
-      textTransform: "none",
-      fontWeight: "400",
-    }}
-    items={[
-      {
-        label: 
-          <Title level={5}>SIZE</Title>
-        ,
-        key: "0",
-        children: [size]
-      },
-      {
-        label:
-        <Title level={5}>COLOUR</Title>
-        ,
-        key: "1",
-        children:[colour]
-      },
-      {
-        label: 
-        <Title level={5}>FITTING</Title>
-        ,
-        key: "3",
-        children:[fitting]
-      },
-      {
-        label: (
-          <Title level={5}>PRICE</Title>
-          ),
-        key: "3",
-        children:[price]
-      },
-      {
-        label: 
-        <Title level={5}>FEATURES</Title>
-        ,
-        key: "3",
-        children:[features]
-      },
-    ]}
-  />
+  <Menu>
+    <SubMenu title="SIZE">
+      <MenuItem id="filter-list">XS</MenuItem>
+      <MenuItem id="filter-list">S</MenuItem>
+      <MenuItem id="filter-list">M</MenuItem>
+    </SubMenu>
+    <SubMenu title="COLOUR">
+      <MenuItem id="filter-list">RED</MenuItem>
+      <MenuItem id="filter-list">BLACK</MenuItem>
+      <MenuItem id="filter-list">BLUE</MenuItem>
+    </SubMenu>
+    <SubMenu title="FITTING">
+      <MenuItem id="filter-list">LOOSE</MenuItem>
+      <MenuItem id="filter-list">REGULAR</MenuItem>
+      <MenuItem id="filter-list">SLIM</MenuItem>
+    </SubMenu>
+    <SubMenu title="FEATURES">
+      <MenuItem id="filter-list">ANTI BACTERIAL</MenuItem>
+      <MenuItem id="filter-list">BCI</MenuItem>
+      <MenuItem id="filter-list">BEECOOL</MenuItem>
+    </SubMenu>
+    <SubMenu title="PRICE">
+      <MenuItem id="filter-list">Rp 15.000</MenuItem>
+      <MenuItem id="filter-list">Rp 30.000</MenuItem>
+      <MenuItem id="filter-list">Rp 50.000</MenuItem>
+    </SubMenu>
+  </Menu>
 )
 
 export default function ProductFilter() {
@@ -281,11 +263,13 @@ export default function ProductFilter() {
           </a>
         </Dropdown>
       </Row>
-      <Dropdown className="filter-btn" overlay={filterButton} trigger={["click"]}>
-        <Button>
-          <FilterOutlined/>
-        </Button>
-      </Dropdown>
+      <Col span={4}>
+        <Dropdown className="filter-btn" overlay={filterButton} trigger={["click"]} placement={"bottomRight"}>
+          <Button>
+            <FilterOutlined />
+          </Button>
+        </Dropdown>
+      </Col>
     </Row>
   );
 }
