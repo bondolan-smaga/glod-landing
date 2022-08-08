@@ -1,0 +1,33 @@
+@import '../variables';
+
+@mixin for-mobile-up {
+  @media (min-width: $phone) {
+    @content;
+  }
+}
+@mixin for-tablet-up {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+@mixin for-big-tablet-up {
+  @media (min-width: $big-tablet) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: $big-desktop) {
+    @content;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

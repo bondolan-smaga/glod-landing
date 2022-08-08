@@ -1,0 +1,21 @@
+@media screen and (max-width:425px) {
+    #banner-row{
+        margin-bottom: 0px !important;
+    }
+
+    #banner-img {
+        width: 100% !important;
+        height: 300px !important;
+    }
+
+    #button-men {
+        display: block;
+        min-width:20% !important;
+        height: 30px !important;
+    }
+    #button-woman {
+        display: block;
+        min-width:20% !important;
+        height: 30px !important;
+    }
+}

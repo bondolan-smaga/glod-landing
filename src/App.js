@@ -1,13 +1,23 @@
-// import "antd/dist/antd.css"
-import "./App.css";
+import "./App.scss"
+import { Routes, Route } from "react-router-dom";
 
-import Home from "./pages/home";
+import {
+  HomePage,
+  AboutPage,
+  FavoritePage,
+  CataloguePage,
+  DetailProductPage,
+} from "./pages";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/favorite" element={<FavoritePage />} />
+      <Route path="/catalogue" element={<CataloguePage />} />
+      <Route path="/product/:id" element={<DetailProductPage />} />
+    </Routes>
   );
 }
 

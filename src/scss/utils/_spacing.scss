@@ -1,0 +1,215 @@
+@import '../variables';
+
+.gld-margin {
+  &-top {
+    &-2xs {
+      margin-top: $spacing-2xs !important;
+    }
+    &-xs {
+      margin-top: $spacing-xs !important;
+    }
+    &-sm {
+      margin-top: $spacing-sm !important;
+    }
+    &-md {
+      margin-top: $spacing-md !important;
+    }
+    &-lg {
+      margin-top: $spacing-lg !important;
+    }
+    &-xl {
+      margin-top: $spacing-xl !important;
+    }
+    &-2xl {
+      margin-top: $spacing-2xl !important;
+    }
+    &-3xl {
+      margin-top: $spacing-3xl !important;
+    }
+  }
+  &-right {
+    &-2xs {
+      margin-right: $spacing-2xs !important;
+    }
+    &-xs {
+      margin-right: $spacing-xs !important;
+    }
+    &-sm {
+      margin-right: $spacing-sm !important;
+    }
+    &-md {
+      margin-right: $spacing-md !important;
+    }
+    &-lg {
+      margin-right: $spacing-lg !important;
+    }
+    &-xl {
+      margin-right: $spacing-xl !important;
+    }
+    &-2xl {
+      margin-right: $spacing-2xl !important;
+    }
+    &-3xl {
+      margin-right: $spacing-3xl !important;
+    }
+  }
+  &-bottom {
+    &-2xs {
+      margin-bottom: $spacing-2xs !important;
+    }
+    &-xs {
+      margin-bottom: $spacing-xs !important;
+    }
+    &-sm {
+      margin-bottom: $spacing-sm !important;
+    }
+    &-md {
+      margin-bottom: $spacing-md !important;
+    }
+    &-lg {
+      margin-bottom: $spacing-lg !important;
+    }
+    &-xl {
+      margin-bottom: $spacing-xl !important;
+    }
+    &-2xl {
+      margin-bottom: $spacing-2xl !important;
+    }
+    &-3xl {
+      margin-bottom: $spacing-3xl !important;
+    }
+  }
+  &-left {
+    &-2xs {
+      margin-left: $spacing-2xs !important;
+    }
+    &-xs {
+      margin-left: $spacing-xs !important;
+    }
+    &-sm {
+      margin-left: $spacing-sm !important;
+    }
+    &-md {
+      margin-left: $spacing-md !important;
+    }
+    &-lg {
+      margin-left: $spacing-lg !important;
+    }
+    &-xl {
+      margin-left: $spacing-xl !important;
+    }
+    &-2xl {
+      margin-left: $spacing-2xl !important;
+    }
+    &-3xl {
+      margin-left: $spacing-3xl !important;
+    }
+  }
+}
+
+.pd-padding {
+  &-top {
+    &-2xs {
+      padding-top: $spacing-2xs !important;
+    }
+    &-xs {
+      padding-top: $spacing-xs !important;
+    }
+    &-sm {
+      padding-top: $spacing-sm !important;
+    }
+    &-md {
+      padding-top: $spacing-md !important;
+    }
+    &-lg {
+      padding-top: $spacing-lg !important;
+    }
+    &-xl {
+      padding-top: $spacing-xl !important;
+    }
+    &-2xl {
+      padding-top: $spacing-2xl !important;
+    }
+    &-3xl {
+      padding-top: $spacing-3xl !important;
+    }
+  }
+  &-right {
+    &-2xs {
+      padding-right: $spacing-2xs !important;
+    }
+    &-xs {
+      padding-right: $spacing-xs !important;
+    }
+    &-sm {
+      padding-right: $spacing-sm !important;
+    }
+    &-md {
+      padding-right: $spacing-md !important;
+    }
+    &-lg {
+      padding-right: $spacing-lg !important;
+    }
+    &-xl {
+      padding-right: $spacing-xl !important;
+    }
+    &-2xl {
+      padding-right: $spacing-2xl !important;
+    }
+    &-3xl {
+      padding-right: $spacing-3xl !important;
+    }
+  }
+  &-bottom {
+    &-2xs {
+      padding-bottom: $spacing-2xs !important;
+    }
+    &-xs {
+      padding-bottom: $spacing-xs !important;
+    }
+    &-sm {
+      padding-bottom: $spacing-sm !important;
+    }
+    &-md {
+      padding-bottom: $spacing-md !important;
+    }
+    &-lg {
+      padding-bottom: $spacing-lg !important;
+    }
+    &-xl {
+      padding-bottom: $spacing-xl !important;
+    }
+    &-2xl {
+      padding-bottom: $spacing-2xl !important;
+    }
+    &-3xl {
+      padding-bottom: $spacing-3xl !important;
+    }
+  }
+  &-left {
+    &-2xs {
+      padding-left: $spacing-2xs !important;
+    }
+    &-xs {
+      padding-left: $spacing-xs !important;
+    }
+    &-sm {
+      padding-left: $spacing-sm !important;
+    }
+    &-md {
+      padding-left: $spacing-md !important;
+    }
+    &-lg {
+      padding-left: $spacing-lg !important;
+    }
+    &-xl {
+      padding-left: $spacing-xl !important;
+    }
+    &-2xl {
+      padding-left: $spacing-2xl !important;
+    }
+    &-3xl {
+      padding-left: $spacing-3xl !important;
+    }
+  }
+}
