@@ -127,10 +127,10 @@ export default function CataloguePage(props) {
 
     return (
         <MainLayout meta={seo_meta.catalogue.title}>
-            <Row style={{ margin: '15px 30px' }}>
+            <Row style={{ margin: '15px 0' }}>
                 <Breadcrumbs />
             </Row>
-            <Row style={{ margin: '15px 30px' }}>
+            <Row style={{ margin: '15px 0' }}>
                 <ProductFilter />
             </Row>
             <Row>

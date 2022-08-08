@@ -1,140 +1,177 @@
+import { Link } from "react-router-dom"
 import { DownOutlined } from "@ant-design/icons";
-import { Dropdown, Menu, Row, Space } from "antd";
+import { Button, Col, Dropdown, Menu, Row, Space} from "antd";
+import { FilterOutlined } from "@ant-design/icons";
+import "./index.scss"
+import SubMenu from "antd/lib/menu/SubMenu";
+import MenuItem from "antd/lib/menu/MenuItem";
+
+
+const size = (
+  <Menu
+    style={{
+      color: "black",
+      fontSize: "14px",
+      fontFamily: "Gibson-SemiBold, sans-serif",
+      lineHeight: "14px",
+      textTransform: "none",
+      fontWeight: "400",
+    }}
+    items={[
+      {
+        label: <Link to="/catalogue">XS</Link>,
+        key: "0",
+      },
+      {
+        label: <Link to="/catalogue">S</Link>,
+        key: "1",
+      },
+      {
+        label: <Link to="/catalogue">M</Link>,
+        key: "3",
+      },
+    ]}
+  />
+);
+const colour = (
+  <Menu
+    style={{
+      color: "black",
+      fontSize: "14px",
+      fontFamily: "Gibson-SemiBold, sans-serif",
+      lineHeight: "14px",
+      textTransform: "none",
+      fontWeight: "400",
+    }}
+    items={[
+      {
+        label: <Link to="/catalogue">Beige</Link>,
+        key: "0",
+      },
+      {
+        label: <Link to="/catalogue">Black</Link>,
+        key: "1",
+      },
+      {
+        label: <Link to="/catalogue">Blue</Link>,
+        key: "3",
+      },
+    ]}
+  />
+);
+const fitting = (
+  <Menu
+    style={{
+      color: "black",
+      fontSize: "14px",
+      fontFamily: "Gibson-SemiBold, sans-serif",
+      lineHeight: "14px",
+      textTransform: "none",
+      fontWeight: "400",
+    }}
+    items={[
+      {
+        label: <Link to="/catalogue">Loose</Link>,
+        key: "0",
+      },
+      {
+        label: <Link to="/catalogue">Regular</Link>,
+        key: "1",
+      },
+      {
+        label: <Link to="/catalogue">Slim</Link>,
+        key: "3",
+      },
+    ]}
+  />
+);
+const price = (
+  <Menu
+    style={{
+      color: "black",
+      fontSize: "14px",
+      fontFamily: "Gibson-SemiBold, sans-serif",
+      lineHeight: "14px",
+      textTransform: "none",
+      fontWeight: "400",
+    }}
+    items={[
+      {
+        label: <Link to="/catalogue">10.0000</Link>,
+        key: "0",
+      },
+      {
+        label: <Link to="/catalogue">20.000</Link>,
+        key: "1",
+      },
+      {
+        label: <Link to="/catalogue">30.000</Link>,
+        key: "3",
+      },
+    ]}
+  />
+);
+const features = (
+  <Menu
+    style={{
+      color: "black",
+      fontSize: "14px",
+      fontFamily: "Gibson-SemiBold, sans-serif",
+      lineHeight: "14px",
+      textTransform: "none",
+      fontWeight: "400",
+    }}
+    items={[
+      {
+        label: <Link to="/catalogue">Antibacterial</Link>,
+        key: "0",
+      },
+      {
+        label: <Link to="/catalogue">BCI</Link>,
+        key: "1",
+      },
+      {
+        label: <Link to="/catalogue">BeeCool</Link>,
+        key: "3",
+      },
+    ]}
+  />
+);
+
+const filterButton = (
+  <Menu>
+    <SubMenu title="SIZE">
+      <MenuItem id="filter-list">XS</MenuItem>
+      <MenuItem id="filter-list">S</MenuItem>
+      <MenuItem id="filter-list">M</MenuItem>
+    </SubMenu>
+    <SubMenu title="COLOUR">
+      <MenuItem id="filter-list">RED</MenuItem>
+      <MenuItem id="filter-list">BLACK</MenuItem>
+      <MenuItem id="filter-list">BLUE</MenuItem>
+    </SubMenu>
+    <SubMenu title="FITTING">
+      <MenuItem id="filter-list">LOOSE</MenuItem>
+      <MenuItem id="filter-list">REGULAR</MenuItem>
+      <MenuItem id="filter-list">SLIM</MenuItem>
+    </SubMenu>
+    <SubMenu title="FEATURES">
+      <MenuItem id="filter-list">ANTI BACTERIAL</MenuItem>
+      <MenuItem id="filter-list">BCI</MenuItem>
+      <MenuItem id="filter-list">BEECOOL</MenuItem>
+    </SubMenu>
+    <SubMenu title="PRICE">
+      <MenuItem id="filter-list">Rp 15.000</MenuItem>
+      <MenuItem id="filter-list">Rp 30.000</MenuItem>
+      <MenuItem id="filter-list">Rp 50.000</MenuItem>
+    </SubMenu>
+  </Menu>
+)
 
 export default function ProductFilter() {
-  const size = (
-    <Menu
-      style={{
-        color: "black",
-        fontSize: "14px",
-        fontFamily: "Gibson-SemiBold, sans-serif",
-        lineHeight: "14px",
-        textTransform: "none",
-        fontWeight: "400",
-      }}
-      items={[
-        {
-          label: <a href="link">XS</a>,
-          key: "0",
-        },
-        {
-          label: <a href="link">S</a>,
-          key: "1",
-        },
-        {
-          label: <a href="link">M</a>,
-          key: "3",
-        },
-      ]}
-    />
-  );
-  const colour = (
-    <Menu
-      style={{
-        color: "black",
-        fontSize: "14px",
-        fontFamily: "Gibson-SemiBold, sans-serif",
-        lineHeight: "14px",
-        textTransform: "none",
-        fontWeight: "400",
-      }}
-      items={[
-        {
-          label: <a href="link">Beige</a>,
-          key: "0",
-        },
-        {
-          label: <a href="link">Black</a>,
-          key: "1",
-        },
-        {
-          label: <a href="link">Blue</a>,
-          key: "3",
-        },
-      ]}
-    />
-  );
-  const fitting = (
-    <Menu
-      style={{
-        color: "black",
-        fontSize: "14px",
-        fontFamily: "Gibson-SemiBold, sans-serif",
-        lineHeight: "14px",
-        textTransform: "none",
-        fontWeight: "400",
-      }}
-      items={[
-        {
-          label: <a href="link">Loose</a>,
-          key: "0",
-        },
-        {
-          label: <a href="link">Regular</a>,
-          key: "1",
-        },
-        {
-          label: <a href="link">Slim</a>,
-          key: "3",
-        },
-      ]}
-    />
-  );
-  const price = (
-    <Menu
-      style={{
-        color: "black",
-        fontSize: "14px",
-        fontFamily: "Gibson-SemiBold, sans-serif",
-        lineHeight: "14px",
-        textTransform: "none",
-        fontWeight: "400",
-      }}
-      items={[
-        {
-          label: <a href="link">10.0000</a>,
-          key: "0",
-        },
-        {
-          label: <a href="link">20.000</a>,
-          key: "1",
-        },
-        {
-          label: <a href="link">30.000</a>,
-          key: "3",
-        },
-      ]}
-    />
-  );
-  const features = (
-    <Menu
-      style={{
-        color: "black",
-        fontSize: "14px",
-        fontFamily: "Gibson-SemiBold, sans-serif",
-        lineHeight: "14px",
-        textTransform: "none",
-        fontWeight: "400",
-      }}
-      items={[
-        {
-          label: <a href="link">Antibacterial</a>,
-          key: "0",
-        },
-        {
-          label: <a href="link">BCI</a>,
-          key: "1",
-        },
-        {
-          label: <a href="link">BeeCool</a>,
-          key: "3",
-        },
-      ]}
-    />
-  );
   return (
-    <div>
-      <Row span={24}>
+    <Row>
+      <Row span={24} className="filter-btn-row">
         <Dropdown overlay={size} trigger={["click"]}>
           <a onClick={(e) => e.preventDefault()}>
             <Space
@@ -144,7 +181,7 @@ export default function ProductFilter() {
                 fontFamily: "Gibson-SemiBold, sans-serif",
                 lineHeight: "14px",
                 textTransform: "none",
-                fontWeight: "400",
+                fontWeight: "300",
                 marginRight: "30px",
               }}
             >
@@ -226,6 +263,13 @@ export default function ProductFilter() {
           </a>
         </Dropdown>
       </Row>
-    </div>
+      <Col span={4}>
+        <Dropdown className="filter-btn" overlay={filterButton} trigger={["click"]} placement={"bottomRight"}>
+          <Button>
+            <FilterOutlined />
+          </Button>
+        </Dropdown>
+      </Col>
+    </Row>
   );
 }
