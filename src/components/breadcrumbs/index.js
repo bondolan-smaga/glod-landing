@@ -1,14 +1,16 @@
-import {Link} from "react-router-dom"
-import { Breadcrumb, Row, Col, Button } from "antd";
+import { Link } from "react-router-dom"
+import { Breadcrumb, Row, Col} from "antd";
 import {
   DoubleLeftOutlined
 } from '@ant-design/icons';
+import "./index.scss"
 
 export default function Breadcrumbs(props) {
   return (
     <Row>
       <Col span={24}>
         <Breadcrumb
+          classsName="breadcrumbs-tag"
           style={{
             lineHeight: "16px",
             letterSpacing: ".5px",
@@ -23,13 +25,11 @@ export default function Breadcrumbs(props) {
           }}
         >
           <Breadcrumb.Item>
-            <Button>
-              <DoubleLeftOutlined style={{
-                marginRight: "5px",
-                fontSize: "12px",
-              }} />
-              BACK
-            </Button>
+            <DoubleLeftOutlined style={{
+              marginRight: "5px",
+              fontSize: "12px",
+            }} />
+            BACK
           </Breadcrumb.Item>
           <Breadcrumb.Item>
             <Link to="/catalogue/jerseys" >Jerseys</Link>
