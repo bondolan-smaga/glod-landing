@@ -115,10 +115,7 @@ export default function CataloguePage(props) {
         for (let j = 0; j < catalogueProducts[i].tags.length; j++) {
             for (let k = 0; k < tagFilter.length; k++) {
                 if (catalogueProducts[i].tags[j] === tagFilter[k]) {
-                    console.log(catalogueProducts[i].tags[j])
                     filteredProducts.push(catalogueProducts[i])
-                    console.log(filteredProducts)
-                    console.log('iso')
                 }
             }
         }
