@@ -8,7 +8,6 @@ import MainNavbar from "./main-navbar";
 import Newslettersignup from "./newsletter-signup";
 import ProductCard from "./product-card";
 import ProductFilter from "./product-filter";
-import TrendingFooter from "./trending-footer";
 
 export {
   Banner,
@@ -21,5 +20,4 @@ export {
   Newslettersignup,
   ProductCard,
   ProductFilter,
-  TrendingFooter,
 };

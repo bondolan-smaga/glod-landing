@@ -88,7 +88,7 @@ export default function CarouselProductCard(props) {
                         carouselProducts.map((e) => {
                             const {id, image,product, price,colors} = e
                             return (
-                                <ProductCard id={id} image={image} product={product} price={price} colors={colors}/>
+                                <ProductCard key={id} id={id} image={image} product={product} price={price} colors={colors}/>
                             )
                     })}
                 </Carousel>

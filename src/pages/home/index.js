@@ -1,11 +1,10 @@
 import { Col, Row } from "antd";
 
-import Banner from "../../components/banner";
 import {
+  Banner,
   CarouselProductCard,
   MainLayout,
   Newslettersignup,
-  TrendingFooter,
 } from "../../components";
 
 export default function HomePage() {
@@ -84,8 +83,6 @@ export default function HomePage() {
         show={4}
         scroll={4}
       />
-      {/* trending */}
-      <TrendingFooter />
       <Row>
         <Col xs={{ span: 24 }} xl={{ span: 24 }}>
           <Newslettersignup />

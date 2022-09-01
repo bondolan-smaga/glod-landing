@@ -1,33 +1,16 @@
-import { Image, Row, Col, Typography, Button, Carousel, List } from "antd";
-import {
-  MainLayout,
-  CarouselProductCard,
-  TrendingFooter,
-} from "../../components";
+import { Image, Row, Col, Typography } from "antd";
+import { MainLayout, CarouselProductCard } from "../../components";
 
-const { Title, Paragraph, Text } = Typography;
-
-const data = ["New in", "Sustainability", "Sportswear", "Sneakers"];
-const contentStyle = {
-  height: "160px",
-  color: "#fff",
-  lineHeight: "160px",
-  textAlign: "center",
-  background: "#364d79",
-};
+const { Title } = Typography;
 
 export default function AboutPage() {
-  const onChange = (currentSlide) => {
-    console.log(currentSlide);
-  };
-
   return (
     <MainLayout>
       {/* main content */}
       {/* about us */}
       <Row style={{ maxWidth: "1000px", margin: "auto auto" }} justify="center">
         <Col span={24}>
-          <Title className="gld-align-center" level={2}>
+          <Title className="gld-align-center text-white" level={2}>
             About Us
           </Title>
           <Title className="gld-align-center" level={5}>
@@ -94,64 +77,6 @@ export default function AboutPage() {
       </Row>
       {/* recommendation */}
       <CarouselProductCard tag={"GET INSPIRED BY THIS STYLE"} />
-      {/* tranding */}
-      <TrendingFooter />
-      {/* <Row
-        style={{
-          margin: "100px 235px",
-        }}
-      >
-        <Col span={24}>
-          <Title
-            style={{
-              textTransform: "uppercase",
-            }}
-            level={3}
-          >
-            What's trending at the moment
-          </Title>
-        </Col>
-        <Col span={24}>
-          <Row>
-            <Col span={8}>
-              <List
-                header={
-                  <Title style={{ marginBottom: 0 }} level={5}>
-                    Popular men's
-                  </Title>
-                }
-                split={false}
-                dataSource={data}
-                renderItem={(item) => <List.Item>{item}</List.Item>}
-              />
-            </Col>
-            <Col span={8}>
-              <List
-                header={
-                  <Title style={{ marginBottom: 0 }} level={5}>
-                    Popular men's
-                  </Title>
-                }
-                split={false}
-                dataSource={data}
-                renderItem={(item) => <List.Item>{item}</List.Item>}
-              />
-            </Col>
-            <Col span={8}>
-              <List
-                header={
-                  <Title style={{ marginBottom: 0 }} level={5}>
-                    Popular men's
-                  </Title>
-                }
-                split={false}
-                dataSource={data}
-                renderItem={(item) => <List.Item>{item}</List.Item>}
-              />
-            </Col>
-          </Row>
-        </Col>
-      </Row> */}
     </MainLayout>
   );
 }
