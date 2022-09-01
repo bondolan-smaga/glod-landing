@@ -1,5 +1,5 @@
 import { Row, Col } from "antd";
-import { MainLayout, Newslettersignup, Breadcrumbs, ProductFilter, ProductCard } from "../../components";
+import { MainLayout, Newslettersignup, ProductFilter, ProductCard } from "../../components";
 import { seo_meta } from "../../constants/seo";
 
 import BRSFC01 from "../../assets/GLOD WEB/BRSFC 01.jpg"
@@ -115,10 +115,7 @@ export default function CataloguePage(props) {
         for (let j = 0; j < catalogueProducts[i].tags.length; j++) {
             for (let k = 0; k < tagFilter.length; k++) {
                 if (catalogueProducts[i].tags[j] === tagFilter[k]) {
-                    console.log(catalogueProducts[i].tags[j])
                     filteredProducts.push(catalogueProducts[i])
-                    console.log(filteredProducts)
-                    console.log('iso')
                 }
             }
         }
@@ -127,10 +124,10 @@ export default function CataloguePage(props) {
 
     return (
         <MainLayout meta={seo_meta.catalogue.title}>
-            <Row style={{ margin: '15px 0' }}>
+            {/* <Row style={{ margin: '15px 5px' }}>
                 <Breadcrumbs />
-            </Row>
-            <Row style={{ margin: '15px 0' }}>
+            </Row> */}
+            <Row style={{ margin: '15px 5px' }}>
                 <ProductFilter />
             </Row>
             <Row>
