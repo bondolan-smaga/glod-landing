@@ -1,10 +1,7 @@
 import { Image, Row, Col, Typography } from "antd";
-import {
-  MainLayout,
-  CarouselProductCard,
-} from "../../components";
+import { MainLayout, CarouselProductCard } from "../../components";
 import { seo_meta } from "../../constants/seo";
-import "./index.css"
+import "./index.css";
 
 const { Title } = Typography;
 
@@ -15,7 +12,7 @@ export default function AboutPage() {
       {/* about us */}
       <Row style={{ maxWidth: "1000px", margin: "auto auto" }} justify="center">
         <Col span={24}>
-          <Title className="gld-align-center" id="ttl-about" level={2}>
+          <Title className="gld-align-center text-white" level={2}>
             About Us
           </Title>
           <Title className="gld-align-center" id="glod-desc" level={5}>
@@ -83,9 +80,12 @@ export default function AboutPage() {
       {/* recommendation */}
       <Row>
         <Col span={24}>
-          <CarouselProductCard tag={"GET INSPIRED BY THIS STYLE"} show={4} scroll={4} />
+          <CarouselProductCard
+            tag={"GET INSPIRED BY THIS STYLE"}
+            show={4}
+            scroll={4}
+          />
         </Col>
-
       </Row>
     </MainLayout>
   );
