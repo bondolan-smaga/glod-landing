@@ -10,7 +10,7 @@ export default function Breadcrumbs(props) {
     <Row>
       <Col span={24}>
         <Breadcrumb
-        className="bradcrumbs-tag"
+        className="breadcrumbs-tag"
           style={{
             lineHeight: "16px",
             letterSpacing: ".5px",

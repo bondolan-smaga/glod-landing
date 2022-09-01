@@ -1,5 +1,5 @@
 import { Row, Col } from "antd";
-import { MainLayout, Newslettersignup, Breadcrumbs, ProductFilter, ProductCard } from "../../components";
+import { MainLayout, Newslettersignup, ProductFilter, ProductCard } from "../../components";
 import { seo_meta } from "../../constants/seo";
 
 import BRSFC01 from "../../assets/GLOD WEB/BRSFC 01.jpg"
@@ -124,9 +124,9 @@ export default function CataloguePage(props) {
 
     return (
         <MainLayout meta={seo_meta.catalogue.title}>
-            <Row style={{ margin: '15px 5px' }}>
+            {/* <Row style={{ margin: '15px 5px' }}>
                 <Breadcrumbs />
-            </Row>
+            </Row> */}
             <Row style={{ margin: '15px 5px' }}>
                 <ProductFilter />
             </Row>
