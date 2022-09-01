@@ -1,11 +1,13 @@
 import { Image, Row, Col, Typography } from "antd";
 import { MainLayout, CarouselProductCard } from "../../components";
+import { seo_meta } from "../../constants/seo";
+import "./index.css";
 
 const { Title } = Typography;
 
 export default function AboutPage() {
   return (
-    <MainLayout>
+    <MainLayout meta={seo_meta.about.title}>
       {/* main content */}
       {/* about us */}
       <Row style={{ maxWidth: "1000px", margin: "auto auto" }} justify="center">
@@ -13,18 +15,18 @@ export default function AboutPage() {
           <Title className="gld-align-center text-white" level={2}>
             About Us
           </Title>
-          <Title className="gld-align-center" level={5}>
+          <Title className="gld-align-center" id="glod-desc" level={5}>
             Glod Sportwear adalah penyedia pakaian olah raga yang berada di Kota
             Solo - Jawa Tengah
           </Title>
-          <Title className="gld-align-center" level={5}>
+          <Title className="gld-align-center" id="glod-desc" level={5}>
             Tim desain Glod sangat memperhatikan pola patrun baju yang nyaman
             enak dipakai dan konsep desain artwork Jersey printing yang sangat
             detail dan keren.
           </Title>
         </Col>
         {/* images */}
-        <Row gutter={[12, 12]}>
+        <Row gutter={[12, 12]} id="image-grid">
           <Col span={8}>
             <Image src="https://lh3.googleusercontent.com/p/AF1QipM4np4MHlmVOYqp7nxYbr1EnbDabXks1fx48IX4=w768-h768-n-o-v1" />
           </Col>
@@ -54,12 +56,12 @@ export default function AboutPage() {
           </Col>
         </Row>
         <Col span={24}>
-          <Title className="gld-align-center" level={2}>
+          <Title className="gld-align-center" id="hstry-ttl" level={2}>
             History
           </Title>
           <Row gutter={[28, 0]}>
             <Col xs={24} sm={12}>
-              <Title className="gld-align-justify" level={5}>
+              <Title className="gld-align-justify" id="hstry-desc" level={5}>
                 Dari tahun 2016 Glod sudah banyak memproduksi Jersey Custom dari
                 berbagai jenis Jersey / pakaian olah raga, mulai dari jersey
                 futsal, jersey sepakbola, jersey volley, jersey basket, jersey
@@ -67,7 +69,7 @@ export default function AboutPage() {
               </Title>
             </Col>
             <Col xs={24} sm={12}>
-              <Title className="gld-align-justify" level={5}>
+              <Title className="gld-align-justify" id="hstry-desc" level={5}>
                 Glod sudah banyak di percaya menjalin kerja sama dengan Club
                 futsal / Sepakbola dan Komunitas sepeda yang sudah terkenal
               </Title>
@@ -76,7 +78,15 @@ export default function AboutPage() {
         </Col>
       </Row>
       {/* recommendation */}
-      <CarouselProductCard tag={"GET INSPIRED BY THIS STYLE"} />
+      <Row>
+        <Col span={24}>
+          <CarouselProductCard
+            tag={"GET INSPIRED BY THIS STYLE"}
+            show={4}
+            scroll={4}
+          />
+        </Col>
+      </Row>
     </MainLayout>
   );
 }

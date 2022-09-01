@@ -16,20 +16,20 @@ export default function FavouriteList() {
               marginBottom: 0,
               fontWeight: "bolder",
               textAlign: "center",
-              fontFamily:'Edu VIC WA NT Beginner', 
-              fontSize:'larger'
+              fontFamily: 'Edu VIC WA NT Beginner',
+              fontSize: 'larger'
             }}
             level={2}
           >
             MY FAVORITES
           </Title>
-          <Paragraph style={{fontFamily:'Edu VIC WA NT Beginner', fontSize:'larger'}}>
+          <Paragraph style={{ fontFamily: 'Edu VIC WA NT Beginner', fontSize: 'larger' }}>
             My Favourites is a great way to keep track of your personal
             must-haves and their availability. And, most importantly, it just
             takes one click to move an item from the list and into your shopping
             cart.
           </Paragraph>
-          <Row style={{ marginTop: "80px",fontFamily:'Edu VIC WA NT Beginner', fontSize:'larger'}}>
+          <Row style={{ marginTop: "80px", fontFamily: 'Edu VIC WA NT Beginner', fontSize: 'larger' }}>
             <Paragraph style={{ marginRight: "auto" }}>
               YOU HAVE 2 PRODUCTS UNDER MY FAVOURITE
             </Paragraph>
@@ -55,7 +55,7 @@ export default function FavouriteList() {
             <Image
               style={{ margin: "30px 0px" }}
               src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dwce12e8d3/images/packshot/212573-7165.png?sw=150&sh=150&q=70"
-            ></Image>
+            />
             <Col
               style={{
                 marginTop: "35px",
@@ -228,7 +228,13 @@ export default function FavouriteList() {
           </Row>
         </Col>
       </Col>
-      <CarouselProductCard style={{margin:'100px 0'}} tag={'YOU MAY ALSO LIKE'} />
+      <Col>
+        <Row>
+          <Col span={24}>
+            <CarouselProductCard style={{ margin: '100px 0' }} tag={'YOU MAY ALSO LIKE'} />
+          </Col>
+        </Row>
+      </Col>
     </>
   );
 }

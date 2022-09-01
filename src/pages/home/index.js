@@ -6,10 +6,12 @@ import {
   MainLayout,
   Newslettersignup,
 } from "../../components";
+import { seo_meta } from "../../constants/seo";
+import banner3 from "../../assets/GLOD WEB/PERSIS REDOUT GLODWEAR 04.jpg"
 
 export default function HomePage() {
   return (
-    <MainLayout meta={{ title: "Homepage | GLOD" }}>
+    <MainLayout meta={seo_meta.home.title}>
       {/* MAIN CONTENTS */}
       <Row>
         <Col span={24}>
@@ -41,9 +43,7 @@ export default function HomePage() {
             <Col xs={{ span: 24 }} xl={{ span: 12 }}>
               <Banner
                 style={{ margin: "20px 0" }}
-                background={
-                  "url(https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dw6c9591c7/homepage/STYLE/720x600_Split_Legacy_Core_V2_2.0.jpg)"
-                }
+                background={banner3}
               />
             </Col>
             <Col xs={{ span: 24 }} xl={{ span: 12 }}>

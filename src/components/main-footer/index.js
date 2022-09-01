@@ -13,7 +13,9 @@ const { Title } = Typography;
 
 export default function MainFooter() {
   return (
-    <Row style={{ backgroundColor: "black", color: "white", padding: "0 20px" }}>
+    <Row
+      style={{ backgroundColor: "black", color: "white", padding: "0 20px" }}
+    >
       <Col
         xs={{ span: 12, order: 1 }}
         xl={{ span: 8 }}
@@ -29,7 +31,12 @@ export default function MainFooter() {
       <Col
         xs={{ span: 24, order: 3 }}
         xl={{ span: 8, order: 2 }}
-        style={{ textAlign: "center", justifyContent: "center", alignContent: "center", display: "flex" }}
+        style={{
+          textAlign: "center",
+          justifyContent: "center",
+          alignContent: "center",
+          display: "flex",
+        }}
       >
         <Title
           id="copyright"
@@ -39,11 +46,7 @@ export default function MainFooter() {
           GLOD Sportwear ©2022 Created by GLOD
         </Title>
       </Col>
-      <Col
-        id="social"
-        xs={{ span: 12, order: 2 }}
-        xl={{ span: 8, order: 3 }}
-      >
+      <Col id="social" xs={{ span: 12, order: 2 }} xl={{ span: 8, order: 3 }}>
         <Row style={{ fontSize: "30px", color: "white" }} justify="end">
           <Link to="/">
             <FacebookOutlined

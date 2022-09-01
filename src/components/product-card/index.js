@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { Card, Row, Button } from "antd";
+import { Card, Row, Button, Col,Typography } from "antd";
 import Icon from '@ant-design/icons'
+
+const {Title} = Typography
 
 
 
@@ -25,107 +27,121 @@ export default function ProductCard(props) {
       style={{
         display: "flex",
         justifyContent: "center",
-        marginBottom: "40px",
+        marginBottom: "2.5em",
       }}
     >
-            <Card
-            style={{margin:'10px 10px', borderRadius:'5%'}}
-              hoverable
-              cover={
-                <Row gutter={[0,16]}>
-                  <div>
-                    <p  
-                      style={{
-                        backgroundColor: "#d03a3a",
-                        color: "#fff",
-                        marginRight: "5px",
-                        fontSize: "10px",
-                        letterSpacing: ".5px",
-                        padding: "4px 15px 3px",
-                        fontFamily: "Gibson-SemiBold, sans-serif",
-                        position: "absolute",
-                        marginTop: "20px",
-                        fontWeight: "bold"
-                      }}
-                    >
-                      -50%
-                    </p>
-                  </div>
-                  <div>
-                    <Button onClick={increase} style={{ display: "inline-block", position: "absolute", left: '80%', top: '1.5%', background: 'transparent', border: 'none' }}>
-                      <HeartIcon style={{ fontSize: '28px',color:'hotpink' }} />
-                    </Button>
-                    <img
-                      alt="img not found"
-                      src={props.image}
-                      style={{width:'100%', height :'100%'}}
-                    />
-                  </div>
-                </Row>
-              }
+      <Card
+        style={{
+          margin: '0.63em 0.63em',
+          borderRadius: '5%'
+        }}
+        hoverable
+        cover={
+          <Row gutter={[0, 16]}>
+            <div>
+              <p
+                style={{
+                  backgroundColor: "#d03a3a",
+                  color: "#fff",
+                  marginRight: "0.3em",
+                  fontSize: "0.6rem",
+                  padding: "0.25em 0.94em 0.2em",
+                  fontFamily: "Gibson-SemiBold, sans-serif",
+                  position: "absolute",
+                  fontWeight: "bold",
+                  top: "5%"
+                }}
+              >
+                -50%
+              </p>
+            </div>
+            <div>
+              <Button onClick={increase} style={{
+                display: "inline-block",
+                position: "absolute",
+                right: '0.05em',
+                top: '4%',
+                background: 'transparent',
+                border: 'none'
+              }}>
+                <HeartIcon style={{
+                  fontSize: '1.75rem',
+                  color: '#d03a3a'
+                }} />
+              </Button>
+              <img
+                alt="img not found"
+                src={props.image}
+                style={{
+                  width: '100%',
+                  height: '100%'
+                }}
+              />
+            </div>
+          </Row>
+        }
+      >
+        <Row id="product title">
+          <Col xs={{span:24}} id="product name">
+            <Title
+              id="title"
+              style={{
+                color: "#000",
+                lineHeight: "1.25em",
+                fontSize: "0.9rem",
+                marginBottom: "0.63em",
+                fontFamily: "Gibson-Medium,sans-serif",
+                fontWeight: "700",
+              }}
             >
-              <div id="product title">
-                <div id="product name">
-                  <p
-                    id="title"
-                    style={{
-                      color: "#000",
-                      lineHeight: "20px",
-                      fontSize: "14px",
-                      marginBottom: "10px",
-                      fontFamily: "Gibson-Medium,sans-serif",
-                      fontWeight: "700",
-                    }}
-                  >
-                    {props.product}
-                  </p>
-                </div>
-                <div
-                  id="pricetag"
-                  style={{
-                    display: "flex",
-                    justifyContent: "flex-start",
-                  }}
-                >
-                  <p
-                    style={{
-                      color: "#000",
-                      letterSpacing: "0",
-                      fontSize: "12px",
-                      fontFamily: "Gibson-Regular,sans-serif",
-                      marginRight: "10px",
-                      textDecoration: "line-through",
-                    }}
-                  >
-                   Rp {props.price}
-                  </p>
-                  <p
-                    id="discount price"
-                    style={{
-                      color: "#c00",
-                      fontFamily: "Gibson-SemiBold, sans-serif",
-                      letterSpacing: "0",
-                      fontSize: "12px",
-                      fontWeight: "700",
-                    }}
-                  >
-                   Rp {props.price - (50/100 * props.price)}
-                  </p>
-                </div>
-                <div id="product color">
-                  <p
-                    style={{
-                      fontSize: "14px",
-                      letterSpacing: ".5px",
-                      fontFamily: "Gibson-Regular, sans-serif",
-                      fontWeight: "700",
-                    }}
-                  >
-                    Warna Tersedia: {props.colors} Warna
-                  </p>
-                </div>
-              </div>
-            </Card>
+              {props.product}
+            </Title>
+          </Col>
+          <Row
+            id="pricetag"
+            style={{
+              display: "flex",
+              justifyContent: "flex-start",
+            }}
+          >
+            <p
+              style={{
+                color: "#000",
+                letterSpacing: "0",
+                fontSize: "0.75rem",
+                fontFamily: "Gibson-Regular,sans-serif",
+                marginRight: "0.63em",
+                textDecoration: "line-through",
+              }}
+            >
+              Rp {props.price}
+            </p>
+            <p
+              id="discount price"
+              style={{
+                color: "#c00",
+                fontFamily: "Gibson-SemiBold, sans-serif",
+                letterSpacing: "0",
+                fontSize: "0.75rem",
+                fontWeight: "700",
+              }}
+            >
+              Rp {props.price - (50 / 100 * props.price)}
+            </p>
+          </Row>
+          <div id="product color">
+            <p
+              style={{
+                fontSize: "0.88rem",
+                fontFamily: "Gibson-Regular, sans-serif",
+                fontWeight: "700",
+              }}
+            >
+              Warna Tersedia: {props.colors.join(', ')}
+            </p>
+          </div>
+        </Row>
+      </Card>
     </Row>
   );
 }

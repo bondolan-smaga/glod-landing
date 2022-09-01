@@ -1,13 +1,13 @@
 import HomePage from "./home"
 import AboutPage from "./about"
-import FavouritePage from "./favourite"
+import FavoritePage from "./favorite"
 import CataloguePage from "./catalogue"
 import DetailProductPage from "./detail-product"
 
 export {
   HomePage,
   AboutPage,
-  FavouritePage,
+  FavoritePage,
   CataloguePage,
   DetailProductPage
 }

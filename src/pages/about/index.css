@@ -1,0 +1,96 @@
+@media only screen and (max-width:425px) {
+  #ttl-about {
+    font-size: 1.5rem ;
+  }
+
+  #glod-desc{
+    font-size: 0.8rem;
+  }
+
+  #image-grid{
+    margin-top: 1 em;
+  }
+
+  #hstry-ttl {
+    margin-top: 1em;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  #hstry-desc{
+    font-size:0.8rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  #ttl-about {
+    font-size: 1.5rem ;
+  }
+
+  #glod-desc{
+    font-size: 1rem;
+  }
+
+  #image-grid{
+    margin-top: 2em;
+  }
+
+  #hstry-ttl {
+    margin-top: 1em;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  #hstry-desc{
+    font-size:1rem;
+  }
+}
+
+@media only screen and (min-width:992px) {
+  #ttl-about {
+    font-size: 1.5rem ;
+  }
+
+  #glod-desc{
+    font-size: 1rem;
+  }
+
+  #image-grid{
+    margin-top: 2em;
+  }
+
+  #hstry-ttl {
+    margin-top: 1em;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  #hstry-desc{
+    font-size:1rem;
+  }
+}
+
+@media only screen and (min-width:1440px) {
+  #ttl-about {
+    font-size: 1.5rem ;
+  }
+
+  #glod-desc{
+    font-size: 1.5rem;
+  }
+
+  #image-grid{
+    margin-top: 2em;
+  }
+
+  #hstry-ttl {
+    margin-top: 1em;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  #hstry-desc{
+    font-size:1.6rem;
+  }
+}
