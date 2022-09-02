@@ -121,52 +121,53 @@ export default function CataloguePage(props) {
           filteredProducts.push(catalogueProducts[i]);
         }
       }
-      return (
-        <MainLayout meta={seo_meta.catalogue}>
-          {/* <Row style={{ margin: '15px 5px' }}>
-                <Breadcrumbs />
-            </Row> */}
-          <Row style={{ margin: "15px 5px" }}>
-            <ProductFilter />
-          </Row>
-          <Row>
-            <Col
-              span={24}
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                flexWrap: "wrap",
-              }}
-            >
-              {filteredProducts.map((filteredProduct) => {
-                const { id, image, tags, product, price, colors } =
-                  filteredProduct;
-                return (
-                  <Col
-                    xs={{ span: 12 }}
-                    md={{ span: 8 }}
-                    lg={{ span: 6 }}
-                    xl={{ span: 6 }}
-                  >
-                    <ProductCard
-                      id={id}
-                      image={image}
-                      tags={tags}
-                      product={product}
-                      price={price}
-                      colors={colors}
-                    />
-                  </Col>
-                );
-              })}
-            </Col>
-            <Row span={24} justify="center"></Row>
-            <Col span={24}>
-              <Newslettersignup />
-            </Col>
-          </Row>
-        </MainLayout>
-      );
     }
   }
+  return (
+    <MainLayout meta={seo_meta.catalogue}>
+      {/* <Row style={{ margin: '15px 5px' }}>
+            <Breadcrumbs />
+        </Row> */}
+      <Row style={{ margin: "15px 5px" }}>
+        <ProductFilter />
+      </Row>
+      <Row>
+        <Col
+          span={24}
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+          }}
+        >
+          {filteredProducts.map((filteredProduct) => {
+            const { id, image, tags, product, price, colors } =
+              filteredProduct;
+            return (
+              <Col
+              key={id}
+              xs={{ span: 12 }}
+              md={{ span: 8 }}
+              lg={{ span: 6 }}
+              xl={{ span: 6 }}
+              >
+                <ProductCard
+                  id={id}
+                  image={image}
+                  tags={tags}
+                  product={product}
+                  price={price}
+                  colors={colors}
+                />
+              </Col>
+            );
+          })}
+        </Col>
+        {/* <Row span={24} justify="center"></Row> */}
+        <Col span={24}>
+          <Newslettersignup />
+        </Col>
+      </Row>
+    </MainLayout>
+  );
 }
