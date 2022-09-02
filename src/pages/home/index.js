@@ -1,13 +1,13 @@
 import { Col, Row } from "antd";
 
-import Banner from "../../components/banner";
 import {
+  Banner,
   CarouselProductCard,
   MainLayout,
   Newslettersignup,
-  TrendingFooter,
 } from "../../components";
 import { seo_meta } from "../../constants/seo";
+import banner3 from "../../assets/GLOD WEB/PERSIS REDOUT GLODWEAR 04.jpg"
 
 export default function HomePage() {
   return (
@@ -43,9 +43,7 @@ export default function HomePage() {
             <Col xs={{ span: 24 }} xl={{ span: 12 }}>
               <Banner
                 style={{ margin: "20px 0" }}
-                background={
-                  "url(https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dw6c9591c7/homepage/STYLE/720x600_Split_Legacy_Core_V2_2.0.jpg)"
-                }
+                background={banner3}
               />
             </Col>
             <Col xs={{ span: 24 }} xl={{ span: 12 }}>
@@ -85,8 +83,6 @@ export default function HomePage() {
         show={4}
         scroll={4}
       />
-      {/* trending */}
-      <TrendingFooter />
       <Row>
         <Col xs={{ span: 24 }} xl={{ span: 24 }}>
           <Newslettersignup />

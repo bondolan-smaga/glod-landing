@@ -1,8 +1,7 @@
-import "./index.scss";
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Dropdown, Row, Col, Input, Button, Menu, Typography, Badge } from "antd";
-import { SearchOutlined, HeartOutlined, MenuOutlined } from "@ant-design/icons";
+import { Dropdown, Row, Col, Input, Button, Menu, Typography } from "antd";
+import { SearchOutlined, MenuOutlined } from "@ant-design/icons";
+import "./index.scss";
 import logoNavbar from "../../assets/GLOD WEB/LOGO GLOD TXT W.jpg"
 const { Title } = Typography;
 
@@ -15,7 +14,7 @@ const burgerBar = (
         label: (
           <Link to="/catalogue">
             <Title level={5}>
-              JERSEYS
+              MEN
             </Title>
           </Link>
         ),
@@ -25,7 +24,7 @@ const burgerBar = (
         label: (
           <Link to="/catalogue">
             <Title level={5}>
-              ACCESSORIES
+              WOMEN
             </Title>
           </Link>
         ),
@@ -44,23 +43,6 @@ const burgerBar = (
 );
 
 export default function MainNavbar() {
-
-  const [count] = useState(0);
-  // const increase = () => {
-  //   setCount(count + 1);
-  // };
-
-  // const decline = () => {
-  //   let newCount = count - 1;
-
-  //   if (newCount < 0) {
-  //     newCount = 0;
-  //   }
-
-  //   setCount(newCount);
-  // }
-
-
   return (
     <Row id="responsive-nav">
       <Col xs={{ span: 6 }} sm={{ span: 4 }} md={{ span: 4 }} lg={{ span: 4 }} xl={{ span: 4 }}>
@@ -73,14 +55,14 @@ export default function MainNavbar() {
         </Link>
       </Col>
       <Col md={{ span: 12 }} lg={{ span: 12 }} xl={{ span: 12 }} id="menu">
-        <Link to="/catalogue" className="main-menu">JERSEYS</Link>
-        <Link to="/catalogue" className="main-menu" >ACCESSORIES</Link>
+        <Link to="/catalogue" className="main-menu">MEN</Link>
+        <Link to="/catalogue" className="main-menu" >WOMEN</Link>
         <Link to="/about" className="main-menu" >ABOUT US</Link>
       </Col>
       <Col xs={{ span: 15}} sm={{ span: 17 }} md={{ span: 8 }} lg={{ span: 8 }} xl={{ span: 8 }}>
         <Row>
           <Col
-            span={16}
+            span={24}
             style={{
               borderLeft: "1px solid grey",
               borderRight: "1px solid grey",
@@ -93,7 +75,7 @@ export default function MainNavbar() {
               prefix={<SearchOutlined />}
             />
           </Col>
-          <Col
+          {/* <Col
             span={8}
             style={{ textAlign: "center", borderRight: "1px solid grey" }}
           >
@@ -104,7 +86,7 @@ export default function MainNavbar() {
                 </Badge>
               </Button>
             </Link>
-          </Col>
+          </Col> */}
         </Row>
       </Col>
       <Col span={3} id="side-menu" >

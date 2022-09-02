@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import { DownOutlined } from "@ant-design/icons";
-import { Button, Col, Dropdown, Menu, Row, Space} from "antd";
+import { Button, Col, Dropdown, Menu, Row, Space } from "antd";
 import { FilterOutlined } from "@ant-design/icons";
-import "./index.scss"
+import "./index.scss";
 import SubMenu from "antd/lib/menu/SubMenu";
 import MenuItem from "antd/lib/menu/MenuItem";
-
 
 const size = (
   <Menu
@@ -166,14 +165,14 @@ const filterButton = (
       <MenuItem id="filter-list">Rp 50.000</MenuItem>
     </SubMenu>
   </Menu>
-)
+);
 
 export default function ProductFilter() {
   return (
     <Row>
       <Row span={24} className="filter-btn-row">
         <Dropdown overlay={size} trigger={["click"]}>
-          <a onClick={(e) => e.preventDefault()}>
+          <a href="/" onClick={(e) => e.preventDefault()}>
             <Space
               style={{
                 color: "black",
@@ -191,7 +190,7 @@ export default function ProductFilter() {
           </a>
         </Dropdown>
         <Dropdown overlay={colour} trigger={["click"]}>
-          <a onClick={(e) => e.preventDefault()}>
+          <a href="/" onClick={(e) => e.preventDefault()}>
             <Space
               style={{
                 color: "black",
@@ -209,7 +208,7 @@ export default function ProductFilter() {
           </a>
         </Dropdown>
         <Dropdown overlay={fitting} trigger={["click"]}>
-          <a onClick={(e) => e.preventDefault()}>
+          <a href="/" onClick={(e) => e.preventDefault()}>
             <Space
               style={{
                 color: "black",
@@ -227,7 +226,7 @@ export default function ProductFilter() {
           </a>
         </Dropdown>
         <Dropdown overlay={price} trigger={["click"]}>
-          <a onClick={(e) => e.preventDefault()}>
+          <a href="/" onClick={(e) => e.preventDefault()}>
             <Space
               style={{
                 color: "black",
@@ -245,7 +244,7 @@ export default function ProductFilter() {
           </a>
         </Dropdown>
         <Dropdown overlay={features} trigger={["click"]}>
-          <a onClick={(e) => e.preventDefault()}>
+          <a href="/" onClick={(e) => e.preventDefault()}>
             <Space
               style={{
                 color: "black",
@@ -264,7 +263,12 @@ export default function ProductFilter() {
         </Dropdown>
       </Row>
       <Col span={4}>
-        <Dropdown className="filter-btn" overlay={filterButton} trigger={["click"]} placement={"bottomRight"}>
+        <Dropdown
+          className="filter-btn"
+          overlay={filterButton}
+          trigger={["click"]}
+          placement={"bottomRight"}
+        >
           <Button>
             <FilterOutlined />
           </Button>

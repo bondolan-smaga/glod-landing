@@ -1,0 +1,71 @@
+.big-title{
+    margin-top: 0 !important;
+}
+.news-letter-container{
+    background-color: rgb(0, 0, 0);
+}
+.max-container{
+    max-width: 992px !important;
+}
+
+@media only screen and (max-width:768px) {
+    .small-title{
+        font-size: 0.75rem !important;
+    }
+    .news-letter-container{
+        padding: 6.25em 1em;
+    }
+    .max-input-width .max-button-width{
+        max-width: 510px;
+    }
+    .input-container{
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media only screen and (min-width:768px) {
+    .small-title{
+        font-size: 1.25rem !important;
+        text-align: center;
+    }
+    .news-letter-container{
+        padding: 2.2em 3.2em;
+        text-align: center;
+    }
+}
+@media only screen and (max-width:992px) {
+    .big-title{
+        font-size: 1.6rem !important;
+    }
+}
+@media only screen and (min-width:992px) {
+    .big-title{
+        font-size: 2.2rem !important;
+    }
+    .news-letter-container{
+        padding: 4.7em 10.3em;
+    }
+}
+
+@media only screen and (max-width:425px) {
+    #newslet-row{
+        padding:75px 35px;
+    }
+    #newslet-text {
+        font-size: large;
+        text-align: left;
+    }
+    #input-email{
+        text-align: center;
+    }
+    #btn-subs{
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width:1440px) {
+    #newslet-row {
+        padding: 165px 75px 
+    }
+}
