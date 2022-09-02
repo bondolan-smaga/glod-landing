@@ -14,7 +14,7 @@ const { Title } = Typography;
 export default function MainFooter() {
   return (
     <Row
-      style={{ backgroundColor: "black", color: "white", padding: "0 20px" }}
+      style={{ backgroundColor: "black", color: "white", padding: "10px 20px 10px" }}
     >
       <Col
         xs={{ span: 12, order: 1 }}
@@ -41,7 +41,7 @@ export default function MainFooter() {
         <Title
           id="copyright"
           level={5}
-          style={{ color: "white", padding: "10px 0px", fontSize: "15px" }}
+          style={{ color: "white", padding: "10px 0px", fontSize: "15px", margin: "0" }}
         >
           GLOD Sportwear ©2022 Created by GLOD
         </Title>

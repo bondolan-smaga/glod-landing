@@ -51,7 +51,7 @@ const produckDetail = `Unisex. Quality: 100% acrylic. Item No. 212571-7165`;
 
 export default function DetailProductPage() {
   return (
-    <MainLayout meta={seo_meta.detailProduct.title}>
+    <MainLayout meta={seo_meta.detailProduct}>
       <Row>
         <Breadcrumbs></Breadcrumbs>
       </Row>

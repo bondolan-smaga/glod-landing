@@ -1,20 +1,19 @@
 import { Button, Col, Row } from "antd";
-import "./index.css"
-
-
-
+import "./index.css";
 
 export default function Banner(props) {
   return (
     <Row id="banner-row" {...props}>
-      <Col span={24}
+      <Col
+        span={24}
         id="pond"
         style={{
           display: "flex",
           justifyContent: "center",
         }}
       >
-        <Row id="banner-img"
+        <Row
+          id="banner-img"
           style={{
             backgroundImage: props.background,
             width: "100%",
@@ -38,7 +37,7 @@ export default function Banner(props) {
             <div
               id="button-container"
               style={{
-                padding:'30px',
+                padding: "30px",
                 display: "flex",
                 width: "fit-content",
                 height: "50px",
@@ -48,7 +47,7 @@ export default function Banner(props) {
                 ghost
                 id="button-men"
                 style={{
-                  padding:'8px 8px',
+                  padding: "8px 8px",
                   display: "inline-block",
                   margin: "0px 10px 0px 0px",
                   color: "#000000",
@@ -71,7 +70,7 @@ export default function Banner(props) {
                 ghost
                 id="button-woman"
                 style={{
-                  padding:'8px 8px',
+                  padding: "8px 8px",
                   display: "inline-block",
                   margin: "0px 10px 0px 0px",
                   color: "#000000",
