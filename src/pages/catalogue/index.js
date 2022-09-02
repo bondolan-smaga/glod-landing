@@ -106,6 +106,7 @@ const catalogueProducts = [
 
 ]
 
+
 export default function CataloguePage(props) {
     const tagFilter = ['jersey']
     let filteredProducts = []
@@ -115,15 +116,13 @@ export default function CataloguePage(props) {
         for (let j = 0; j < catalogueProducts[i].tags.length; j++) {
             for (let k = 0; k < tagFilter.length; k++) {
                 if (catalogueProducts[i].tags[j] === tagFilter[k]) {
-                    console.log(catalogueProducts[i].tags[j])
                     filteredProducts.push(catalogueProducts[i])
-                    console.log(filteredProducts)
-                    console.log('iso')
                 }
             }
         }
     }
 
+   
 
     return (
         <MainLayout meta={seo_meta.catalogue.title}>
@@ -139,7 +138,7 @@ export default function CataloguePage(props) {
                         filteredProducts.map((filteredProduct => {
                             const { id, image, tags, product, price, colors } = filteredProduct
                             return (
-                                <Col xs={{ span: 12 }} md={{ span: 8 }} lg={{ span: 6 }} xl={{ span: 6 }}>
+                                <Col key={id} xs={{ span: 12 }} md={{ span: 8 }} lg={{ span: 6 }} xl={{ span: 6 }}>
                                     <ProductCard
                                         id={id}
                                         image={image}
