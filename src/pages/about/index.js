@@ -7,7 +7,7 @@ const { Title } = Typography;
 
 export default function AboutPage() {
   return (
-    <MainLayout meta={seo_meta.about.title}>
+    <MainLayout meta={seo_meta.about}>
       {/* main content */}
       {/* about us */}
       <Row style={{ maxWidth: "1000px", margin: "auto auto" }} justify="center">

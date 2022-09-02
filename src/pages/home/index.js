@@ -7,11 +7,11 @@ import {
   Newslettersignup,
 } from "../../components";
 import { seo_meta } from "../../constants/seo";
-import banner3 from "../../assets/GLOD WEB/PERSIS REDOUT GLODWEAR 04.jpg"
+import banner3 from "../../assets/GLOD WEB/PERSIS REDOUT GLODWEAR 04.jpg";
 
 export default function HomePage() {
   return (
-    <MainLayout meta={seo_meta.home.title}>
+    <MainLayout meta={seo_meta.home}>
       {/* MAIN CONTENTS */}
       <Row>
         <Col span={24}>
@@ -41,10 +41,7 @@ export default function HomePage() {
         <Col span={24}>
           <Row gutter={[8, 0]}>
             <Col xs={{ span: 24 }} xl={{ span: 12 }}>
-              <Banner
-                style={{ margin: "20px 0" }}
-                background={banner3}
-              />
+              <Banner style={{ margin: "20px 0" }} background={banner3} />
             </Col>
             <Col xs={{ span: 24 }} xl={{ span: 12 }}>
               <Banner

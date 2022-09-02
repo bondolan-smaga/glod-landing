@@ -110,7 +110,6 @@ const catalogueProducts = [
   },
 ];
 
-
 export default function CataloguePage(props) {
   const tagFilter = ["jersey"];
   let filteredProducts = [];
@@ -119,11 +118,11 @@ export default function CataloguePage(props) {
     for (let j = 0; j < catalogueProducts[i].tags.length; j++) {
       for (let k = 0; k < tagFilter.length; k++) {
         if (catalogueProducts[i].tags[j] === tagFilter[k]) {
-          filteredProducts.push(catalogueProducts[i])
+          filteredProducts.push(catalogueProducts[i]);
         }
       }
       return (
-        <MainLayout meta={seo_meta.catalogue.title}>
+        <MainLayout meta={seo_meta.catalogue}>
           {/* <Row style={{ margin: '15px 5px' }}>
                 <Breadcrumbs />
             </Row> */}
@@ -133,10 +132,15 @@ export default function CataloguePage(props) {
           <Row>
             <Col
               span={24}
-              style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap",
+              }}
             >
               {filteredProducts.map((filteredProduct) => {
-                const { id, image, tags, product, price, colors } = filteredProduct;
+                const { id, image, tags, product, price, colors } =
+                  filteredProduct;
                 return (
                   <Col
                     xs={{ span: 12 }}
