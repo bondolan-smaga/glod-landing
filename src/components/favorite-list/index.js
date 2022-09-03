@@ -1,8 +1,8 @@
+import "./index.css";
 import { Col, Row, Typography, Button, Image } from "antd";
 import CarouselProductCard from "../carousel-product-card";
 import { Link } from "react-router-dom";
-import "./index.css";
-import { favoriteProducts } from "../../constants/favorite-products";
+import { favoriteProducts } from "../../constants/products";
 const { Title, Paragraph } = Typography;
 
 export default function FavoriteList() {
