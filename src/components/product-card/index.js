@@ -54,42 +54,6 @@ export default function ProductCard(props) {
           <Col span={24}>
             <Text style={{ fontWeight: "700" }}>Warna Tersedia: {props.colors.join(", ")}</Text>
           </Col>
-          <Row
-            style={{
-              display: "flex",
-              justifyContent: "flex-start",
-            }}
-          >
-            <p
-              style={{
-                color: "#000",
-                letterSpacing: "0",
-                fontSize: "0.75rem",
-                fontFamily: "Gibson-Regular,sans-serif",
-                marginRight: "0.63em",
-                textDecoration: "line-through",
-              }}
-            ></p>
-            <p
-              id="discount price"
-              style={{
-                color: "#c00",
-                fontFamily: "Gibson-SemiBold, sans-serif",
-                letterSpacing: "0",
-                fontSize: "0.75rem",
-                fontWeight: "700",
-              }}
-            ></p>
-          </Row>
-          <div id="product color">
-            <p
-              style={{
-                fontSize: "0.88rem",
-                fontFamily: "Gibson-Regular, sans-serif",
-                fontWeight: "700",
-              }}
-            ></p>
-          </div>
         </Row>
       </Card>
     </Row>
