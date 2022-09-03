@@ -1,4 +1,4 @@
-import { Col, Row, Image, Carousel, Typography, Space } from "antd";
+import { Col, Row, Image, Carousel, Typography, Space, Button } from "antd";
 
 import { MainLayout, Newslettersignup, CarouselProductCard } from "../../components";
 import { seo_meta } from "../../constants/seo";
@@ -389,6 +389,13 @@ export default function DetailProductPage() {
               }}
             >
               L
+            </Col>
+          </Row>
+          <Row style={{ marginTop: '20px' }}>
+            <Col span={24}>
+              <Button style={{ backgroundColor: '#03AC0E', borderRadius: '15px', color: 'white' }}>
+                Go to Tokopedia
+              </Button>
             </Col>
           </Row>
         </Col>
