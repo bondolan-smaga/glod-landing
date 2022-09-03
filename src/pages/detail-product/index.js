@@ -1,11 +1,13 @@
-import { Col, Row, Image, Carousel, Dropdown, Space } from "antd";
-import { DownOutlined } from "@ant-design/icons";
+import { Col, Row, Image, Carousel, Typography, Space, Button } from "antd";
 
-import { Breadcrumbs, MainLayout } from "../../components";
+import { MainLayout, Newslettersignup, CarouselProductCard } from "../../components";
 import { seo_meta } from "../../constants/seo";
+import "./index.scss"
+
+const Title = Typography
 
 const contentStyle = {
-  height: "450px",
+  height: "fit-content",
   color: "#fff",
   lineHeight: "160px",
   textAlign: "center",
@@ -39,7 +41,6 @@ const contentStyle = {
 //         ]}
 //     />)
 
-const produckDetail = `Unisex. Quality: 100% acrylic. Item No. 212571-7165`;
 
 // const sizeAndFit = (
 //     `Fitting: Regular`
@@ -52,15 +53,21 @@ const produckDetail = `Unisex. Quality: 100% acrylic. Item No. 212571-7165`;
 export default function DetailProductPage() {
   return (
     <MainLayout meta={seo_meta.detailProduct}>
-      <Row>
+      {/* <Row>
         <Breadcrumbs></Breadcrumbs>
-      </Row>
+      </Row> */}
       <Row gutter={[24, 8]}>
-        <Col span={8}>
-          <Carousel autoplay>
+        <Col
+          xs={{ span: 24 }}
+          sm={{ span: 24 }}
+          md={{ span: 24 }}
+          lg={{ span: 8 }}
+          xl={{ span: 8 }}>
+          <Carousel>
             <div>
               <h3 style={contentStyle}>
                 <Image
+                  className="main-product"
                   style={{
                     backgroundColor: "#eaeaea",
                     marginTop: "6px",
@@ -73,6 +80,7 @@ export default function DetailProductPage() {
             <div>
               <h3 style={contentStyle}>
                 <Image
+                  className="main-product"
                   style={{
                     backgroundColor: "#eaeaea",
                     marginTop: "6px",
@@ -85,6 +93,7 @@ export default function DetailProductPage() {
             <div>
               <h3 style={contentStyle}>
                 <Image
+                  className="main-product"
                   style={{
                     backgroundColor: "#eaeaea",
                     marginTop: "6px",
@@ -97,6 +106,7 @@ export default function DetailProductPage() {
             <div>
               <h3 style={contentStyle}>
                 <Image
+                  className="main-product"
                   style={{
                     backgroundColor: "#eaeaea",
                     marginTop: "6px",
@@ -108,7 +118,7 @@ export default function DetailProductPage() {
             </div>
           </Carousel>
         </Col>
-        <Col span={11}>
+        <Col span={11} xs={{ span: 24 }} sm={{ span: 24 }} lg={{ span: 8 }}>
           <Row>
             <Col
               style={{
@@ -208,11 +218,7 @@ export default function DetailProductPage() {
             >
               A classic style with the hummel® chevron update, this sweater has
               been created using a cotton sweat fabric with a brushed backside
-              for increased comfort, softness and warmth. The hmlLEGACY
-              SWEATSHIRT is cuffed at the waistband and sleeves to trap the body
-              heat in and the cold air out. This style is unisex and fitted on
-              men. For women, we recommend choosing one size smaller than you
-              normally would.
+              for increased comfort, softness and warmth.
             </Col>
           </Row>
           <Row>
@@ -221,29 +227,27 @@ export default function DetailProductPage() {
                 marginTop: "10px",
               }}
             >
-              <Dropdown
-                overlay={produckDetail}
-                trigger={["click"]}
-                overlayStyle={{
-                  width: "350px",
-                }}
-              >
-                <a href="/" onClick={(e) => e.preventDefault()}>
-                  <Space>
-                    Product Detail
-                    <DownOutlined />
-                  </Space>
-                </a>
-              </Dropdown>
+              <Title level={5} style={{ fontWeight: 'bold' }}>
+                Product Detail
+              </Title>
+              <Space style={{ fontWeight: 'bold', color: '#2800aa' }}>
+                Unisex. Quality: 100% acrylic. Item No. 212571-7165
+              </Space>
             </Col>
           </Row>
         </Col>
-        <Col span={5}>
+        <Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 12 }} lg={{ span: 6 }} xl={{ span: 6 }}>
           <Row>
             <Col>Color:</Col>
           </Row>
-          <Row gutter={[8, 8]}>
-            <Col span={4}>
+          <Row gutter={[8, 8]}
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+            }}
+          >
+            <Col span={4} xs={{ span: 6 }}>
               <Image
                 style={{
                   backgroundColor: "#eaeaea",
@@ -254,7 +258,7 @@ export default function DetailProductPage() {
                 src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dw029cc50d/images/packshot/212571-1116.png?sw=40&sh=40&q=70"
               />
             </Col>
-            <Col span={4}>
+            <Col span={4} xs={{ span: 6 }}>
               <Image
                 style={{
                   backgroundColor: "#eaeaea",
@@ -265,7 +269,7 @@ export default function DetailProductPage() {
                 src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dw2b25c34a/images/packshot/212571-2001.png?sw=40&sh=40&q=70"
               />
             </Col>
-            <Col span={4}>
+            <Col span={4} xs={{ span: 6 }}>
               <Image
                 style={{
                   backgroundColor: "#eaeaea",
@@ -276,7 +280,7 @@ export default function DetailProductPage() {
                 src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dwcff952a7/images/packshot/212571-2006.png?sw=40&sh=40&q=70"
               />
             </Col>
-            <Col span={4}>
+            <Col span={4} xs={{ span: 6 }}>
               <Image
                 style={{
                   backgroundColor: "#eaeaea",
@@ -287,7 +291,7 @@ export default function DetailProductPage() {
                 src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dw7d71ae15/images/packshot/212571-3306.png?sw=40&sh=40&q=70"
               />
             </Col>
-            <Col span={4}>
+            <Col span={4} xs={{ span: 6 }}>
               <Image
                 style={{
                   backgroundColor: "#eaeaea",
@@ -298,7 +302,7 @@ export default function DetailProductPage() {
                 src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dw6db60430/images/packshot/212571-6012.png?sw=40&sh=40&q=70"
               />
             </Col>
-            <Col span={4}>
+            <Col span={4} xs={{ span: 6 }}>
               <Image
                 style={{
                   backgroundColor: "#eaeaea",
@@ -309,7 +313,7 @@ export default function DetailProductPage() {
                 src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dw225cce97/images/packshot/212571-6219.png?sw=40&sh=40&q=70"
               />
             </Col>
-            <Col span={4}>
+            <Col span={4} xs={{ span: 6 }}>
               <Image
                 style={{
                   backgroundColor: "#eaeaea",
@@ -320,7 +324,7 @@ export default function DetailProductPage() {
                 src="https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dw2bdb0e76/images/packshot/212571-7165.png?sw=40&sh=40&q=70"
               />
             </Col>
-            <Col span={4}>
+            <Col span={4} xs={{ span: 6 }}>
               <Image
                 style={{
                   backgroundColor: "#eaeaea",
@@ -335,7 +339,7 @@ export default function DetailProductPage() {
           <Row
             gutter={[0, 0]}
             style={{
-              marginTop: "10px",
+              marginTop: "20px",
             }}
           >
             <Col
@@ -387,6 +391,27 @@ export default function DetailProductPage() {
               L
             </Col>
           </Row>
+          <Row style={{ marginTop: '20px' }}>
+            <Col span={24}>
+              <Button style={{ backgroundColor: '#03AC0E', borderRadius: '15px', color: 'white' }}>
+                Go to Tokopedia
+              </Button>
+            </Col>
+          </Row>
+        </Col>
+        <Col span={24}>
+          <Row span={24}>
+            <Col span={24} style={{ margin: "10px 0" }}>
+              <CarouselProductCard
+                tag={"RELATED PRODUCT"}
+                show={4}
+                scroll={4}
+              />
+            </Col>
+          </Row>
+        </Col>
+        <Col span={24}>
+          <Newslettersignup />
         </Col>
       </Row>
     </MainLayout>
