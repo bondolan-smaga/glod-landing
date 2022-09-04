@@ -1,5 +1,15 @@
-import { Link } from "react-router-dom";
-import { Dropdown, Row, Col, Input, Button, Menu, Typography } from "antd";
+import {
+  Dropdown,
+  Row,
+  Col,
+  Input,
+  Button,
+  Menu,
+  Typography,
+  Form,
+} from "antd";
+import { useState, useEffect } from "react";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { SearchOutlined, MenuOutlined } from "@ant-design/icons";
 import "./index.scss";
 import logoNavbar from "../../assets/GLOD WEB/LOGO GLOD TXT W.jpg";
@@ -37,8 +47,21 @@ const burgerBar = (
 );
 
 export default function MainNavbar() {
+  const navigate = useNavigate();
+  const [inputQuery, setInputQuery] = useState("");
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    console.log("masuk sini");
+    setInputQuery(searchParams.get("q"));
+  }, []);
+
+  function handleOnSearch() {
+    console.log(inputQuery, "input val");
+    navigate(`/catalogue?q=${inputQuery}`);
+  }
   return (
-    <Row id="responsive-nav">
+    <Row>
       <Col
         xs={{ span: 6 }}
         sm={{ span: 4 }}
@@ -73,34 +96,16 @@ export default function MainNavbar() {
         lg={{ span: 8 }}
         xl={{ span: 8 }}
       >
-        <Row>
-          <Col
-            span={24}
-            style={{
-              borderLeft: "1px solid grey",
-              borderRight: "1px solid grey",
-            }}
-          >
-            <Input
-              size="large"
-              placeholder="search"
-              bordered={false}
-              prefix={<SearchOutlined />}
-            />
-          </Col>
-          {/* <Col
-            span={8}
-            style={{ textAlign: "center", borderRight: "1px solid grey" }}
-          >
-            <Link to="/favorite">
-              <Button type="text">
-                <Badge count={count} size="small" offset={[3, 0]} showZero color="black">
-                  <HeartOutlined style={{ fontSize: "20px", color: "grey" }} />
-                </Badge>
-              </Button>
-            </Link>
-          </Col> */}
-        </Row>
+        <Form onFinish={handleOnSearch}>
+          <Input
+            value={inputQuery}
+            onChange={(e) => setInputQuery(e.target.value)}
+            size="large"
+            placeholder="search"
+            bordered={false}
+            prefix={<SearchOutlined />}
+          />
+        </Form>
       </Col>
       <Col span={3} id="side-menu">
         <Button style={{ border: "none", height: "100%" }}>
