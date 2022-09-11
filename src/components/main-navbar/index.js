@@ -1,26 +1,17 @@
-import {
-  Dropdown,
-  Row,
-  Col,
-  Input,
-  Button,
-  Menu,
-  Typography,
-  Form,
-} from "antd";
+import { Dropdown, Row, Col, Input, Menu, Typography, Form } from "antd";
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { SearchOutlined, MenuOutlined } from "@ant-design/icons";
+
 import "./index.scss";
 import logoNavbar from "../../assets/GLOD WEB/LOGO GLOD TXT W.jpg";
-const { Title } = Typography;
 
+const { Title } = Typography;
 const burgerBar = (
   <Menu
-    style={{ top: "1.3rem" }}
+    className="gld-margin-top-md"
     items={[
       {
-        key: "men",
         label: (
           <Link to="/catalogue">
             <Title level={5}>MEN</Title>
@@ -28,7 +19,6 @@ const burgerBar = (
         ),
       },
       {
-        key: "accessories",
         label: (
           <Link to="/catalogue">
             <Title level={5}>WOMEN</Title>
@@ -52,52 +42,32 @@ export default function MainNavbar() {
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
-    console.log("masuk sini");
     setInputQuery(searchParams.get("q"));
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function handleOnSearch() {
-    console.log(inputQuery, "input val");
     navigate(`/catalogue?q=${inputQuery}`);
   }
   return (
-    <Row>
-      <Col
-        xs={{ span: 6 }}
-        sm={{ span: 4 }}
-        md={{ span: 4 }}
-        lg={{ span: 4 }}
-        xl={{ span: 4 }}
-      >
+    <Row align="middle">
+      <Col xs={{ span: 6 }} sm={{ span: 4 }} md={{ span: 18 }}>
         <Link to="/">
-          <img
-            id="gambarlogo"
-            src={logoNavbar}
-            style={{ width: "150px", height: "64px" }}
-            alt="GLOD"
-          />
+          <img className="brand-logo" src={logoNavbar} alt="GLOD" />
         </Link>
-      </Col>
-      <Col md={{ span: 12 }} lg={{ span: 12 }} xl={{ span: 12 }} id="menu">
-        <Link to="/catalogue" className="main-menu">
+        <Link to="/catalogue" className="main-menu link-text">
           MEN
         </Link>
-        <Link to="/catalogue" className="main-menu">
+        <Link to="/catalogue" className="main-menu link-text">
           WOMEN
         </Link>
-        <Link to="/about" className="main-menu">
+        <Link to="/about" className="main-menu link-text">
           ABOUT US
         </Link>
       </Col>
-      <Col
-        style={{ display: 'flex', alignItems: 'center'}}
-        xs={{ span: 15 }}
-        sm={{ span: 17 }}
-        md={{ span: 8 }}
-        lg={{ span: 8 }}
-        xl={{ span: 8 }}
-      >
-        <Form onFinish={handleOnSearch} style={{width:'100%'}}>
+      <Col xs={{ span: 15 }} sm={{ span: 17 }} md={{ span: 6 }}>
+        <Form className="search-form" onFinish={handleOnSearch}>
           <Input
             value={inputQuery}
             onChange={(e) => setInputQuery(e.target.value)}
@@ -108,16 +78,15 @@ export default function MainNavbar() {
           />
         </Form>
       </Col>
-      <Col span={3} id="side-menu">
-        <Button style={{ border: "none", height: "100%" }}>
-          <Dropdown
-            overlay={burgerBar}
-            placement={"bottomLeft"}
-            overlayStyle={{ width: "100%", height: "50px" }}
-          >
-            <MenuOutlined />
-          </Dropdown>
-        </Button>
+      <Col className="side-menu" span={3}>
+        <Dropdown
+          overlay={burgerBar}
+          placement={"bottomLeft"}
+          overlayStyle={{ width: "100%", height: "50px" }}
+          trigger={["click"]}
+        >
+          <MenuOutlined className="gld-margin-right-sm" />
+        </Dropdown>
       </Col>
     </Row>
   );
