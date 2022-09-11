@@ -90,13 +90,14 @@ export default function MainNavbar() {
         </Link>
       </Col>
       <Col
+        style={{ display: 'flex', alignItems: 'center'}}
         xs={{ span: 15 }}
         sm={{ span: 17 }}
         md={{ span: 8 }}
         lg={{ span: 8 }}
         xl={{ span: 8 }}
       >
-        <Form onFinish={handleOnSearch}>
+        <Form onFinish={handleOnSearch} style={{width:'100%'}}>
           <Input
             value={inputQuery}
             onChange={(e) => setInputQuery(e.target.value)}
