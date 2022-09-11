@@ -6,7 +6,6 @@ import {
   AboutPage,
   CataloguePage,
   DetailProductPage,
-  // FavoritePage,
 } from "./pages";
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/catalogue" element={<CataloguePage />} />
       <Route path="/product/:id" element={<DetailProductPage />} />
-      {/* <Route path="/favorite" element={<FavoritePage />} /> */}
     </Routes>
   );
 }
