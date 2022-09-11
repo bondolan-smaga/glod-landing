@@ -1,5 +1,5 @@
 import { Col, Row, Image, Carousel, Typography, Space, Button } from "antd";
-import { OmitProps } from "antd/lib/transfer/ListBody";
+// import { OmitProps } from "antd/lib/transfer/ListBody";
 
 import { MainLayout, Newslettersignup, CarouselProductCard } from "../../components";
 import { seo_meta } from "../../constants/seo";
