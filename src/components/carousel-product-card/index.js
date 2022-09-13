@@ -121,6 +121,7 @@ export default function CarouselProductCard(props) {
       </Col>
       <Col span={24}>
         <Carousel
+          dots={false}
           {...settings}
           ref={(ref) => {
             slider.current = ref;

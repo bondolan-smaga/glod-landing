@@ -9,6 +9,11 @@ import SHINDYO3 from "../assets/GLOD WEB/SHINDY 00103.jpg";
 import SHINDYO4 from "../assets/GLOD WEB/SHINDY 00201.jpg";
 import SHINDYO5 from "../assets/GLOD WEB/SHINDY 00202.jpg";
 import SHINDYO6 from "../assets/GLOD WEB/SHINDY 00203.jpg";
+import mockUpOneck from "../assets/GLOD WEB/glod mockup oneck.png";
+import mockUpOneckQ from "../assets/GLOD WEB/glod mockup oneckq.png";
+import mockUpVneck from "../assets/GLOD WEB/glod mockup vneck.png";
+import mockUpVneckQ from "../assets/GLOD WEB/glod mockup vneckq.png";
+
 
 export const products = [
   {
@@ -215,6 +220,71 @@ export const catalogueProducts = [
     description: '',
     detail: ''
   },
+  {
+    id: 12,
+    tags: ["mock up oneck", "jersey"],
+    image: mockUpOneck,
+    images: [],
+    product: "GLOD MOCK UP O-NECK",
+    price: 50000,
+    discountPrice: 0,
+    discount: '',
+    colors: ["white"],
+    colorImages: [],
+    sizes: [],
+    type: '',
+    description: '',
+    detail: ''
+  },
+  {
+    id: 13,
+    tags: ["mock up oneck", "jersey"],
+    image: mockUpOneckQ,
+    images: [],
+    product: "GLOD MOCK UP O-NECKQ",
+    price: 50000,
+    discountPrice: 0,
+    discount: '',
+    colors: ["white"],
+    colorImages: [],
+    sizes: [],
+    type: '',
+    description: '',
+    detail: ''
+  },
+  {
+    id: 14,
+    tags: ["mock up vneck", "jersey"],
+    image: mockUpVneck,
+    images: [],
+    product: "GLOD MOCK UP v-NECK",
+    price: 50000,
+    discountPrice: 0,
+    discount: '',
+    colors: ["white"],
+    colorImages: [],
+    sizes: [],
+    type: '',
+    description: '',
+    detail: ''
+  },
+  {
+    id: 15,
+    tags: ["mock up vneck", "jersey"],
+    image: mockUpVneckQ,
+    images: [],
+    product: "GLOD MOCK UP V-NECKQ",
+    price: 50000,
+    discountPrice: 0,
+    discount: '',
+    colors: ["white"],
+    colorImages: [],
+    sizes: [],
+    type: '',
+    description: '',
+    detail: ''
+  },
+
 ];
 
 export const favoriteProducts = [
