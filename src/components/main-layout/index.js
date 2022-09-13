@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Layout } from "antd";
+
 import { MainNavbar, MainFooter } from "../index";
 
 const { Header, Content, Footer } = Layout;

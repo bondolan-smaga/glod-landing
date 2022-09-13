@@ -1,145 +1,57 @@
-.ant-col a {
+.link-text {
   color: black;
   font-weight: 600;
+  text-decoration: none;
 }
-
-.ant-col a:hover {
+.link-text:hover {
   color: black;
 }
 
+.search-form {
+  width: 100%;
+}
 
-@media only screen and (max-width:425px) {
-  #gambarlogo {
-    width: 80px !important;
-    height: 50px !important;
+@media only screen and (max-width: 768px) {
+  .brand-logo {
+    height: 64px;
+    width: 80px;
+    margin-right: 1em;
   }
 
-  .ant-row {
-    width: 100%;
-    left: 10%;
+  .main-menu {
+    display: none;
+  }
+
+  .side-menu {
     display: flex;
     justify-content: right;
   }
-
-  .ant-col .ant-col-4 {
-    width: 15%;
-    max-height: 45px;
-    display: inline-block
-  }
-
-  #gambarlogo {
-    width: 50%;
-    height: 35px;
-  }
-
-  .ant-col .ant-col-12 {
-    display: flex;
-    margin-right: auto;
-  }
-
-  .ant-col .ant-col-3 {
-    font-size: smaller;
-    margin-left: 15px;
-    left: 10%;
-  }
-
-  .ant-col .ant-col-18 {
-    font-size: smaller;
-    margin-left: 5px;
-  }
-
-  #about {
-    font-size: smaller;
-    margin-left: 5px;
-    left: 25%;
-  }
-
-  .ant-btn.ant-btn-text {
-    width: 30px;
-    right: 14%;
-  }
-
-  #search-fav {
-    display: inline-block;
-  }
-
-  #responsive-nav {
-    height: 80%;
-  }
-
-  // #menu {
-  //   display: none;
-  // }
-
 }
 
-@media only screen and (max-width:768px) {
-  #gambarlogo {
-     width: 80px !important;
-    height: 50px !important;
+@media only screen and (min-width: 768px) {
+  .brand-logo {
+    height: 64px;
+    width: 120px;
+    margin-right: 1em;
   }
-  
+
   .main-menu {
+    display: inline;
     margin-right: 1.2em;
   }
 
-  #menu {
-    display: none;
+  .side-menu {
+    display: none !important;
   }
+}
 
-  #side-menu{
-    left: 3%;
-  }
-
-} 
-
-@media only screen and (min-width:768px) {
-  #gambarlogo {
-    width: 120px !important;
-    height: 70px !important;
-  }
-
-  #menu {
-    display: block;
-  }
-  
+@media only screen and (min-width: 1440px) {
   .main-menu {
-    margin-right: 1.2em;
-  }
-
-  #side-menu{
-    display: none;
-  }
-} 
-
-@media only screen and (min-width:992px) and (max-width:1440px){
-  #gambarlogo {
-    width: 120px !important;
-    height: 70px !important;
-  }
-  
-  .main-menu {
-    margin-right: 2em;
-  }
-} 
-
-@media only screen and (min-width:1440px) {
-  #side-menu {
-    display: none;
-  }
-
-  // #menu {
-  //   display: block;
-  // }
-
-  #gambarlogo {
-    width: 170px !important;
-    height: 74px !important;
-  }
-
-  .main-menu {
-    margin-right: 5em;
+    margin-right: 4em;
     font-size: 1rem;
   }
-}
 
+  .brand-logo {
+    margin-right: 4em;
+  }
+}

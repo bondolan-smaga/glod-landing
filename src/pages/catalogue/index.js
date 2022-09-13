@@ -10,13 +10,15 @@ import {
 import { seo_meta } from "../../constants/seo";
 import { catalogueProducts } from "../../constants/products";
 
-export default function CataloguePage(props) {
+export default function CataloguePage() {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [searchParams] = useSearchParams();
   const location = useLocation();
 
   useEffect(() => {
     filterProducts();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
 
   function filterProducts() {
