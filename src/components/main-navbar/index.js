@@ -4,9 +4,9 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { SearchOutlined, MenuOutlined } from "@ant-design/icons";
 
 import "./index.scss";
-import logoNavbar from "../../assets/GLOD WEB/LOGO GLOD TXT W.jpg";
-
+import logoNavbar from "../../assets/GLOD WEB/logo banner glod.png";
 const { Title } = Typography;
+
 const burgerBar = (
   <Menu
     className="gld-margin-top-md"

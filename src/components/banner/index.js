@@ -15,7 +15,7 @@ export default function Banner(props) {
         <Row
           id="banner-img"
           style={{
-            backgroundImage: props.background,
+            backgroundImage: `url('${props.background}')`,
             width: "100%",
             height: "600px",
             backgroundPosition: "center center",

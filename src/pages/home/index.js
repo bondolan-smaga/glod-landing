@@ -7,7 +7,6 @@ import {
   Newslettersignup,
 } from "../../components";
 import { seo_meta } from "../../constants/seo";
-import banner3 from "../../assets/GLOD WEB/PERSIS REDOUT GLODWEAR 04.jpg";
 
 export default function HomePage() {
   return (
@@ -18,7 +17,7 @@ export default function HomePage() {
           <Banner
             style={{ margin: "0 0" }}
             background={
-              "url(https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dw184bfe8a/homepage/UDSALG%20OG%20KAMPAGNER/1480x650_Hero_SALE_SS22_1.jpg)"
+              "/assets/banner 05 reunion.png"
             }
           />
         </Col>
@@ -34,24 +33,9 @@ export default function HomePage() {
           <Banner
             style={{ margin: "30px 0" }}
             background={
-              "url(https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dwd1379773/homepage/STYLE/1480x650_Hero_Training_4.0.jpg)"
+              "/assets/banner 02 madya.png"
             }
           />
-        </Col>
-        <Col span={24}>
-          <Row gutter={[8, 0]}>
-            <Col xs={{ span: 24 }} xl={{ span: 12 }}>
-              <Banner style={{ margin: "20px 0" }} background={banner3} />
-            </Col>
-            <Col xs={{ span: 24 }} xl={{ span: 12 }}>
-              <Banner
-                style={{ margin: "20px 0" }}
-                background={
-                  "url(https://www.hummel.net/on/demandware.static/-/Library-Sites-hummel-shared/default/dwecfc136d/homepage/STYLE/720x600_Split_FTW_3.1.jpg)"
-                }
-              />
-            </Col>
-          </Row>
         </Col>
         {/* NEW SEASON OF FAVOURITES */}
         <Col span={24}>
@@ -69,7 +53,7 @@ export default function HomePage() {
           <Banner
             style={{ margin: "30px 0" }}
             background={
-              "url(https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Library-Sites-hummel-shared/default/dw68b5796f/homepage/1480x650_SPORT_FOOTBALL_1.0.jpg)"
+              "/assets/banner 04 hoodie.png"
             }
           />
         </Col>
