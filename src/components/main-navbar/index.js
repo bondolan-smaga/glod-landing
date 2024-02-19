@@ -14,14 +14,14 @@ const burgerBar = (
       {
         label: (
           <Link to="/catalogue">
-            <Title level={5}>MEN</Title>
+            <Title level={5}>JERSEYS</Title>
           </Link>
         ),
       },
       {
         label: (
           <Link to="/catalogue">
-            <Title level={5}>WOMEN</Title>
+            <Title level={5}>ACCESSORIES</Title>
           </Link>
         ),
       },
@@ -57,10 +57,10 @@ export default function MainNavbar() {
           <img className="brand-logo" src={logoNavbar} alt="GLOD" />
         </Link>
         <Link to="/catalogue" className="main-menu link-text">
-          MEN
+          JERSEYS
         </Link>
         <Link to="/catalogue" className="main-menu link-text">
-          WOMEN
+          ACCESSORIES
         </Link>
         <Link to="/about" className="main-menu link-text">
           ABOUT US
