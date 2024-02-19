@@ -1,7 +1,10 @@
 import { Button, Col, Row } from "antd";
 import "./index.css";
+import { useNavigate } from "react-router";
 
 export default function Banner(props) {
+  let navigate = useNavigate();
+
   return (
     <Row id="banner-row" {...props}>
       <Col
@@ -63,6 +66,7 @@ export default function Banner(props) {
                   textTransform: "uppercase",
                   boxShadow: "none",
                 }}
+                onClick={() => navigate(`/catalogue`)}
               >
                 JERSEYS
               </Button>
@@ -86,6 +90,7 @@ export default function Banner(props) {
                   textTransform: "uppercase",
                   boxShadow: "none",
                 }}
+                onClick={() => navigate(`/catalogue`)}
               >
                 ACCESSORIES
               </Button>
