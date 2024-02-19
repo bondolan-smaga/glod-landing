@@ -64,7 +64,7 @@ export default function Banner(props) {
                   boxShadow: "none",
                 }}
               >
-                MEN
+                JERSEYS
               </Button>
               <Button
                 ghost
@@ -87,7 +87,7 @@ export default function Banner(props) {
                   boxShadow: "none",
                 }}
               >
-                WOMEN
+                ACCESSORIES
               </Button>
             </div>
           </Row>
