@@ -31,8 +31,8 @@ export default function DetailProductPage() {
           xs={{ span: 24 }}
           sm={{ span: 24 }}
           md={{ span: 24 }}
-          lg={{ span: 8 }}
-          xl={{ span: 8 }}
+          lg={{ span: 12 }}
+          xl={{ span: 12 }}
         >
           <Carousel autoplay={true}>
             {catalogueProducts[0].images.map((image) => {
@@ -53,7 +53,7 @@ export default function DetailProductPage() {
             })}
           </Carousel>
         </Col>
-        <Col span={11} xs={{ span: 24 }} sm={{ span: 24 }} lg={{ span: 8 }}>
+        <Col span={11} xs={{ span: 24 }} sm={{ span: 24 }} lg={{ span: 12 }}>
           <Row>
             <Col
               style={{
@@ -168,14 +168,6 @@ export default function DetailProductPage() {
               </Space>
             </Col>
           </Row>
-        </Col>
-        <Col
-          xs={{ span: 24 }}
-          sm={{ span: 24 }}
-          md={{ span: 12 }}
-          lg={{ span: 6 }}
-          xl={{ span: 6 }}
-        >
           <Row>
             <Col>Color:</Col>
           </Row>
@@ -189,39 +181,60 @@ export default function DetailProductPage() {
           >
             {catalogueProducts[0].colorImages.map((colorImage) => {
               return (
-                <Col span={4} xs={{ span: 6 }}>
-                  <Image
-                    style={{
-                      backgroundColor: "#eaeaea",
-                      marginTop: "6px",
-                      marginRight: "10px",
-                    }}
-                    width={40}
-                    src={colorImage}
-                  />
+                <Col span={6} xs={{ span: 6 }} key={colorImage}>
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <button
+                      style={{
+                        backgroundColor: "#eaeaea",
+                        width: "65px",
+                        height: "65px",
+                        borderRadius: "50%", // Make the button circular
+                        border: "none", // Remove border
+                        margin: "0.5rem", // Adjust margins
+                        padding: "0", // Remove padding
+                        cursor: "pointer", // Change cursor to pointer on hover
+                        display: "flex", // Add flex display to center content vertically
+                        justifyContent: "center", // Center content horizontally
+                        alignItems: "center", // Center content vertically
+                      }}
+                    >
+                      <Image
+                        style={{
+                          maxWidth: "100%",
+                          maxHeight: "100%",
+                          borderRadius: "50%",
+                        }}
+                        src={colorImage}
+                      />
+                    </button>
+                  </div>
                 </Col>
               );
             })}
           </Row>
           <Row
-            gutter={[0, 0]}
+            gutter={[8, 0]}
             style={{
-              marginTop: "20px",
+              marginTop: "10px",
+              display: "flex",
+              justifyContent: "center",
+              flexWrap: "wrap",
             }}
           >
             {catalogueProducts[0].sizes.map((size) => {
               return (
                 <Col
                   span={4}
+                  key={size}
                   style={{
-                    width: "40px",
-                    height: "40px",
-                    borderStyle: "solid",
-                    borderWidth: "1px",
-                    borderRadius: "3px",
+                    width: "1rem",
+                    height: "3rem",
+                    border: "1px solid #000",
+                    borderRadius: "15px",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
+                    marginBottom: "5px",
                     marginRight: "5px",
                   }}
                 >
@@ -230,7 +243,7 @@ export default function DetailProductPage() {
               );
             })}
           </Row>
-          <Row style={{ marginTop: "20px" }}>
+          <Row style={{ marginTop: "10px" }}>
             <Col span={24}>
               <Button
                 style={{
@@ -245,15 +258,7 @@ export default function DetailProductPage() {
           </Row>
         </Col>
         <Col span={24}>
-          <Row span={24}>
-            <Col span={24} style={{ margin: "10px 0" }}>
-              <CarouselProductCard
-                tag={"RELATED PRODUCT"}
-                show={4}
-                scroll={4}
-              />
-            </Col>
-          </Row>
+          <CarouselProductCard tag={"RELATED PRODUCT"} show={4} scroll={4} />
         </Col>
         <Col span={24}>
           <Newslettersignup />
