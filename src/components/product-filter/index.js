@@ -1,19 +1,17 @@
 import { Link } from "react-router-dom";
 import { DownOutlined } from "@ant-design/icons";
-import { Button, Col, Dropdown, Menu, Row, Space } from "antd";
-import { FilterOutlined } from "@ant-design/icons";
+import { Col, Dropdown, Menu, Row, Space } from "antd";
+// import { FilterOutlined } from "@ant-design/icons";
 import "./index.scss";
-import SubMenu from "antd/lib/menu/SubMenu";
-import MenuItem from "antd/lib/menu/MenuItem";
+// import SubMenu from "antd/lib/menu/SubMenu";
+// import MenuItem from "antd/lib/menu/MenuItem";
 
 const size = (
   <Menu
     style={{
       color: "black",
-      fontSize: "14px",
       fontFamily: "Gibson-SemiBold, sans-serif",
       lineHeight: "14px",
-      textTransform: "none",
       fontWeight: "400",
     }}
     items={[
@@ -36,10 +34,8 @@ const colour = (
   <Menu
     style={{
       color: "black",
-      fontSize: "14px",
       fontFamily: "Gibson-SemiBold, sans-serif",
       lineHeight: "14px",
-      textTransform: "none",
       fontWeight: "400",
     }}
     items={[
@@ -62,10 +58,8 @@ const fitting = (
   <Menu
     style={{
       color: "black",
-      fontSize: "14px",
       fontFamily: "Gibson-SemiBold, sans-serif",
       lineHeight: "14px",
-      textTransform: "none",
       fontWeight: "400",
     }}
     items={[
@@ -88,10 +82,8 @@ const price = (
   <Menu
     style={{
       color: "black",
-      fontSize: "14px",
       fontFamily: "Gibson-SemiBold, sans-serif",
       lineHeight: "14px",
-      textTransform: "none",
       fontWeight: "400",
     }}
     items={[
@@ -114,10 +106,8 @@ const features = (
   <Menu
     style={{
       color: "black",
-      fontSize: "14px",
       fontFamily: "Gibson-SemiBold, sans-serif",
       lineHeight: "14px",
-      textTransform: "none",
       fontWeight: "400",
     }}
     items={[
@@ -137,55 +127,57 @@ const features = (
   />
 );
 
-const filterButton = (
-  <Menu>
-    <SubMenu title="SIZE">
-      <MenuItem id="filter-list">XS</MenuItem>
-      <MenuItem id="filter-list">S</MenuItem>
-      <MenuItem id="filter-list">M</MenuItem>
-    </SubMenu>
-    <SubMenu title="COLOUR">
-      <MenuItem id="filter-list">RED</MenuItem>
-      <MenuItem id="filter-list">BLACK</MenuItem>
-      <MenuItem id="filter-list">BLUE</MenuItem>
-    </SubMenu>
-    <SubMenu title="FITTING">
-      <MenuItem id="filter-list">LOOSE</MenuItem>
-      <MenuItem id="filter-list">REGULAR</MenuItem>
-      <MenuItem id="filter-list">SLIM</MenuItem>
-    </SubMenu>
-    <SubMenu title="FEATURES">
-      <MenuItem id="filter-list">ANTI BACTERIAL</MenuItem>
-      <MenuItem id="filter-list">BCI</MenuItem>
-      <MenuItem id="filter-list">BEECOOL</MenuItem>
-    </SubMenu>
-    <SubMenu title="PRICE">
-      <MenuItem id="filter-list">Rp 15.000</MenuItem>
-      <MenuItem id="filter-list">Rp 30.000</MenuItem>
-      <MenuItem id="filter-list">Rp 50.000</MenuItem>
-    </SubMenu>
-  </Menu>
-);
+// const filterButton = (
+//   <Menu>
+//     <SubMenu title="SIZE">
+//       <MenuItem id="filter-list">XS</MenuItem>
+//       <MenuItem id="filter-list">S</MenuItem>
+//       <MenuItem id="filter-list">M</MenuItem>
+//     </SubMenu>
+//     <SubMenu title="COLOUR">
+//       <MenuItem id="filter-list">RED</MenuItem>
+//       <MenuItem id="filter-list">BLACK</MenuItem>
+//       <MenuItem id="filter-list">BLUE</MenuItem>
+//     </SubMenu>
+//     <SubMenu title="FITTING">
+//       <MenuItem id="filter-list">LOOSE</MenuItem>
+//       <MenuItem id="filter-list">REGULAR</MenuItem>
+//       <MenuItem id="filter-list">SLIM</MenuItem>
+//     </SubMenu>
+//     <SubMenu title="FEATURES">
+//       <MenuItem id="filter-list">ANTI BACTERIAL</MenuItem>
+//       <MenuItem id="filter-list">BCI</MenuItem>
+//       <MenuItem id="filter-list">BEECOOL</MenuItem>
+//     </SubMenu>
+//     <SubMenu title="PRICE">
+//       <MenuItem id="filter-list">Rp 15.000</MenuItem>
+//       <MenuItem id="filter-list">Rp 30.000</MenuItem>
+//       <MenuItem id="filter-list">Rp 50.000</MenuItem>
+//     </SubMenu>
+//   </Menu>
+// );
 
 export default function ProductFilter() {
   return (
-    <Row>
-      <Row span={24} className="filter-btn-row">
+    // <Row>
+    <Row span={24} gap="small" className="filter-btn-row">
+      <Col
+        style={{
+          paddingLeft: "8px",
+        }}
+      >
         <Dropdown overlay={size} trigger={["click"]}>
           <a href="/" onClick={(e) => e.preventDefault()}>
             <Space
               style={{
                 color: "black",
-                fontSize: "14px",
                 fontFamily: "Gibson-SemiBold, sans-serif",
                 lineHeight: "14px",
-                textTransform: "none",
-                fontWeight: "300",
-                marginRight: "30px",
+                fontWeight: "400",
               }}
             >
               Size
-              <DownOutlined />
+              <DownOutlined style={{ marginRight: "20px" }} />
             </Space>
           </a>
         </Dropdown>
@@ -194,16 +186,13 @@ export default function ProductFilter() {
             <Space
               style={{
                 color: "black",
-                fontSize: "14px",
                 fontFamily: "Gibson-SemiBold, sans-serif",
                 lineHeight: "14px",
-                textTransform: "none",
                 fontWeight: "400",
-                marginRight: "30px",
               }}
             >
               Colour
-              <DownOutlined />
+              <DownOutlined style={{ marginRight: "20px" }} />
             </Space>
           </a>
         </Dropdown>
@@ -212,16 +201,13 @@ export default function ProductFilter() {
             <Space
               style={{
                 color: "black",
-                fontSize: "14px",
                 fontFamily: "Gibson-SemiBold, sans-serif",
                 lineHeight: "14px",
-                textTransform: "none",
                 fontWeight: "400",
-                marginRight: "30px",
               }}
             >
               Fitting
-              <DownOutlined />
+              <DownOutlined style={{ marginRight: "20px" }} />
             </Space>
           </a>
         </Dropdown>
@@ -230,16 +216,13 @@ export default function ProductFilter() {
             <Space
               style={{
                 color: "black",
-                fontSize: "14px",
                 fontFamily: "Gibson-SemiBold, sans-serif",
                 lineHeight: "14px",
-                textTransform: "none",
                 fontWeight: "400",
-                marginRight: "30px",
               }}
             >
               Price
-              <DownOutlined />
+              <DownOutlined style={{ marginRight: "20px" }} />
             </Space>
           </a>
         </Dropdown>
@@ -248,21 +231,19 @@ export default function ProductFilter() {
             <Space
               style={{
                 color: "black",
-                fontSize: "14px",
                 fontFamily: "Gibson-SemiBold, sans-serif",
                 lineHeight: "14px",
-                textTransform: "none",
                 fontWeight: "400",
-                marginRight: "30px",
               }}
             >
               Features
-              <DownOutlined />
+              <DownOutlined style={{ marginRight: "20px" }} />
             </Space>
           </a>
         </Dropdown>
-      </Row>
-      <Col span={4}>
+      </Col>
+      {/* </Row>
+<Col span={4}>
         <Dropdown
           className="filter-btn"
           overlay={filterButton}
@@ -273,7 +254,7 @@ export default function ProductFilter() {
             <FilterOutlined />
           </Button>
         </Dropdown>
-      </Col>
+      </Col> */}
     </Row>
   );
 }

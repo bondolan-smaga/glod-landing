@@ -10,19 +10,19 @@ export default function AboutPage() {
     <MainLayout meta={seo_meta.about}>
       {/* main content */}
       {/* about us */}
-      <Row style={{ maxWidth: "1000px", margin: "auto auto" }} justify="center">
+      <Row
+        style={{ maxWidth: "1000px", margin: "auto", padding: "20px" }}
+        justify="center"
+      >
         <Col span={24}>
-          <Title className="gld-align-center text-white" level={2}>
+          <Title className="gld-align-center" id="ttl-about" level={2}>
             About Us
           </Title>
           <Title className="gld-align-center" id="glod-desc" level={5}>
             Glod Sportwear adalah penyedia pakaian olah raga yang berada di Kota
-            Solo - Jawa Tengah
-          </Title>
-          <Title className="gld-align-center" id="glod-desc" level={5}>
-            Tim desain Glod sangat memperhatikan pola patrun baju yang nyaman
-            enak dipakai dan konsep desain artwork Jersey printing yang sangat
-            detail dan keren.
+            Solo - Jawa Tengah. Tim desain Glod sangat memperhatikan pola patrun
+            baju yang nyaman enak dipakai dan konsep desain artwork Jersey
+            printing yang sangat detail dan keren.
           </Title>
         </Col>
         {/* images */}
