@@ -177,7 +177,7 @@ export default function ProductFilter() {
               }}
             >
               Size
-              <DownOutlined style={{ marginRight: "20px" }} />
+              <DownOutlined style={{ marginRight: "58px" }} />
             </Space>
           </a>
         </Dropdown>
@@ -192,7 +192,7 @@ export default function ProductFilter() {
               }}
             >
               Colour
-              <DownOutlined style={{ marginRight: "20px" }} />
+              <DownOutlined style={{ marginRight: "58px" }} />
             </Space>
           </a>
         </Dropdown>
@@ -207,7 +207,7 @@ export default function ProductFilter() {
               }}
             >
               Fitting
-              <DownOutlined style={{ marginRight: "20px" }} />
+              <DownOutlined style={{ marginRight: "58px" }} />
             </Space>
           </a>
         </Dropdown>
@@ -222,7 +222,7 @@ export default function ProductFilter() {
               }}
             >
               Price
-              <DownOutlined style={{ marginRight: "20px" }} />
+              <DownOutlined style={{ marginRight: "58px" }} />
             </Space>
           </a>
         </Dropdown>
@@ -237,7 +237,7 @@ export default function ProductFilter() {
               }}
             >
               Features
-              <DownOutlined style={{ marginRight: "20px" }} />
+              <DownOutlined style={{ marginRight: "58px" }} />
             </Space>
           </a>
         </Dropdown>
