@@ -10,6 +10,7 @@ export default function FavoritePage() {
     <MainLayout meta={seo_meta.favorite.title}>
       <Row>
         <Col>
+        <div>halo</div>
           <FavoriteLIst />
         </Col>
       </Row>
